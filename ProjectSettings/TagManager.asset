@@ -7,7 +7,6 @@ TagManager:
   - SaveController
   - CameraList
   - ScreenList
-  - CombatEncounter
   - Enemy
   layers:
   - Default
@@ -20,7 +19,7 @@ TagManager:
   - 
   - 
   - 
-  - Enemy
+  - 
   - 
   - 
   - 

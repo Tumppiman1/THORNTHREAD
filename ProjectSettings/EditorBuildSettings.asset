@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Tuomas.unity
+    guid: f953f4bd3d786d349aac000d8d971072
+  - enabled: 1
+    path: Assets/Scenes/Code Test.unity
+    guid: 1ceb134362fbfa34caf22cbe192851e6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
