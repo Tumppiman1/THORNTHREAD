@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -9,16 +10,36 @@ public class PlayerStats : MonoBehaviour
     
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private TextMeshProUGUI attackPointText;
+    [Header("Player health")]
     public float health;
     public float maxHealth = 100f;
     
-    public float brokenSwordDamage = 5f;
-    public float axeDamage = 20f;
-
+    // AP system
+    [Header("Attack point system")]
     public int attackPointCount = 4;
     public int maxAttackPointCount = 4;
-
+    
+    // Broken sword
+    [Header("Broken sword stats")]
+    public float brokenSwordDamage = 5f;
+    
+    
+    // Axe
+    [Header("Axe stats")]
+    public float axeDamage = 20f;
     public int axeApCost = 2;
+    
+    // Shield
+    [Header("Shield stats")] 
+    public int blockAmount = 1;
+    
+    
+    // Consumables
+    [Header("Consumables")]
+    public int healFlaskConsumableID = 0;
+    public int attackPointConsumableID = 1;
+    public int addTurnsConsumableID = 2;
+    
     
     
     
@@ -48,6 +69,18 @@ public class PlayerStats : MonoBehaviour
     public void TakeAttackPoints(int apCost)
     {
         attackPointCount -= apCost;
+        attackPointText.text = "AP: " + attackPointCount;
+    }
+
+    public void AddAttackPoints(int apToAdd)
+    {
+        attackPointCount += apToAdd;
+        attackPointText.text = "AP: " + attackPointCount;
+    }
+
+    public void ResetAttackPoints()
+    {
+        attackPointCount = maxAttackPointCount;
         attackPointText.text = "AP: " + attackPointCount;
     }
 
@@ -87,7 +120,7 @@ public class PlayerStats : MonoBehaviour
         if (attackPointCount - axeApCost >= 0) 
         {
             GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().AxeAttack();
-            TakeAttackPoints(axeApCost);
+            
         }
     }
 
@@ -95,7 +128,16 @@ public class PlayerStats : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().ShieldBlock();
     }
-    
+
+    public void AttackPointConsumable()
+    {
+        GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().UseConsumable(attackPointConsumableID);
+    }
+
+    public void AddTurnsConsumable()
+    {
+        GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().UseConsumable(addTurnsConsumableID);
+    }
 
     
 }

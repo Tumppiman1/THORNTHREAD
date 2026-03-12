@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CombatManager : MonoBehaviour
@@ -14,7 +15,11 @@ public class CombatManager : MonoBehaviour
     public int playerActionsLeft = 0;
     public int enemyActionsLeft = 0;
 
-    public int index = 0;
+    private int index = 0;
+    public int attackType = 0;
+    
+    public bool playerIsBlocking = false;
+    
     
     void Start()
     {
@@ -30,7 +35,7 @@ public class CombatManager : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0)) {
                     target = hit.collider.gameObject;
-                    BrokenSwordAttack();
+                    PlayerAttack(attackType);
                     chooseTarget = false;
                     
                 }
@@ -39,16 +44,11 @@ public class CombatManager : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        
-    }
-
     public void StartCombat()
     {
+        GameObject.Find("TestUI").transform.GetChild(0).gameObject.SetActive(true);
         if (isPlayerTurn) {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().attackPointCount =
-                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().maxAttackPointCount;
+            _player.GetComponent<PlayerStats>().ResetAttackPoints();
             playerActionsLeft++;
             PlayerTurn();
         }
@@ -58,13 +58,23 @@ public class CombatManager : MonoBehaviour
     {
         if (isPlayerTurn) // player turn
         {
+            Debug.Log("Player turn");
+            playerIsBlocking = false;
             playerActionsLeft++;
             PlayerTurn();
         }
 
         else if (!isPlayerTurn) // enemy turn 
         {
+            Debug.Log("Enemy turn");
+            
             if (enemies.Count > 0) {
+
+                foreach (GameObject enemy in enemies) 
+                {
+                    // Remove block effect from enemies at the start of enemy turn
+                    enemy.GetComponent<EnemyStats>().isBlocking = false;
+                }
                 enemyActionsLeft++;
                 EnemyTurn();
             }
@@ -96,19 +106,92 @@ public class CombatManager : MonoBehaviour
             // Enemy attack
             
             // One enemy
-            
-            if (enemies.Count == 1) {
-
+            if (enemies.Count == 1) 
+            {
+                Debug.Log("single");
                 if (enemies[0].GetComponent<EnemyStats>().enemyAlive) 
                 {
-                    float enemyDamage = enemies[0].GetComponent<EnemyStats>().enemyDamage;
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().TakeDamage(enemyDamage);
-                
-                    enemyActionsLeft--;
-                    EnemyTurn();
+                        // Decide enemy attack option
+                        int enemyAttackChance = enemies[0].GetComponent<EnemyStats>().attackChance;
+                        int enemyBlockChance = enemies[0].GetComponent<EnemyStats>().blockChance;
+                        int enemyHealChance = enemies[0].GetComponent<EnemyStats>().healChance;
+                        int enemySpecialChance = enemies[0].GetComponent<EnemyStats>().specialChance;
+
+                        int totalChance = enemyAttackChance + enemyBlockChance + enemyHealChance + enemySpecialChance;
+                        // Debug.Log(totalChance);
+                        
+                        int randomInt = UnityEngine.Random.Range(0, totalChance + 1);
+
+                        if (randomInt >= 0 && randomInt < enemyAttackChance) {
+                            // enemy attack
+                            Debug.Log(randomInt);
+                            Debug.Log("Enemy attack");
+                            
+                            if (!playerIsBlocking) {
+                                
+                                int randomHitChance = UnityEngine.Random.Range(0, 101);
+                                
+                                if (randomHitChance <= enemies[0].GetComponent<EnemyStats>().hitChance) 
+                                {
+                                    float enemyDamage = enemies[0].GetComponent<EnemyStats>().enemyDamage;
+                                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().TakeDamage(enemyDamage);
+                                    enemyActionsLeft--;
+                                    EnemyTurn();
+                                }
+
+                                else {
+                                    Debug.Log("Enemy attack missed");
+                                    enemyActionsLeft--;
+                                    EnemyTurn();
+                                }
+                            }
+                            
+                            else 
+                            {
+                                Debug.Log("Attack blocked");
+                                playerIsBlocking = false;
+                                enemyActionsLeft--;
+                                EnemyTurn();
+                            }
+                            
+                        }
+                        
+                        else if (randomInt >= enemyAttackChance && randomInt < enemyAttackChance + enemyBlockChance) {
+                            // enemy block
+                            //Debug.Log(randomInt);
+                            Debug.Log("Enemy block");
+
+                            enemies[0].GetComponent<EnemyStats>().isBlocking = true;
+                            enemyActionsLeft--;
+                            EnemyTurn();
+                        }
+                        
+                        else if (randomInt >= enemyAttackChance + enemyBlockChance && randomInt < enemyAttackChance + enemyBlockChance + enemyHealChance) {
+                            // Enemy Heal
+                            //Debug.Log(randomInt);
+                            Debug.Log("Enemy heal");
+                            enemyActionsLeft--;
+                            EnemyTurn();
+                        }
+                        
+                        else if (randomInt >= enemyAttackChance + enemyBlockChance + enemyHealChance && randomInt <= totalChance) {
+                            // enemy special
+                            //Debug.Log(randomInt);
+                            Debug.Log("Enemy special");
+                            enemyActionsLeft--;
+                            EnemyTurn();
+                        }
+
+                        else {
+                            //Debug.Log("something");
+                            //Debug.Log(randomInt);
+                        }
+                        
                 }
 
-                else {
+                else 
+                {
+                    enemies.Clear();
                     EndCombat();
                 }
                 
@@ -117,26 +200,93 @@ public class CombatManager : MonoBehaviour
             // Multiple enemies
             else if (enemies.Count > 1) {
                 index = 0;
-
-
-                foreach (GameObject enemy in enemies) 
+                Debug.Log("multiple");
+                
+                foreach (GameObject enemy in enemies.ToList()) 
                 {
                     if (!enemy.GetComponent<EnemyStats>().enemyAlive) 
                     {
                         enemies.RemoveAt(index);
                         index = 0;
                     }
-                    
-                    float enemyDamage = enemy.GetComponent<EnemyStats>().enemyDamage;
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().TakeDamage(enemyDamage);
 
-                    index++;
+                    if (enemy.GetComponent<EnemyStats>().enemyAlive) 
+                    {
+                        // Decide enemy attack option
+                        int enemyAttackChance = enemy.GetComponent<EnemyStats>().attackChance;
+                        int enemyBlockChance = enemy.GetComponent<EnemyStats>().blockChance;
+                        int enemyHealChance = enemy.GetComponent<EnemyStats>().healChance;
+                        int enemySpecialChance = enemy.GetComponent<EnemyStats>().specialChance;
+
+                        int totalChance = enemyAttackChance + enemyBlockChance + enemyHealChance + enemySpecialChance;
+                        // Debug.Log(totalChance);
+                        
+                        int randomInt = UnityEngine.Random.Range(0, totalChance + 1);
+
+                        if (randomInt >= 0 && randomInt < enemyAttackChance) {
+                            // enemy attack
+                            // Debug.Log(randomInt);
+                            Debug.Log("Enemy attack");
+                            
+                            if (!playerIsBlocking) {
+                                
+                                int randomHitChance = UnityEngine.Random.Range(0, 101);
+                                
+                                if (randomHitChance <= enemy.GetComponent<EnemyStats>().hitChance) 
+                                {
+                                    float enemyDamage = enemy.GetComponent<EnemyStats>().enemyDamage;
+                                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().TakeDamage(enemyDamage);
+                                    
+                                }
+
+                                else {
+                                    Debug.Log("Enemy attack missed");
+                                    
+                                }
+                            }
+                            
+                            else 
+                            {
+                                Debug.Log("Attack blocked");
+                                playerIsBlocking = false;
+                                
+                            }
+                            
+                        }
+                        
+                        else if (randomInt >= enemyAttackChance && randomInt < enemyAttackChance + enemyBlockChance) {
+                            // enemy block
+                            //Debug.Log(randomInt);
+                            Debug.Log("Enemy block");
+
+                            enemy.GetComponent<EnemyStats>().isBlocking = true;
+                            
+                        }
+                        
+                        else if (randomInt >= enemyAttackChance + enemyBlockChance && randomInt < enemyAttackChance + enemyBlockChance + enemyHealChance) {
+                            // Enemy Heal
+                            //Debug.Log(randomInt);
+                            Debug.Log("Enemy heal");
+                            
+                        }
+                        
+                        else if (randomInt >= enemyAttackChance + enemyBlockChance + enemyHealChance && randomInt <= totalChance) {
+                            // enemy special
+                            //Debug.Log(randomInt);
+                            Debug.Log("Enemy special");
+                            
+                        }
+
+                        else {
+                            //Debug.Log("something");
+                            //Debug.Log(randomInt);
+                        }
+                    }
                 }
                 
                 enemyActionsLeft--;
                 EnemyTurn();
             }
-            
         }
 
         else 
@@ -149,18 +299,23 @@ public class CombatManager : MonoBehaviour
     void EndCombat()
     {
         // End combat encounter
-
+        
         if (enemies.Count == 0) 
         {
-            gameObject.SetActive(false);    
+            Debug.Log("EndCombat");
+            gameObject.SetActive(false);
+            GameObject.Find("TestUI").transform.GetChild(0).gameObject.SetActive(false);
         }
+        
+        
     }
-    
-    public void BrokenSwordAttack()
+
+    private void PlayerAttack(int attackTypeID)
     {
-        if (isPlayerTurn) 
+        // Broken sword
+        if (attackTypeID == 1) 
         {
-            if (target != null) 
+            if (target != null && !target.GetComponent<EnemyStats>().isBlocking) 
             {  
                 // attack target
                 // Debug.Log("here");
@@ -171,25 +326,83 @@ public class CombatManager : MonoBehaviour
             }
 
             else {
-                // acquire target
-                chooseTarget = true;
+                Debug.Log("Enemy blocked attack");
+                target.GetComponent<EnemyStats>().isBlocking = false;
+                PlayerTurn();
+            }
+        }
+        
+        // Axe
+        else if (attackTypeID == 2) 
+        {
+            if (target != null && !target.GetComponent<EnemyStats>().isBlocking) 
+            {  
+                // attack target
+                // Debug.Log("here");
+                target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().axeDamage);
+                _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().axeApCost);
+                playerActionsLeft--;
+                target = null;
+                PlayerTurn();
             }
             
+            else {
+                Debug.Log("Enemy blocked attack");
+                target.GetComponent<EnemyStats>().isBlocking = false;
+                _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().axeApCost);
+                PlayerTurn();
+            }
+        }
+        
+    }
+    
+    public void BrokenSwordAttack()
+    {
+        attackType = 1;
+        
+        if (isPlayerTurn) 
+        {
+                // acquire target
+                chooseTarget = true;
         }
     }
 
     public void AxeAttack()
     {
+        attackType = 2;
         if (isPlayerTurn) 
         {
-            playerActionsLeft--;
+            // acquire target
+            chooseTarget = true;
         }
     }
 
     public void ShieldBlock()
     {
+        if (isPlayerTurn) {
+            playerIsBlocking = true;
+            playerActionsLeft--;
+            PlayerTurn();
+        }
+    }
+
+    public void UseConsumable(int consumableID)
+    {
         if (isPlayerTurn) 
         {
+            // AP Consumable
+            if (consumableID == 1) 
+            {
+                _player.GetComponent<PlayerStats>().ResetAttackPoints();
+                Debug.Log("Used AP consumable");        
+            }
+            
+            // Add +2 Turns Consumable
+            else if (consumableID == 2) 
+            {
+                playerActionsLeft += 2;
+            }
+            
             playerActionsLeft--;
         }
     }
