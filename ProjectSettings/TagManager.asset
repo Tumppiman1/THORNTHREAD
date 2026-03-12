@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - CombatEncounter
   - UI
+  - Items
   layers:
   - Default
   - TransparentFX
