@@ -46,6 +46,8 @@ public class CombatManager : MonoBehaviour
 
     public void StartCombat()
     {
+        GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().currentScreen.transform.GetChild(0).gameObject.SetActive(false);
+        GameObject.Find("TestUI").transform.GetChild(1).gameObject.SetActive(false);
         GameObject.Find("TestUI").transform.GetChild(0).gameObject.SetActive(true);
         if (isPlayerTurn) {
             _player.GetComponent<PlayerStats>().ResetAttackPoints();
@@ -307,6 +309,9 @@ public class CombatManager : MonoBehaviour
             Debug.Log("EndCombat");
             gameObject.SetActive(false);
             GameObject.Find("TestUI").transform.GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("TestUI").transform.GetChild(1).gameObject.SetActive(true);
+            
+            GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().currentScreen.transform.GetChild(0).gameObject.SetActive(true);
         }
         
         

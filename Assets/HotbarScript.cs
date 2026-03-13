@@ -23,9 +23,13 @@ public class HotbarScript : MonoBehaviour
 
     public void UpdateHotbar()
     {
+        // Updates hotbar icons when new items are added to items list
         if (items.Count > 0) {
-            for (int i = 0; i < items.Count; i++) {
+            for (int i = 0; i < items.Count; i++) 
+            {
                 //Debug.Log(i);
+                
+                // Gets item icon from inventory controller
                 _inventoryController.GetComponent<Items>().ItemIcon(i);
             }
         }
