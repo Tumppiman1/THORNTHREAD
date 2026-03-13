@@ -10,6 +10,9 @@ public class EnemyStats : MonoBehaviour
     [Header("Enemy damage")]
     public float enemyDamage = 10f;
     
+    [Header("Enemy heal ability")]
+    public float healAmount = 5f;
+    
     [Header("Combat stats")]
     public int hitChance = 70;
     public int attackChance = 60;
@@ -39,6 +42,21 @@ public class EnemyStats : MonoBehaviour
             enemyAlive = false;
             // Destroy(gameObject);
             Invoke(nameof(EnemyDeath), 1f);
+        }
+    }
+
+    public void TakeHealing(float amountToHeal)
+    {
+        if (enemyHealth + amountToHeal <= enemyMaxHealth) 
+        {
+            Debug.Log("enemy heal for: " + amountToHeal);
+            enemyHealth += amountToHeal;
+        }
+
+        else
+        {
+            Debug.Log("enemy heal for: " + (enemyMaxHealth - enemyHealth));
+            enemyHealth = enemyMaxHealth;
         }
     }
 

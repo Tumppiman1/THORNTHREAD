@@ -124,7 +124,7 @@ public class CombatManager : MonoBehaviour
 
                         if (randomInt >= 0 && randomInt < enemyAttackChance) {
                             // enemy attack
-                            Debug.Log(randomInt);
+                            // Debug.Log(randomInt);
                             Debug.Log("Enemy attack");
                             
                             if (!playerIsBlocking) {
@@ -170,6 +170,7 @@ public class CombatManager : MonoBehaviour
                             // Enemy Heal
                             //Debug.Log(randomInt);
                             Debug.Log("Enemy heal");
+                            enemies[0].GetComponent<EnemyStats>().TakeHealing(enemies[0].GetComponent<EnemyStats>().healAmount);
                             enemyActionsLeft--;
                             EnemyTurn();
                         }
@@ -267,6 +268,7 @@ public class CombatManager : MonoBehaviour
                             // Enemy Heal
                             //Debug.Log(randomInt);
                             Debug.Log("Enemy heal");
+                            enemy.GetComponent<EnemyStats>().TakeHealing(enemy.GetComponent<EnemyStats>().healAmount);
                             
                         }
                         
@@ -317,17 +319,31 @@ public class CombatManager : MonoBehaviour
         {
             if (target != null && !target.GetComponent<EnemyStats>().isBlocking) 
             {  
-                // attack target
-                // Debug.Log("here");
-                target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().brokenSwordDamage);
-                playerActionsLeft--;
-                target = null;
-                PlayerTurn();
+                int playerRandomHitChance = UnityEngine.Random.Range(0, 100);
+
+                if (playerRandomHitChance <= _player.GetComponent<PlayerStats>().swordHitChance) 
+                {
+                    // attack target
+                    // Debug.Log("here");
+                    target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().brokenSwordDamage);
+                    playerActionsLeft--;
+                    target = null;
+                    PlayerTurn();
+                }
+
+                else {
+                    Debug.Log("Player attack missed");
+                    playerActionsLeft--;
+                    target = null;
+                    PlayerTurn();
+                }
             }
 
             else {
                 Debug.Log("Enemy blocked attack");
                 target.GetComponent<EnemyStats>().isBlocking = false;
+                target = null;
+                playerActionsLeft--;
                 PlayerTurn();
             }
         }
@@ -337,13 +353,26 @@ public class CombatManager : MonoBehaviour
         {
             if (target != null && !target.GetComponent<EnemyStats>().isBlocking) 
             {  
-                // attack target
-                // Debug.Log("here");
-                target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().axeDamage);
-                _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().axeApCost);
-                playerActionsLeft--;
-                target = null;
-                PlayerTurn();
+                int playerRandomHitChance = UnityEngine.Random.Range(0, 100);
+
+                if (playerRandomHitChance <= _player.GetComponent<PlayerStats>().axeHitChance) 
+                {
+                    // attack target
+                    // Debug.Log("here");
+                    target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().axeDamage);
+                    _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().axeApCost);
+                    playerActionsLeft--;
+                    target = null;
+                    PlayerTurn();
+                }
+                
+                else {
+                    Debug.Log("Player attack missed");
+                    _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().axeApCost);
+                    playerActionsLeft--;
+                    target = null;
+                    PlayerTurn();
+                }
             }
             
             else {

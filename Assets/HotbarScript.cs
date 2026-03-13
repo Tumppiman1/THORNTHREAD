@@ -21,12 +21,13 @@ public class HotbarScript : MonoBehaviour
 
     public void UpdateHotbar()
     {
-        for (int i = 0; i <= items.Count; i++) 
-        {
-            Debug.Log(i);
-            _inventoryController.GetComponent<Items>().ItemIcon(i);
+        if (items.Count > 0) {
+            for (int i = 0; i < items.Count; i++) {
+                //Debug.Log(i);
+                _inventoryController.GetComponent<Items>().ItemIcon(i);
+            }
         }
-        
+
     }
     
     

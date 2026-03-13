@@ -22,12 +22,14 @@ public class PlayerStats : MonoBehaviour
     // Broken sword
     [Header("Broken sword stats")]
     public float brokenSwordDamage = 5f;
+    public int swordHitChance = 70;
     
     
     // Axe
     [Header("Axe stats")]
     public float axeDamage = 20f;
     public int axeApCost = 2;
+    public int axeHitChance = 100;
     
     // Shield
     [Header("Shield stats")] 

@@ -7,8 +7,8 @@ public class Items : MonoBehaviour
     public List<string> items = new List<string>();
     public List<RawImage> icons = new List<RawImage>();
     
-    private string _kirves;
-    private int _kirvesCount = 0;
+    private string kirves;
+    //public int _kirvesCount = 0;
     [SerializeField] private RawImage kirvesIcon;
     
     private string _key1;
@@ -27,26 +27,7 @@ public class Items : MonoBehaviour
     {
         
     }
-
-    public void AddItem(string itemName, int count)
-    {
-        
-        if (itemName == _kirves) 
-        {
-            
-            items.Add(_kirves);
-            icons.Add(kirvesIcon);
-            _kirvesCount += count;
-        }
-        
-        
-        else 
-        {
-            Debug.Log("Kirves");
-            _kirvesCount += count;
-        }
-        
-    }
+    
 
     public void ItemCount(string item)
     {
@@ -55,10 +36,10 @@ public class Items : MonoBehaviour
 
     public void ItemIcon(int slot)
     {
-        if (slot == 0) 
+        if (true) 
         {
             //slot.GetComponent<Image>().sprite = kirvesIcon.sprite;
-            GameObject.Find("HotbarSlots").transform.GetChild(0).GetComponent<RawImage>().texture = icons[slot].texture;
+            GameObject.Find("HotbarSlots").transform.GetChild(slot).GetComponent<RawImage>().texture = icons[slot].texture;
 
         }
     }
