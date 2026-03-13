@@ -54,7 +54,7 @@ public class PlayerStats : MonoBehaviour
     
     void Start()
     {
-        health = maxHealth;
+        // health = maxHealth;
         
         
         healthText.text = "Health: " + health;

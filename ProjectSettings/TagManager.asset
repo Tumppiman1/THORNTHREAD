@@ -11,6 +11,7 @@ TagManager:
   - CombatEncounter
   - UI
   - Items
+  - CombatEncounterList
   layers:
   - Default
   - TransparentFX

@@ -4062,7 +4062,7 @@ MonoBehaviour:
   addTurnsConsumableButton: {fileID: 1500560487}
   healthText: {fileID: 1758980185}
   attackPointText: {fileID: 1494970828}
-  health: 0
+  health: 100
   maxHealth: 200
   attackPointCount: 0
   maxAttackPointCount: 4
@@ -7951,6 +7951,7 @@ Transform:
   m_Children:
   - {fileID: 492850902}
   - {fileID: 405415019}
+  - {fileID: 1371909787}
   m_Father: {fileID: 1183648353}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1148829982
@@ -7965,6 +7966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e5053268f52dc8449bd5c725bbf5b53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  combatEncounterCompleted: 0
   enemyMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -8181,7 +8183,6 @@ Transform:
   m_Children:
   - {fileID: 650839410}
   - {fileID: 1148829981}
-  - {fileID: 1371909787}
   m_Father: {fileID: 1782367986}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1183648354
@@ -11038,7 +11039,6 @@ Transform:
   m_Children:
   - {fileID: 1886198988}
   - {fileID: 1561297980}
-  - {fileID: 1963695433}
   m_Father: {fileID: 1782367986}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1366060383
@@ -11194,18 +11194,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371909786}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -6.49}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1617318859}
   - {fileID: 1351553070}
-  m_Father: {fileID: 1183648353}
+  m_Father: {fileID: 1148829981}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.37000275, y: -0.14999998}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1371909788
@@ -11280,9 +11280,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1380100192}
+  - component: {fileID: 1380100193}
   m_Layer: 0
-  m_Name: CombatEncounters
-  m_TagString: Untagged
+  m_Name: CombatEncounterList
+  m_TagString: CombatEncounterList
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11302,6 +11303,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1416328497}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1380100193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380100191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b7091105818589468ff8dc24568236d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combatEncounters:
+  - {fileID: 1561297979}
+  - {fileID: 1148829980}
+  completedEncounters: []
 --- !u!1 &1409703354
 GameObject:
   m_ObjectHideFlags: 0
@@ -12938,6 +12955,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1522630562}
+  - {fileID: 1963695433}
   m_Father: {fileID: 1366060382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1561297981
@@ -12952,6 +12970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e5053268f52dc8449bd5c725bbf5b53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  combatEncounterCompleted: 0
   enemyMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -16498,17 +16517,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963695432}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -6.28}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1312537170}
-  m_Father: {fileID: 1366060382}
+  m_Father: {fileID: 1561297980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1.9100037, y: 1.67}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1963695434

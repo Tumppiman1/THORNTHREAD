@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CombatManager : MonoBehaviour
 {
+    public bool combatEncounterCompleted = false;
     private GameObject _player;
     [SerializeField] private LayerMask enemyMask;
     public List<GameObject> enemies = new List<GameObject>();
@@ -310,6 +311,8 @@ public class CombatManager : MonoBehaviour
             gameObject.SetActive(false);
             GameObject.Find("TestUI").transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("TestUI").transform.GetChild(1).gameObject.SetActive(true);
+            combatEncounterCompleted = true;
+            GameObject.FindGameObjectWithTag("CombatEncounterList").GetComponent<CombatEncounterList>().RemoveCompletedCombatEncounters();
             
             GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().currentScreen.transform.GetChild(0).gameObject.SetActive(true);
         }
