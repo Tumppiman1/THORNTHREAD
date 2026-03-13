@@ -423,13 +423,17 @@ public class CombatManager : MonoBehaviour
             if (consumableID == 1) 
             {
                 _player.GetComponent<PlayerStats>().ResetAttackPoints();
-                Debug.Log("Used AP consumable");        
+                _player.GetComponent<PlayerStats>().attackPointConsumableAmount -= 1;
+                Debug.Log("Used AP consumable");
+                
             }
             
             // Add +2 Turns Consumable
             else if (consumableID == 2) 
             {
+                _player.GetComponent<PlayerStats>().addTurnsConsumableAmount -= 1;
                 playerActionsLeft += 2;
+                Debug.Log("Used add 2 turns consumable");
             }
             
             playerActionsLeft--;

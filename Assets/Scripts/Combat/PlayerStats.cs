@@ -8,6 +8,9 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private GameObject axeButton;
     [SerializeField] private GameObject shieldButton;
     
+    [SerializeField] private GameObject addAttackPointsConsumableButton;
+    [SerializeField] private GameObject addTurnsConsumableButton;
+    
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private TextMeshProUGUI attackPointText;
     [Header("Player health")]
@@ -41,10 +44,12 @@ public class PlayerStats : MonoBehaviour
     // Consumables
     [Header("Consumables")]
     public int healFlaskConsumableID = 0;
+    
     public int attackPointConsumableID = 1;
+    public int attackPointConsumableAmount = 1;
+    
     public int addTurnsConsumableID = 2;
-    
-    
+    public int addTurnsConsumableAmount = 1;
     
     
     void Start()
@@ -54,19 +59,23 @@ public class PlayerStats : MonoBehaviour
         
         healthText.text = "Health: " + health;
         attackPointText.text = "AP: " + attackPointCount;
+
+        addAttackPointsConsumableButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = attackPointConsumableAmount.ToString();
+        addTurnsConsumableButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = addTurnsConsumableAmount.ToString();
+        
     }
 
     void Update()
     {
         
         // Deactivate axe if not collected or not enough AP to use it
-        if (!playerHasAxe && attackPointCount <= 0) 
+        if (playerHasAxe && attackPointCount > 0) 
         {
-            axeButton.SetActive(false);
+            axeButton.SetActive(true);
         }
 
         else {
-            axeButton.SetActive(true);
+            axeButton.SetActive(false);
         }
     
         // Deactivate shield if not collected
@@ -79,6 +88,15 @@ public class PlayerStats : MonoBehaviour
             shieldButton.SetActive(true);
         }
         
+        if (attackPointConsumableAmount.ToString() != addAttackPointsConsumableButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text) 
+        {
+            addAttackPointsConsumableButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = attackPointConsumableAmount.ToString();
+        }
+
+        if (addTurnsConsumableAmount.ToString() != addTurnsConsumableButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text) 
+        {
+            addTurnsConsumableButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = addTurnsConsumableAmount.ToString();
+        }
         
     }
 
@@ -147,12 +165,23 @@ public class PlayerStats : MonoBehaviour
 
     public void AttackPointConsumable()
     {
-        GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().UseConsumable(attackPointConsumableID);
+        if (attackPointConsumableAmount > 0) {
+            GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().UseConsumable(attackPointConsumableID);
+        }
+        else {
+            Debug.Log("No AP consumables left");
+        }
     }
 
     public void AddTurnsConsumable()
     {
-        GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().UseConsumable(addTurnsConsumableID);
+        if (addTurnsConsumableAmount > 0) {
+            GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().UseConsumable(addTurnsConsumableID);
+        }
+        else {
+            Debug.Log("No add 2 turns consumables left");
+        }
+
     }
 
     
