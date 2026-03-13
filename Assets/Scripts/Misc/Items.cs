@@ -7,15 +7,9 @@ public class Items : MonoBehaviour
     public List<string> items = new List<string>();
     public List<RawImage> icons = new List<RawImage>();
     
-    private string kirves;
+    //private string kirves;
     //public int _kirvesCount = 0;
-    [SerializeField] private RawImage kirvesIcon;
-    
-    private string _key1;
-    private int _key1Count;
-    
-    
-    
+    //[SerializeField] private RawImage kirvesIcon;
     
     void Start()
     {

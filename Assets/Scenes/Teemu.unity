@@ -216,7 +216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &98610794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2453,10 +2453,11 @@ MonoBehaviour:
   maxAttackPointCount: 4
   brokenSwordDamage: 5
   swordHitChance: 80
+  playerHasAxe: 1
   axeDamage: 10
   axeApCost: 2
   axeHitChance: 100
-  blockAmount: 1
+  playerHasShield: 1
   healFlaskConsumableID: 0
   attackPointConsumableID: 1
   addTurnsConsumableID: 2
@@ -4738,7 +4739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1153144955
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9560,7 +9561,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   icons: []
-  kirvesIcon: {fileID: 1123939231}
 --- !u!1 &2122398187
 GameObject:
   m_ObjectHideFlags: 0

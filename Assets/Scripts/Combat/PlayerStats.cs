@@ -27,13 +27,15 @@ public class PlayerStats : MonoBehaviour
     
     // Axe
     [Header("Axe stats")]
+    public bool playerHasAxe = true;
     public float axeDamage = 20f;
     public int axeApCost = 2;
     public int axeHitChance = 100;
     
     // Shield
-    [Header("Shield stats")] 
-    public int blockAmount = 1;
+    [Header("Shield stats")]
+    public bool playerHasShield = true;
+    //public int blockAmount = 1;
     
     
     // Consumables
@@ -56,13 +58,25 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
-        if (attackPointCount <= 0) 
+        
+        // Deactivate axe if not collected or not enough AP to use it
+        if (!playerHasAxe && attackPointCount <= 0) 
         {
             axeButton.SetActive(false);
         }
 
         else {
             axeButton.SetActive(true);
+        }
+    
+        // Deactivate shield if not collected
+        if (!playerHasShield) 
+        {
+            shieldButton.SetActive(false);
+        }
+
+        else {
+            shieldButton.SetActive(true);
         }
         
         

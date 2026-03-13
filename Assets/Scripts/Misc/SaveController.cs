@@ -18,7 +18,14 @@ public class SaveController : MonoBehaviour
             
         SaveData saveData = new SaveData
         {
-            playerPosition = GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().currentScreen
+            playerPosition = GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().currentScreen,
+            playerHasAxe = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasAxe,
+            playerHasShield = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasShield,
+            
+            items = GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items,
+            icons = GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().icons,
+            
+            
         };
         
         File.WriteAllText(_saveLocation, JsonUtility.ToJson(saveData));
@@ -31,6 +38,13 @@ public class SaveController : MonoBehaviour
             SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(_saveLocation));
             
             GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().currentScreen = saveData.playerPosition;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasAxe = saveData.playerHasAxe;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasShield = saveData.playerHasShield;
+                
+            GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items = saveData.items;
+            GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().icons = saveData.icons;
+
+
         }
         else 
         {

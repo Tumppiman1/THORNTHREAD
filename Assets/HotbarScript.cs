@@ -11,6 +11,8 @@ public class HotbarScript : MonoBehaviour
     {
         items = GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items;
         _inventoryController = GameObject.FindGameObjectWithTag("Items");
+        
+        UpdateHotbar();
     }
 
     
