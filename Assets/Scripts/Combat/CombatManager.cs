@@ -47,7 +47,9 @@ public class CombatManager : MonoBehaviour
 
     public void StartCombat()
     {
-        GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().currentScreen.transform.GetChild(0).gameObject.SetActive(false);
+        // GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().currentScreen.transform.GetChild(0).gameObject.SetActive(false);
+        transform.parent.GetChild(0).gameObject.SetActive(false);
+        
         GameObject.Find("TestUI").transform.GetChild(1).gameObject.SetActive(false);
         GameObject.Find("TestUI").transform.GetChild(0).gameObject.SetActive(true);
         if (isPlayerTurn) {
@@ -314,7 +316,8 @@ public class CombatManager : MonoBehaviour
             combatEncounterCompleted = true;
             GameObject.FindGameObjectWithTag("CombatEncounterList").GetComponent<CombatEncounterList>().RemoveCompletedCombatEncounters();
             
-            GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().currentScreen.transform.GetChild(0).gameObject.SetActive(true);
+            // GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().currentScreen.transform.GetChild(0).gameObject.SetActive(true);
+            transform.parent.GetChild(0).gameObject.SetActive(false);
         }
         
         

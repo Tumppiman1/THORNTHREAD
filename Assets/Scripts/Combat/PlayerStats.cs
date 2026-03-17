@@ -1,9 +1,11 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
+    [SerializeField] private GameObject deathScreen;
     [SerializeField] private GameObject brokenSwordButton;
     [SerializeField] private GameObject axeButton;
     [SerializeField] private GameObject shieldButton;
@@ -137,6 +139,7 @@ public class PlayerStats : MonoBehaviour
             Debug.Log("Player dead");
             
             // Death screen, Death Menu, Load last checkpoint
+            deathScreen.SetActive(true);
         }
     }
 
@@ -238,7 +241,18 @@ public class PlayerStats : MonoBehaviour
             Debug.Log("Maximum amount of add turns consumables");
         }
     }
-    
+
+    public void ReloadLastCheckPoint()
+    {
+        SceneManager.LoadScene("Teemu");
+        // GameObject.FindGameObjectWithTag("UI").transform.GetChild(0).gameObject.SetActive(false);
+        // GameObject.FindGameObjectWithTag("UI").transform.GetChild(1).gameObject.SetActive(true);
+        
+        
+        //GameObject.FindGameObjectWithTag("SaveController").GetComponent<SaveController>().LoadGame();
+        
+        
+    }
     
 
     

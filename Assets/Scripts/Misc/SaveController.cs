@@ -9,11 +9,13 @@ public class SaveController : MonoBehaviour
     {
         _saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
          LoadGame();
+         
     }
 
 
     public void SaveGame()
     {
+        Debug.Log("Game saved");
         GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().FindCurrentActiveScreen();
             
         SaveData saveData = new SaveData
@@ -46,11 +48,16 @@ public class SaveController : MonoBehaviour
 
     public void LoadGame()
     {
+        
+        
         if (File.Exists(_saveLocation)) 
         {
+            Debug.Log("Game loaded");
             SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(_saveLocation));
             
             GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().currentScreen = saveData.playerPosition;
+            GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().UpdateScreen();
+            
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().health = saveData.playerHealth;
             
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasAxe = saveData.playerHasAxe;
@@ -76,7 +83,9 @@ public class SaveController : MonoBehaviour
         }
         else 
         {
+            Debug.Log("Save file created");
             SaveGame();
+            
         }
     }
 

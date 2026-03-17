@@ -5,7 +5,7 @@ using UnityEngine.UI;
 [System.Serializable]
 public class SaveData
 {
-    public GameObject playerPosition;           // Active camera
+    public int playerPosition;           // Active camera
     public float playerHealth;                  // Player health
     
     public bool playerHasAxe;                   // Player has collected axe
