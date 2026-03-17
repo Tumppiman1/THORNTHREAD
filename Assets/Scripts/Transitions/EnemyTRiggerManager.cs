@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
@@ -6,37 +7,27 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class EnemyTriggerManager : MonoBehaviour
 {
-  public static EnemyTriggerManager instance;
-
-
-    [SerializeField] private Button North;
-    [SerializeField] private Button South;
-    [SerializeField] private Button East;
-    [SerializeField] private Button West;
-    [SerializeField] private ScreenListScript Screen;
-
-
-    private GameObject Cam;
-
-    private void Awake()
-    {
-        if (instance == null)
+    public static EnemyTriggerManager instance;
+    public GameObject SupriseCam;
+    [SerializeField] private string gameScene;
+    
+    void Start()
+            {
+       if (SupriseCam == null)
         {
-            instance = this;
+            this.gameObject.SetActive(false);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+
+
     }
 
 
-
-    public void MoveNorth()
+    public void Battle()
     {
 
-        Cam = Screen.screenList[0];
+
+        
+
 
     }
-
-    }
+}
