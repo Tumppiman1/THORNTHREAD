@@ -21,4 +21,11 @@ public class SaveData
     public List<GameObject> combatEncounters;
     public List<GameObject> completedEncounters;
 
+    public List<GameObject> collectableItems;
+    public List<GameObject> collectedItems;
+
+    public List<GameObject> healRefillStations;
+    public List<GameObject> emptyHealRefillStations;
+
+
 }

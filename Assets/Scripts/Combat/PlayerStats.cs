@@ -7,6 +7,8 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private GameObject brokenSwordButton;
     [SerializeField] private GameObject axeButton;
     [SerializeField] private GameObject shieldButton;
+
+    [SerializeField] private GameObject healFlaskButton;
     
     [SerializeField] private GameObject addAttackPointsConsumableButton;
     [SerializeField] private GameObject addTurnsConsumableButton;
@@ -43,12 +45,19 @@ public class PlayerStats : MonoBehaviour
     
     // Consumables
     [Header("Consumables")]
+    [Header("Health flask")]
     public int healFlaskConsumableID = 0;
+    public int healFlaskUsesLeft = 2;
+    public float healFlaskHealAmount = 10f;
     
+    [Header("AP Consumable")]
     public int attackPointConsumableID = 1;
+    public bool attackPointConsumable = false;
     public int attackPointConsumableAmount = 1;
     
+    [Header("Add turns")]
     public int addTurnsConsumableID = 2;
+    public bool addTurnsConsumable = false;
     public int addTurnsConsumableAmount = 1;
     
     
@@ -126,7 +135,14 @@ public class PlayerStats : MonoBehaviour
         
         if (health <= 0) {
             Debug.Log("Player dead");
+            
+            // Death screen, Death Menu, Load last checkpoint
         }
+    }
+
+    public void UseHealFlask()
+    {
+        GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().UseHealthFlask();
     }
 
     public void Heal(float heal)
@@ -134,12 +150,27 @@ public class PlayerStats : MonoBehaviour
         if (health + heal <= maxHealth) 
         {
             health += heal;
+            healthText.text = "Health: " + health;
         }
 
         else {
             health = maxHealth;
+            healthText.text = "Health: " + health;
         }
         
+    }
+
+    public void RefillHealFlask()
+    {
+        if (healFlaskUsesLeft < 2) 
+        {
+            healFlaskUsesLeft = 2;
+        }
+
+        else 
+        {
+            Debug.Log("Heal flask already full");    
+        }
     }
 
     public void BrokenSwordAttack()
@@ -165,7 +196,7 @@ public class PlayerStats : MonoBehaviour
 
     public void AttackPointConsumable()
     {
-        if (attackPointConsumableAmount > 0) {
+        if (attackPointConsumableAmount > 0 && attackPointConsumable) {
             GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().UseConsumable(attackPointConsumableID);
         }
         else {
@@ -173,9 +204,22 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public void CollectAttackPointConsumable()
+    {
+        if (!attackPointConsumable) 
+        {
+            attackPointConsumable = true;
+            attackPointConsumableAmount++;
+        }
+
+        else {
+            Debug.Log("Maximum amount of AP consumables");
+        }
+    }
+
     public void AddTurnsConsumable()
     {
-        if (addTurnsConsumableAmount > 0) {
+        if (addTurnsConsumableAmount > 0 && addTurnsConsumable) {
             GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().UseConsumable(addTurnsConsumableID);
         }
         else {
@@ -183,6 +227,19 @@ public class PlayerStats : MonoBehaviour
         }
 
     }
+
+    public void CollectAddTurnsConsumable()
+    {
+        if (!addTurnsConsumable) {
+            addTurnsConsumable = true;
+            addTurnsConsumableAmount++;
+        }
+        else {
+            Debug.Log("Maximum amount of add turns consumables");
+        }
+    }
+    
+    
 
     
 }

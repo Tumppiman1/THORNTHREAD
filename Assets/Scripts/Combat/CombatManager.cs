@@ -432,6 +432,7 @@ public class CombatManager : MonoBehaviour
             {
                 _player.GetComponent<PlayerStats>().ResetAttackPoints();
                 _player.GetComponent<PlayerStats>().attackPointConsumableAmount -= 1;
+                _player.GetComponent<PlayerStats>().attackPointConsumable = false;
                 Debug.Log("Used AP consumable");
                 
             }
@@ -440,12 +441,33 @@ public class CombatManager : MonoBehaviour
             else if (consumableID == 2) 
             {
                 _player.GetComponent<PlayerStats>().addTurnsConsumableAmount -= 1;
+                _player.GetComponent<PlayerStats>().addTurnsConsumable = false;
                 playerActionsLeft += 2;
                 Debug.Log("Used add 2 turns consumable");
             }
             
             playerActionsLeft--;
         }
+    }
+
+    public void UseHealthFlask()
+    {
+        if (isPlayerTurn) 
+        {
+            if (_player.GetComponent<PlayerStats>().healFlaskUsesLeft > 0) 
+            {
+                _player.GetComponent<PlayerStats>().Heal(_player.GetComponent<PlayerStats>().healFlaskHealAmount);
+                _player.GetComponent<PlayerStats>().healFlaskUsesLeft--;
+                playerActionsLeft--;
+                PlayerTurn();
+                Debug.Log("Used heal flask");
+            }
+
+            else {
+                Debug.Log("No heal flask uses left");
+            }
+        }
+            
     }
 
 }

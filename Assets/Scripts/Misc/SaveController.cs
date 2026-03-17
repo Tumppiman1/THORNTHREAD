@@ -32,7 +32,13 @@ public class SaveController : MonoBehaviour
             icons = GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().icons,
             
             combatEncounters = GameObject.FindGameObjectWithTag("CombatEncounterList").GetComponent<CombatEncounterList>().combatEncounters,
-            completedEncounters = GameObject.FindGameObjectWithTag("CombatEncounterList").GetComponent<CombatEncounterList>().completedEncounters
+            completedEncounters = GameObject.FindGameObjectWithTag("CombatEncounterList").GetComponent<CombatEncounterList>().completedEncounters,
+            
+            collectableItems = GameObject.FindGameObjectWithTag("CollectableItemsList").GetComponent<CollectableItemsList>().collectableItems,
+            collectedItems = GameObject.FindGameObjectWithTag("CollectableItemsList").GetComponent<CollectableItemsList>().collectedItems,
+            
+            healRefillStations = GameObject.Find("HealRefillStationList").GetComponent<HealRefillStationList>().healRefillStations,
+            emptyHealRefillStations = GameObject.Find("HealRefillStationList").GetComponent<HealRefillStationList>().emptyHealRefillStations,
         };
         
         File.WriteAllText(_saveLocation, JsonUtility.ToJson(saveData));
@@ -58,6 +64,12 @@ public class SaveController : MonoBehaviour
             
             GameObject.FindGameObjectWithTag("CombatEncounterList").GetComponent<CombatEncounterList>().combatEncounters = saveData.combatEncounters;
             GameObject.FindGameObjectWithTag("CombatEncounterList").GetComponent<CombatEncounterList>().completedEncounters = saveData.completedEncounters;
+            
+            GameObject.FindGameObjectWithTag("CollectableItemsList").GetComponent<CollectableItemsList>().collectableItems = saveData.collectableItems;
+            GameObject.FindGameObjectWithTag("CollectableItemsList").GetComponent<CollectableItemsList>().collectedItems = saveData.collectedItems;
+            
+            GameObject.Find("HealRefillStationList").GetComponent<HealRefillStationList>().healRefillStations = saveData.healRefillStations;
+            GameObject.Find("HealRefillStationList").GetComponent<HealRefillStationList>().emptyHealRefillStations = saveData.emptyHealRefillStations;
             
 
 

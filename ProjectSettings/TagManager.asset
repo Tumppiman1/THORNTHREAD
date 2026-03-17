@@ -12,6 +12,8 @@ TagManager:
   - UI
   - Items
   - CombatEncounterList
+  - CollectableItemsList
+  - Fade
   layers:
   - Default
   - TransparentFX
