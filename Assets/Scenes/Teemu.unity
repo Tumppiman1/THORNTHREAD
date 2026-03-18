@@ -2931,7 +2931,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 100}
+  m_SizeDelta: {x: 1010, y: 105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &414602485
 MonoBehaviour:
@@ -8103,6 +8103,8 @@ MonoBehaviour:
   blackScreenImage: {fileID: 1796186953}
   fadeIn: 0
   fadeOut: 0
+  fadeInMultiplier: 2
+  fadeOutMultiplier: 3
 --- !u!114 &977686849
 MonoBehaviour:
   m_ObjectHideFlags: 0

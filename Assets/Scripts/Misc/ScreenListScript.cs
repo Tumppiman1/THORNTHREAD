@@ -7,22 +7,6 @@ public class ScreenListScript : MonoBehaviour
     public int currentScreen = 0;
     void Start()
     {
-        
-        /*
-        if (currentScreen == null) 
-        {
-            currentScreen = screenList[0];
-            screenList[0].gameObject.SetActive(true);
-        }
-        
-        else {
-            DeactivateScreens();
-
-            if (screenList.Contains(currentScreen)) {
-                currentScreen.gameObject.SetActive(true);
-            }
-        }*/
-        
         DeactivateScreens();
         screenList[currentScreen].gameObject.SetActive(true);
         
@@ -33,18 +17,6 @@ public class ScreenListScript : MonoBehaviour
     {
         screenList[currentScreen].gameObject.SetActive(true);
     }
-
-    /*
-    public void FindCurrentActiveScreen()
-    {
-        foreach (GameObject screen in screenList) 
-        {
-            if (screen.activeInHierarchy) 
-            {
-                screen
-            }
-        }
-    }*/
     
     public void FindCurrentActiveScreen()
     {

@@ -47,7 +47,6 @@ public class CombatManager : MonoBehaviour
 
     public void StartCombat()
     {
-        // GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().currentScreen.transform.GetChild(0).gameObject.SetActive(false);
         transform.parent.GetChild(0).gameObject.SetActive(false);
         
         GameObject.Find("TestUI").transform.GetChild(1).gameObject.SetActive(false);

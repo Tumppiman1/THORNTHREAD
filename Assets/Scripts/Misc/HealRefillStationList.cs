@@ -6,8 +6,6 @@ public class HealRefillStationList : MonoBehaviour
     public List<GameObject> healRefillStations = new List<GameObject>();
     public List<int> healRefillStationsUsesLeft = new List<int>();
     
-    //public List<GameObject> emptyHealRefillStations = new List<GameObject>();
-    
     void Start()
     {
         DeactivateEmptyStations();
@@ -49,18 +47,4 @@ public class HealRefillStationList : MonoBehaviour
             }
         }
     }
-    
-    /*
-    public void DeactivateEmptyStations()
-    {
-        if (emptyHealRefillStations.Count > 0) 
-        {
-            foreach (GameObject station in emptyHealRefillStations) 
-            {
-                station.gameObject.SetActive(false);    
-            }
-        }
-    }
-    */
-    
 }

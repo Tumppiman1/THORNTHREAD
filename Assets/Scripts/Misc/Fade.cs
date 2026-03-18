@@ -8,13 +8,15 @@ public class Fade : MonoBehaviour
     
     public bool fadeIn = false;
     public bool fadeOut = false;
+
+    public float fadeInMultiplier = 2;
+    public float fadeOutMultiplier = 2;
     
     void Update()
     {
         if (fadeIn && blackScreen.alpha <= 1) 
         {
-            blackScreen.alpha += Time.deltaTime;
-
+            blackScreen.alpha += Time.deltaTime * fadeInMultiplier;
             if (blackScreen.alpha >= 1) 
             {
                 fadeIn = false;
@@ -24,7 +26,7 @@ public class Fade : MonoBehaviour
 
         if (fadeOut && blackScreen.alpha >= 0) 
         {
-            blackScreen.alpha -= Time.deltaTime * 2;
+            blackScreen.alpha -= Time.deltaTime * fadeOutMultiplier;
 
             if (blackScreen.alpha <= 0) 
             {
