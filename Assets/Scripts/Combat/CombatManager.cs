@@ -63,7 +63,8 @@ public class CombatManager : MonoBehaviour
         else if (!isPlayerTurn) {
             
             enemyActionsLeft++;
-            EnemyTurn();
+            Invoke(nameof(EnemyTurn), 1f);
+            //EnemyTurn();
         }
     }
 

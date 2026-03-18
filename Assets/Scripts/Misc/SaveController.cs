@@ -26,6 +26,7 @@ public class SaveController : MonoBehaviour
             playerHasAxe = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasAxe,
             playerHasShield = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasShield,
             
+            healFlaskUsesLeft = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().healFlaskUsesLeft,
             attackPointConsumableAmount = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().attackPointConsumableAmount,
             addTurnsConsumableAmount = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().addTurnsConsumableAmount,
             
@@ -40,7 +41,8 @@ public class SaveController : MonoBehaviour
             collectedItems = GameObject.FindGameObjectWithTag("CollectableItemsList").GetComponent<CollectableItemsList>().collectedItems,
             
             healRefillStations = GameObject.Find("HealRefillStationList").GetComponent<HealRefillStationList>().healRefillStations,
-            emptyHealRefillStations = GameObject.Find("HealRefillStationList").GetComponent<HealRefillStationList>().emptyHealRefillStations,
+            healRefillStationsUsesLeft = GameObject.Find("HealRefillStationList").GetComponent<HealRefillStationList>().healRefillStationsUsesLeft,
+            
         };
         
         File.WriteAllText(_saveLocation, JsonUtility.ToJson(saveData));
@@ -62,7 +64,8 @@ public class SaveController : MonoBehaviour
             
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasAxe = saveData.playerHasAxe;
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasShield = saveData.playerHasShield;
-
+            
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().healFlaskUsesLeft = saveData.healFlaskUsesLeft;
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().attackPointConsumableAmount = saveData.attackPointConsumableAmount;
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().addTurnsConsumableAmount = saveData.addTurnsConsumableAmount;
                 
@@ -76,7 +79,7 @@ public class SaveController : MonoBehaviour
             GameObject.FindGameObjectWithTag("CollectableItemsList").GetComponent<CollectableItemsList>().collectedItems = saveData.collectedItems;
             
             GameObject.Find("HealRefillStationList").GetComponent<HealRefillStationList>().healRefillStations = saveData.healRefillStations;
-            GameObject.Find("HealRefillStationList").GetComponent<HealRefillStationList>().emptyHealRefillStations = saveData.emptyHealRefillStations;
+            GameObject.Find("HealRefillStationList").GetComponent<HealRefillStationList>().healRefillStationsUsesLeft = saveData.healRefillStationsUsesLeft;
             
 
 

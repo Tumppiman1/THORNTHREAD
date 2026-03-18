@@ -11,6 +11,7 @@ public class SaveData
     public bool playerHasAxe;                   // Player has collected axe
     public bool playerHasShield;                // Player has collected shield
 
+    public int healFlaskUsesLeft;
     public int attackPointConsumableAmount;     // Amount of AP consumables left
     public int addTurnsConsumableAmount;        // Amount of +2 turns consumables left
     
@@ -25,7 +26,8 @@ public class SaveData
     public List<GameObject> collectedItems;
 
     public List<GameObject> healRefillStations;
-    public List<GameObject> emptyHealRefillStations;
+    public List<int> healRefillStationsUsesLeft;
+    //public List<GameObject> emptyHealRefillStations;
 
 
 }
