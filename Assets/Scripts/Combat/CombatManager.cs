@@ -52,10 +52,18 @@ public class CombatManager : MonoBehaviour
         
         GameObject.Find("TestUI").transform.GetChild(1).gameObject.SetActive(false);
         GameObject.Find("TestUI").transform.GetChild(0).gameObject.SetActive(true);
+        _player.GetComponent<PlayerStats>().ResetAttackPoints();
+        
         if (isPlayerTurn) {
-            _player.GetComponent<PlayerStats>().ResetAttackPoints();
+            //_player.GetComponent<PlayerStats>().ResetAttackPoints();
             playerActionsLeft++;
             PlayerTurn();
+        }
+
+        else if (!isPlayerTurn) {
+            
+            enemyActionsLeft++;
+            EnemyTurn();
         }
     }
 
@@ -317,7 +325,8 @@ public class CombatManager : MonoBehaviour
             GameObject.FindGameObjectWithTag("CombatEncounterList").GetComponent<CombatEncounterList>().RemoveCompletedCombatEncounters();
             
             // GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().currentScreen.transform.GetChild(0).gameObject.SetActive(true);
-            transform.parent.GetChild(0).gameObject.SetActive(false);
+            transform.parent.transform.GetChild(0).gameObject.SetActive(true);
+            Destroy(gameObject);
         }
         
         

@@ -71,7 +71,20 @@ public class MovementScript : MonoBehaviour
             
             else if (combatRequirements.Count > 0) 
             {
-                
+                foreach (GameObject combatEncounter in combatRequirements) 
+                {
+                    if (combatEncounter == null) 
+                    {
+                        Debug.Log("Requirement conditions met");
+                        GameObject.FindGameObjectWithTag("Fade").GetComponent<Fade>().StartFade();
+                        Invoke(nameof(NextCamera), 1f);
+                    }
+                    
+                    else {
+                        Debug.Log("Requirement conditions not met");
+                        break;
+                    }
+                }
             }
 
             else {

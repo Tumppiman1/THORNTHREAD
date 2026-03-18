@@ -22,13 +22,11 @@ public class ScreenListScript : MonoBehaviour
                 currentScreen.gameObject.SetActive(true);
             }
         }*/
-
         
+        DeactivateScreens();
         screenList[currentScreen].gameObject.SetActive(true);
         
-        
-        Debug.Log("Screen list loaded");
-        
+        //Debug.Log("Screen list loaded");
     }
 
     public void UpdateScreen()

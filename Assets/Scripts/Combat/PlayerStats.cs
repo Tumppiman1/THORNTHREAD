@@ -108,6 +108,11 @@ public class PlayerStats : MonoBehaviour
         {
             addTurnsConsumableButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = addTurnsConsumableAmount.ToString();
         }
+
+        if (healFlaskUsesLeft.ToString() != healFlaskButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text) 
+        {
+            healFlaskButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = healFlaskUsesLeft.ToString();
+        }
         
     }
 

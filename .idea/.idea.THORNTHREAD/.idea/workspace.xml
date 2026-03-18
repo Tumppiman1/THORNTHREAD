@@ -10,10 +10,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/CombatManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/PlayerStats.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/MovementScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/MovementScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/SaveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/SaveController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/SaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/SaveData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/ScreenListScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/ScreenListScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +94,8 @@
       <updated>1773299741460</updated>
       <workItem from="1773299743305" duration="15796000" />
       <workItem from="1773386416176" duration="12641000" />
-      <workItem from="1773731836602" duration="13150000" />
+      <workItem from="1773731836602" duration="13175000" />
+      <workItem from="1773818037995" duration="1715000" />
     </task>
     <servers />
   </component>
