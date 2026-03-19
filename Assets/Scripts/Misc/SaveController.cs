@@ -25,10 +25,12 @@ public class SaveController : MonoBehaviour
             
             playerHasAxe = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasAxe,
             playerHasShield = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasShield,
+            playerHasMace = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasMace,
             
             healFlaskUsesLeft = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().healFlaskUsesLeft,
             attackPointConsumableAmount = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().attackPointConsumableAmount,
             addTurnsConsumableAmount = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().addTurnsConsumableAmount,
+            damageOvertimeConsumableAmount = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().damageOvertimeConsumableAmount,
             
             
             items = GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items,
@@ -64,10 +66,12 @@ public class SaveController : MonoBehaviour
             
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasAxe = saveData.playerHasAxe;
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasShield = saveData.playerHasShield;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasMace = saveData.playerHasMace;
             
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().healFlaskUsesLeft = saveData.healFlaskUsesLeft;
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().attackPointConsumableAmount = saveData.attackPointConsumableAmount;
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().addTurnsConsumableAmount = saveData.addTurnsConsumableAmount;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().damageOvertimeConsumableAmount = saveData.damageOvertimeConsumableAmount;
                 
             GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items = saveData.items;
             GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().icons = saveData.icons;
