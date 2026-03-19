@@ -403,6 +403,43 @@ public class CombatManager : MonoBehaviour
             }
         }
         
+        
+        // Mace attack
+        else if (attackTypeID == 3) 
+        {
+            if (target != null && !target.GetComponent<EnemyStats>().isBlocking) 
+            {  
+                int playerRandomHitChance = UnityEngine.Random.Range(0, 100);
+
+                if (playerRandomHitChance <= _player.GetComponent<PlayerStats>().maceHitChance) 
+                {
+                    // attack target
+                    // Debug.Log("here");
+                    target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().maceDamage);
+                    target.GetComponent<EnemyStats>().stunDuration = 2;
+                    _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().maceApCost);
+                    playerActionsLeft--;
+                    target = null;
+                    PlayerTurn();
+                }
+                
+                else {
+                    Debug.Log("Player attack missed");
+                    _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().maceApCost);
+                    playerActionsLeft--;
+                    target = null;
+                    PlayerTurn();
+                }
+            }
+            
+            else {
+                Debug.Log("Enemy blocked attack");
+                target.GetComponent<EnemyStats>().isBlocking = false;
+                _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().maceApCost);
+                PlayerTurn();
+            }
+        }
+        
     }
     
     public void BrokenSwordAttack()
@@ -432,6 +469,17 @@ public class CombatManager : MonoBehaviour
             playerIsBlocking = true;
             playerActionsLeft--;
             PlayerTurn();
+        }
+    }
+
+    public void StunMaceAttack()
+    {
+        attackType = 3;
+        
+        if (isPlayerTurn) 
+        {
+            // acquire target
+            chooseTarget = true;
         }
     }
 

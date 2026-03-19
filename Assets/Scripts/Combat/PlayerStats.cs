@@ -44,6 +44,14 @@ public class PlayerStats : MonoBehaviour
     public bool playerHasShield = true;
     //public int blockAmount = 1;
     
+    // Mace
+    [Header("Mace stats")]
+    public bool playerHasMace = true;
+    public float maceDamage = 10f;
+    public int maceApCost = 2;
+    public int maceHitChance = 100;
+    
+    
     
     // Consumables
     [Header("Consumables")]
@@ -200,6 +208,14 @@ public class PlayerStats : MonoBehaviour
     public void ShieldBlock()
     {
         GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().ShieldBlock();
+    }
+
+    public void StunMaceAttack()
+    {
+        if (attackPointCount - maceApCost >= 0) {
+
+            GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().StunMaceAttack();
+        }
     }
 
     public void AttackPointConsumable()

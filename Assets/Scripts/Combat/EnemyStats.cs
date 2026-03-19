@@ -20,6 +20,10 @@ public class EnemyStats : MonoBehaviour
     public int healChance = 5;
     public int specialChance = 5;
 
+    [Header("Special effects")] 
+    public int stunDuration = 0;
+    
+
     public bool isBlocking = false;
     
     void Start()
