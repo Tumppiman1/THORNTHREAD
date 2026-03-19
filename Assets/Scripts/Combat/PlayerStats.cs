@@ -14,6 +14,7 @@ public class PlayerStats : MonoBehaviour
     
     [SerializeField] private GameObject addAttackPointsConsumableButton;
     [SerializeField] private GameObject addTurnsConsumableButton;
+    [SerializeField] private GameObject damageOverTimeConsumableButton;
     
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private TextMeshProUGUI attackPointText;
@@ -70,10 +71,25 @@ public class PlayerStats : MonoBehaviour
     public bool addTurnsConsumable = false;
     public int addTurnsConsumableAmount = 1;
     
+    [Header("Damage overtime consumable")]
+    public int damageOvertimeConsumableID = 3;
+    public bool damageOvertimeConsumable = false;
+    public int damageOvertimeConsumableAmount = 0;
+    public float damageOvertimeConsumableDamage = 4f;
+    public int damageOvertimeConsumableDuration = 4;
+    
     
     void Start()
     {
         // health = maxHealth;
+
+        if (health == 0) {
+            health = maxHealth;
+        }
+
+        else {
+            
+        }
         
         
         healthText.text = "Health: " + health;
@@ -121,7 +137,11 @@ public class PlayerStats : MonoBehaviour
         {
             healFlaskButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = healFlaskUsesLeft.ToString();
         }
-        
+
+        if (damageOvertimeConsumableAmount.ToString() != damageOverTimeConsumableButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text) 
+        {
+            damageOverTimeConsumableButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = damageOvertimeConsumableAmount.ToString();
+        }
     }
 
     public void TakeAttackPoints(int apCost)
@@ -261,6 +281,19 @@ public class PlayerStats : MonoBehaviour
         else {
             Debug.Log("Maximum amount of add turns consumables");
         }
+    }
+
+    public void DamageOvertimeConsumable()
+    {
+        if (damageOvertimeConsumableAmount > 0) 
+        {
+            GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().DamageOvertimeConsumableAttack();
+        }
+    }
+
+    public void CollectDamageOvertimeConsumable()
+    {
+        damageOvertimeConsumableAmount++;
     }
 
     public void ReloadLastCheckPoint()

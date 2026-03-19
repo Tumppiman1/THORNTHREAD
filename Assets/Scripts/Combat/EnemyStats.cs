@@ -22,6 +22,7 @@ public class EnemyStats : MonoBehaviour
 
     [Header("Special effects")] 
     public int stunDuration = 0;
+    public int damageOvertimeDuration = 0;
     
 
     public bool isBlocking = false;

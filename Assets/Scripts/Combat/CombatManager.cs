@@ -107,6 +107,17 @@ public class CombatManager : MonoBehaviour
         }
 
         else {
+            // Damage overtime effect
+            foreach (GameObject enemy in enemies.ToList()) 
+            {
+                if (enemy.GetComponent<EnemyStats>().enemyAlive && enemy.GetComponent<EnemyStats>().damageOvertimeDuration > 0) 
+                {
+                    Debug.Log("Enemy took: " + _player.GetComponent<PlayerStats>().damageOvertimeConsumableDamage + " damage overtime");
+                    enemy.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().damageOvertimeConsumableDamage);
+                    enemy.GetComponent<EnemyStats>().damageOvertimeDuration--;
+                }
+            }
+            
             isPlayerTurn = false;
             ChangeTurn();
         }
@@ -118,11 +129,11 @@ public class CombatManager : MonoBehaviour
         {
             // Enemy attack
             
-            // One enemy
+            // Single enemy
             if (enemies.Count == 1) 
             {
                 Debug.Log("single");
-                if (enemies[0].GetComponent<EnemyStats>().enemyAlive) 
+                if (enemies[0].GetComponent<EnemyStats>().enemyAlive && enemies[0].GetComponent<EnemyStats>().stunDuration <= 0) 
                 {
                         // Decide enemy attack option
                         int enemyAttackChance = enemies[0].GetComponent<EnemyStats>().attackChance;
@@ -202,6 +213,14 @@ public class CombatManager : MonoBehaviour
                         }
                         
                 }
+                
+                else if (enemies[0].GetComponent<EnemyStats>().enemyAlive && enemies[0].GetComponent<EnemyStats>().stunDuration > 0) 
+                {
+                    Debug.Log("Enemy is stunned");
+                    enemies[0].GetComponent<EnemyStats>().stunDuration--;
+                    enemyActionsLeft--;
+                    EnemyTurn();
+                }
 
                 else 
                 {
@@ -224,7 +243,7 @@ public class CombatManager : MonoBehaviour
                         index = 0;
                     }
 
-                    if (enemy.GetComponent<EnemyStats>().enemyAlive) 
+                    if (enemy.GetComponent<EnemyStats>().enemyAlive && enemy.GetComponent<EnemyStats>().stunDuration <= 0) 
                     {
                         // Decide enemy attack option
                         int enemyAttackChance = enemy.GetComponent<EnemyStats>().attackChance;
@@ -297,11 +316,20 @@ public class CombatManager : MonoBehaviour
                             //Debug.Log(randomInt);
                         }
                     }
+                    
+                    else if (enemy.GetComponent<EnemyStats>().enemyAlive && enemy.GetComponent<EnemyStats>().stunDuration > 0) 
+                    {
+                        Debug.Log("Enemy is stunned");
+                        enemy.GetComponent<EnemyStats>().stunDuration--;
+                        
+                    }
                 }
                 
                 enemyActionsLeft--;
                 EnemyTurn();
             }
+            
+            
         }
 
         else 
@@ -407,8 +435,10 @@ public class CombatManager : MonoBehaviour
         // Mace attack
         else if (attackTypeID == 3) 
         {
+            // Check if enemy is blocking
             if (target != null && !target.GetComponent<EnemyStats>().isBlocking) 
             {  
+                // Hit chance calculation
                 int playerRandomHitChance = UnityEngine.Random.Range(0, 100);
 
                 if (playerRandomHitChance <= _player.GetComponent<PlayerStats>().maceHitChance) 
@@ -439,6 +469,25 @@ public class CombatManager : MonoBehaviour
                 PlayerTurn();
             }
         }
+        
+        else if (attackTypeID == 4) 
+        {
+            // Check if enemy isnt null
+            if (target != null) 
+            {  
+                    // attack target
+                    // Debug.Log("here");
+                    // target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().maceDamage);
+                    target.GetComponent<EnemyStats>().damageOvertimeDuration = _player.GetComponent<PlayerStats>().damageOvertimeConsumableDuration;
+                    _player.GetComponent<PlayerStats>().damageOvertimeConsumableAmount--;
+                    
+                    playerActionsLeft--;
+                    target = null;
+                    PlayerTurn();
+            }
+        }
+        
+        
         
     }
     
@@ -483,6 +532,19 @@ public class CombatManager : MonoBehaviour
         }
     }
 
+    public void DamageOvertimeConsumableAttack()
+    {
+        // Damage overtime consumable
+
+        attackType = 4;
+        
+        if (isPlayerTurn) 
+        {
+            // acquire target
+            chooseTarget = true;
+        }
+    }
+
     public void UseConsumable(int consumableID)
     {
         if (isPlayerTurn) 
@@ -505,6 +567,8 @@ public class CombatManager : MonoBehaviour
                 playerActionsLeft += 2;
                 Debug.Log("Used add 2 turns consumable");
             }
+            
+            
             
             playerActionsLeft--;
         }
