@@ -30,7 +30,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Start()
+  /*  private void Start()
     {
         var data = AudioSaveManager.instance.Data;
 
@@ -49,7 +49,7 @@ public class AudioManager : MonoBehaviour
     }
 
 
-
+    */
 
     public void PlayMusic(string name)
     {

@@ -376,6 +376,7 @@ public class CombatManager : MonoBehaviour
                     target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().brokenSwordDamage);
                     playerActionsLeft--;
                     target = null;
+                    AudioManager.Instance.PlaySFX("Sword_Hit");
                     PlayerTurn();
                 }
 
@@ -383,6 +384,7 @@ public class CombatManager : MonoBehaviour
                     Debug.Log("Player attack missed");
                     playerActionsLeft--;
                     target = null;
+                    AudioManager.Instance.PlaySFX("Sword_Miss");
                     PlayerTurn();
                 }
             }
@@ -392,6 +394,7 @@ public class CombatManager : MonoBehaviour
                 target.GetComponent<EnemyStats>().isBlocking = false;
                 target = null;
                 playerActionsLeft--;
+                AudioManager.Instance.PlaySFX("Sword_Miss2");
                 PlayerTurn();
             }
         }
