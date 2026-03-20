@@ -39,7 +39,7 @@ public class HealRefillStationList : MonoBehaviour
         
         foreach (GameObject station in healRefillStations) 
         {
-            Debug.Log(healRefillStations.IndexOf(station));
+            //Debug.Log(healRefillStations.IndexOf(station));
 
             if (healRefillStations[healRefillStations.IndexOf(station)].gameObject == healRefillStation) 
             {

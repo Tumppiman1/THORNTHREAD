@@ -90,6 +90,8 @@ public class PlayerStats : MonoBehaviour
         else {
             
         }
+
+        //GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().enabled = true;
         
         
         healthText.text = "Health: " + health;
