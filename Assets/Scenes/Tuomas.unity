@@ -5656,6 +5656,8 @@ MonoBehaviour:
   blackScreenImage: {fileID: 1053556146}
   fadeIn: 0
   fadeOut: 0
+  fadeInMultiplier: 2
+  fadeOutMultiplier: 2
 --- !u!114 &1462530885
 MonoBehaviour:
   m_ObjectHideFlags: 0
