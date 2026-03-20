@@ -306,7 +306,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSounds: []
-  sfxSounds: []
+  sfxSounds:
+  - name: Axe_Equip
+    clip: {fileID: 8300000, guid: 957c75064aa50254380a4b7365fdbf6e, type: 3}
+  - name: Axe_Hit
+    clip: {fileID: 8300000, guid: 5f25d951e518c7a49bd48ebaa7a9800d, type: 3}
+  - name: Axe_Unequip
+    clip: {fileID: 8300000, guid: 864885f7c2d1baf49b65b72685b9dd00, type: 3}
+  - name: Player_Damage
+    clip: {fileID: 8300000, guid: 655a2077b544f9947b1ac77fe4260a72, type: 3}
+  - name: Player_Damage2
+    clip: {fileID: 8300000, guid: b5f18c71431942447aa3e8a18da338aa, type: 3}
+  - name: Shied_Block
+    clip: {fileID: 8300000, guid: e7372a97f6ac06040b9166b9a86562ac, type: 3}
+  - name: Shied_Block2
+    clip: {fileID: 8300000, guid: e3fadf72a2e3ec8428804bedf7944bf4, type: 3}
+  - name: Shied_Block3
+    clip: {fileID: 8300000, guid: 4cf09ce94d513a8468c925f03121ef09, type: 3}
+  - name: Shied_Block3
+    clip: {fileID: 8300000, guid: 26296b626e1eab3478be8115517393c2, type: 3}
+  - name: Shied_Equip
+    clip: {fileID: 8300000, guid: e96b499a3bc036d4c8793ac9de38d678, type: 3}
+  - name: Shied_Unequip
+    clip: {fileID: 8300000, guid: 1df1cc6e8d3fa1546a2a53d6f9435194, type: 3}
+  - name: Shied_Unequip
+    clip: {fileID: 8300000, guid: 1df1cc6e8d3fa1546a2a53d6f9435194, type: 3}
+  - name: Sword_Equip
+    clip: {fileID: 8300000, guid: bc9ab6948a3d6d34c921a3e243346550, type: 3}
+  - name: Sword_Hit
+    clip: {fileID: 8300000, guid: 8b308f801bbbc9342afd24d3a116c5e3, type: 3}
+  - name: Sword_Miss
+    clip: {fileID: 8300000, guid: 2d0b2f0221643fe4491be97c95614e09, type: 3}
+  - name: Sword_Miss2
+    clip: {fileID: 8300000, guid: e9f46fc6c84ea3f47a6e5bf987411c83, type: 3}
+  - name: Sword_Unequip
+    clip: {fileID: 8300000, guid: d6103b95bfc5cbd4681333b27d28485a, type: 3}
+  - name: Skeleton hit
+    clip: {fileID: 8300000, guid: 891e75ec704d407488123e79c31e551d, type: 3}
+  - name: Skeleton Miss
+    clip: {fileID: 8300000, guid: 428d23a522ac7e64185bad53bd0bb125, type: 3}
+  - name: Healing
+    clip: {fileID: 8300000, guid: 9767d99d9fd3d8e4ebf55cb8be653c05, type: 3}
+  - name: Click
+    clip: {fileID: 8300000, guid: dd701e8490c71d64982609ec20256e09, type: 3}
+  - name: Game Start
+    clip: {fileID: 8300000, guid: b20eab4e82f4d1f4faf690fc22de989c, type: 3}
   ambSounds: []
   musicSource: {fileID: 3256639991610041465}
   sfxSource: {fileID: 658423893461726896}
