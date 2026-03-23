@@ -51,11 +51,11 @@ Material:
     - _RefractionStrenght: 1.12
     - _Smoothness: 0.85
     - _WaveAmplitude: 0.05
-    - _WaveSpeed: 0.19
+    - _WaveSpeed: 0.28
     m_Colors:
-    - _DeepColor: {r: 0.054378785, g: 0.04734781, b: 0.0754717, a: 0.68235296}
-    - _FoamColor: {r: 0.0830933, g: 0.032484863, b: 0.09433961, a: 1}
+    - _DeepColor: {r: 0.08217975, g: 0.075872205, b: 0.103773594, a: 0.59607846}
+    - _FoamColor: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
     - _RefractionScale: {r: 130.2, g: 70.9, b: 0, a: 0}
-    - _SurfaceColor: {r: 0.09433961, g: 0.05838376, b: 0.049394794, a: 0}
+    - _SurfaceColor: {r: 0.05735104, g: 0.051397283, b: 0.14150941, a: 0.6392157}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
