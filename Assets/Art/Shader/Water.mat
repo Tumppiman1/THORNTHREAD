@@ -48,7 +48,7 @@ Material:
     - _NormalStrenght: 2.6
     - _QueueControl: 0
     - _RefractionSpeed: 0.05
-    - _RefractionStrenght: 0.28
+    - _RefractionStrenght: 1.12
     - _Smoothness: 0.85
     - _WaveAmplitude: 0.05
     - _WaveSpeed: 0.19
