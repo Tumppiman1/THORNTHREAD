@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6544515386408138489
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 854028938387864762, guid: a38407cd0df36a648aac6aa29602efc5, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 58.39751
+      objectReference: {fileID: 0}
+    - target: {fileID: 854028938387864762, guid: a38407cd0df36a648aac6aa29602efc5, type: 3}
+      propertyPath: ShapeModule.arc.value
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 854028938387864762, guid: a38407cd0df36a648aac6aa29602efc5, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.3592643
+      objectReference: {fileID: 0}
+    - target: {fileID: 854028938387864762, guid: a38407cd0df36a648aac6aa29602efc5, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.3293579
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424381259776963975, guid: a38407cd0df36a648aac6aa29602efc5, type: 3}
+      propertyPath: m_Name
+      value: VFX_Particle_FirepitFire Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427333629162251126, guid: a38407cd0df36a648aac6aa29602efc5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 112.624
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427333629162251126, guid: a38407cd0df36a648aac6aa29602efc5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.745
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427333629162251126, guid: a38407cd0df36a648aac6aa29602efc5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 250.207
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427333629162251126, guid: a38407cd0df36a648aac6aa29602efc5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427333629162251126, guid: a38407cd0df36a648aac6aa29602efc5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427333629162251126, guid: a38407cd0df36a648aac6aa29602efc5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427333629162251126, guid: a38407cd0df36a648aac6aa29602efc5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427333629162251126, guid: a38407cd0df36a648aac6aa29602efc5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427333629162251126, guid: a38407cd0df36a648aac6aa29602efc5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427333629162251126, guid: a38407cd0df36a648aac6aa29602efc5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a38407cd0df36a648aac6aa29602efc5, type: 3}
