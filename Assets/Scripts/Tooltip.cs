@@ -69,9 +69,12 @@ public class Tooltip : MonoBehaviour
             rectTransform.pivot = new Vector2(1.1f, y);
         else if (x <= y && x >= 1 - y) //top
             rectTransform.pivot = new Vector2(x, 1.3f);
+            
+            transform.position = position;
         */
-        Vector2 position = Input.mousePosition;
+        /*Vector2 position = Input.mousePosition;
         
         transform.position = position;
+        */
     }
 }
