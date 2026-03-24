@@ -214,8 +214,8 @@ public class PlayerStats : MonoBehaviour
     public void BrokenSwordAttack()
     {
         GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().BrokenSwordAttack();
-        AudioManager.Instance.PlaySFX("Sword_Equip");
-        // GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().
+        // AudioManager.Instance.PlaySFX("Sword_Equip");
+        
         
     }
 

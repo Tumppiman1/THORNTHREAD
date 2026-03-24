@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -74,7 +75,9 @@ public class CombatManager : MonoBehaviour
             Debug.Log("Player turn");
             playerIsBlocking = false;
             playerActionsLeft++;
-            PlayerTurn();
+            StartCoroutine(PlayerTurnText());
+            Invoke(nameof(PlayerTurn), 1f);
+            //PlayerTurn();
         }
 
         else if (!isPlayerTurn) // enemy turn 
@@ -89,7 +92,10 @@ public class CombatManager : MonoBehaviour
                     enemy.GetComponent<EnemyStats>().isBlocking = false;
                 }
                 enemyActionsLeft++;
-                EnemyTurn();
+                StartCoroutine(EnemyTurnText());
+                
+                Invoke(nameof(EnemyTurn), 1f);
+                // EnemyTurn();
             }
 
             else {
@@ -119,6 +125,8 @@ public class CombatManager : MonoBehaviour
             }
             
             isPlayerTurn = false;
+            
+            
             ChangeTurn();
         }
     }
@@ -376,7 +384,7 @@ public class CombatManager : MonoBehaviour
                     target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().brokenSwordDamage);
                     playerActionsLeft--;
                     target = null;
-                    AudioManager.Instance.PlaySFX("Sword_Hit");
+                    //AudioManager.Instance.PlaySFX("Sword_Hit");
                     PlayerTurn();
                 }
 
@@ -384,7 +392,7 @@ public class CombatManager : MonoBehaviour
                     Debug.Log("Player attack missed");
                     playerActionsLeft--;
                     target = null;
-                    AudioManager.Instance.PlaySFX("Sword_Miss");
+                    //AudioManager.Instance.PlaySFX("Sword_Miss");
                     PlayerTurn();
                 }
             }
@@ -394,7 +402,7 @@ public class CombatManager : MonoBehaviour
                 target.GetComponent<EnemyStats>().isBlocking = false;
                 target = null;
                 playerActionsLeft--;
-                AudioManager.Instance.PlaySFX("Sword_Miss2");
+                //AudioManager.Instance.PlaySFX("Sword_Miss2");
                 PlayerTurn();
             }
         }
@@ -595,6 +603,20 @@ public class CombatManager : MonoBehaviour
             }
         }
             
+    }
+
+    IEnumerator PlayerTurnText()
+    {
+        GameObject.Find("CombatText").transform.GetChild(1).gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        GameObject.Find("CombatText").transform.GetChild(1).gameObject.SetActive(false);
+    }
+    
+    IEnumerator EnemyTurnText()
+    {
+        GameObject.Find("CombatText").transform.GetChild(0).gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        GameObject.Find("CombatText").transform.GetChild(0).gameObject.SetActive(false);
     }
 
 }
