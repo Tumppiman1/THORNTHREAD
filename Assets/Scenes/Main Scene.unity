@@ -4437,7 +4437,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 0.68076783, g: 0.4780171, b: 0.7735849, a: 1}
-  m_Intensity: 8.37
+  m_Intensity: 3.71
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4499,13 +4499,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.50608027, y: 0.49186945, z: 0.37632495, w: 0.6002722}
+  m_LocalRotation: {x: 0.45604494, y: 0.41463783, z: 0.4073728, w: 0.67390347}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 13.731, y: -630.23, z: 77.846}
+  m_LocalEulerAnglesHint: {x: 16.071, y: -644.476, z: 74.788}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8166,6 +8166,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain_prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5714810667582847748, guid: 2901ab27e3c85b84b837b26aca29d56f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 110.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714810667582847748, guid: 2901ab27e3c85b84b837b26aca29d56f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 261.18
+      objectReference: {fileID: 0}
     - target: {fileID: 5724837314275009389, guid: 2901ab27e3c85b84b837b26aca29d56f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -8372,7 +8380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requirements: []
   combatRequirements: []
-  nextCamera: {fileID: 2123157646}
+  nextCamera: {fileID: 0}
 --- !u!114 &762294300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10240,7 +10248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &888853999
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18005,7 +18013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requirements: []
   combatRequirements: []
-  nextCamera: {fileID: 0}
+  nextCamera: {fileID: 720921099}
 --- !u!114 &1501618605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22460,7 +22468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requirements: []
   combatRequirements: []
-  nextCamera: {fileID: 0}
+  nextCamera: {fileID: 2123157646}
 --- !u!114 &1906945016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24521,7 +24529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requirements: []
   combatRequirements: []
-  nextCamera: {fileID: 0}
+  nextCamera: {fileID: 601214560}
 --- !u!114 &2114833089
 MonoBehaviour:
   m_ObjectHideFlags: 0
