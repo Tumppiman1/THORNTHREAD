@@ -43,6 +43,7 @@ public class PlayerStats : MonoBehaviour
     // Shield
     [Header("Shield stats")]
     public bool playerHasShield = true;
+    public int shieldApCost = 1;
     //public int blockAmount = 1;
     
     // Mace
@@ -230,7 +231,9 @@ public class PlayerStats : MonoBehaviour
 
     public void ShieldBlock()
     {
-        GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().ShieldBlock();
+        if (attackPointCount - shieldApCost >= 0) {
+            GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().ShieldBlock();
+        }
     }
 
     public void StunMaceAttack()

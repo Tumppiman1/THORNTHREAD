@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class CombatManager : MonoBehaviour
@@ -57,14 +58,16 @@ public class CombatManager : MonoBehaviour
         if (isPlayerTurn) {
             //_player.GetComponent<PlayerStats>().ResetAttackPoints();
             playerActionsLeft++;
-            PlayerTurn();
+            StartCoroutine(PlayerFirstTurnText());
+            Invoke(nameof(PlayerTurn), 2f);
         }
 
         else if (!isPlayerTurn) {
             
             enemyActionsLeft++;
-            Invoke(nameof(EnemyTurn), 1f);
-            //EnemyTurn();
+            //Invoke(nameof(EnemyTurn), 1f);
+            StartCoroutine(EnemyFirstTurnText());
+            Invoke(nameof(EnemyTurn), 2f);
         }
     }
 
@@ -167,6 +170,7 @@ public class CombatManager : MonoBehaviour
                                 {
                                     float enemyDamage = enemies[0].GetComponent<EnemyStats>().enemyDamage;
                                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().TakeDamage(enemyDamage);
+                                    StartCoroutine(PlayerDamageText("-" + enemyDamage));
                                     enemyActionsLeft--;
                                     EnemyTurn();
                                 }
@@ -277,6 +281,7 @@ public class CombatManager : MonoBehaviour
                                 {
                                     float enemyDamage = enemy.GetComponent<EnemyStats>().enemyDamage;
                                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().TakeDamage(enemyDamage);
+                                    StartCoroutine(PlayerDamageText("-" + enemyDamage));
                                     
                                 }
 
@@ -420,6 +425,7 @@ public class CombatManager : MonoBehaviour
                     // Debug.Log("here");
                     target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().axeDamage);
                     _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().axeApCost);
+                    StartCoroutine(PlayerAPText("-" + _player.GetComponent<PlayerStats>().axeApCost.ToString()));
                     playerActionsLeft--;
                     target = null;
                     PlayerTurn();
@@ -428,6 +434,7 @@ public class CombatManager : MonoBehaviour
                 else {
                     Debug.Log("Player attack missed");
                     _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().axeApCost);
+                    StartCoroutine(PlayerAPText("-" + _player.GetComponent<PlayerStats>().axeApCost.ToString()));
                     playerActionsLeft--;
                     target = null;
                     PlayerTurn();
@@ -438,6 +445,7 @@ public class CombatManager : MonoBehaviour
                 Debug.Log("Enemy blocked attack");
                 target.GetComponent<EnemyStats>().isBlocking = false;
                 _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().axeApCost);
+                StartCoroutine(PlayerAPText("-" + _player.GetComponent<PlayerStats>().axeApCost.ToString()));
                 PlayerTurn();
             }
         }
@@ -459,6 +467,7 @@ public class CombatManager : MonoBehaviour
                     target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().maceDamage);
                     target.GetComponent<EnemyStats>().stunDuration = 2;
                     _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().maceApCost);
+                    StartCoroutine(PlayerAPText("-" + _player.GetComponent<PlayerStats>().maceApCost.ToString()));
                     playerActionsLeft--;
                     target = null;
                     PlayerTurn();
@@ -467,6 +476,7 @@ public class CombatManager : MonoBehaviour
                 else {
                     Debug.Log("Player attack missed");
                     _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().maceApCost);
+                    StartCoroutine(PlayerAPText("-" + _player.GetComponent<PlayerStats>().maceApCost.ToString()));
                     playerActionsLeft--;
                     target = null;
                     PlayerTurn();
@@ -528,6 +538,7 @@ public class CombatManager : MonoBehaviour
         if (isPlayerTurn) {
             playerIsBlocking = true;
             playerActionsLeft--;
+            _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().shieldApCost);
             PlayerTurn();
         }
     }
@@ -617,6 +628,36 @@ public class CombatManager : MonoBehaviour
         GameObject.Find("CombatText").transform.GetChild(0).gameObject.SetActive(true);
         yield return new WaitForSeconds(1f);
         GameObject.Find("CombatText").transform.GetChild(0).gameObject.SetActive(false);
+    }
+    
+    IEnumerator PlayerFirstTurnText()
+    {
+        GameObject.Find("CombatText").transform.GetChild(3).gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        GameObject.Find("CombatText").transform.GetChild(3).gameObject.SetActive(false);
+    }
+    
+    IEnumerator EnemyFirstTurnText()
+    {
+        GameObject.Find("CombatText").transform.GetChild(2).gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        GameObject.Find("CombatText").transform.GetChild(2).gameObject.SetActive(false);
+    }
+    
+    IEnumerator PlayerDamageText(string text)
+    {
+        GameObject.Find("CombatText").transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().text = text;
+        GameObject.Find("CombatText").transform.GetChild(4).gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        GameObject.Find("CombatText").transform.GetChild(4).gameObject.SetActive(false);
+    }
+    
+    IEnumerator PlayerAPText(string text)
+    {
+        GameObject.Find("CombatText").transform.GetChild(5).gameObject.GetComponent<TextMeshProUGUI>().text = text;
+        GameObject.Find("CombatText").transform.GetChild(5).gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        GameObject.Find("CombatText").transform.GetChild(5).gameObject.SetActive(false);
     }
 
 }
