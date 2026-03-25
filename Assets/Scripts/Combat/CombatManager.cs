@@ -98,7 +98,7 @@ public class CombatManager : MonoBehaviour
                 enemyActionsLeft++;
                 StartCoroutine(EnemyTurnText());
                 
-                Invoke(nameof(EnemyTurn), 3f);
+                Invoke(nameof(EnemyTurn), 2f);
                 // EnemyTurn();
             }
 
