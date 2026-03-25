@@ -9,6 +9,8 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private GameObject brokenSwordButton;
     [SerializeField] private GameObject axeButton;
     [SerializeField] private GameObject shieldButton;
+    [SerializeField] private GameObject maceButton;
+    [SerializeField] private GameObject inspectEnemyButton;
 
     [SerializeField] private GameObject healFlaskButton;
     
@@ -53,6 +55,8 @@ public class PlayerStats : MonoBehaviour
     public int maceApCost = 2;
     public int maceHitChance = 100;
     
+    // Inspect enemy
+    public int inspectEnemyApCost = 1;
     
     
     // Consumables
@@ -107,7 +111,7 @@ public class PlayerStats : MonoBehaviour
     {
         
         // Deactivate axe if not collected or not enough AP to use it
-        if (playerHasAxe && attackPointCount > 0) 
+        if (playerHasAxe && attackPointCount >= 3) 
         {
             axeButton.SetActive(true);
         }
@@ -117,14 +121,35 @@ public class PlayerStats : MonoBehaviour
         }
     
         // Deactivate shield if not collected
-        if (!playerHasShield) 
+        if (playerHasShield && attackPointCount >= 1) 
         {
-            shieldButton.SetActive(false);
+            shieldButton.SetActive(true);
         }
 
         else {
-            shieldButton.SetActive(true);
+            shieldButton.SetActive(false);
         }
+        
+        // Deactivate mace
+        if (playerHasMace && attackPointCount >= 5) {
+            maceButton.SetActive(true);
+        }
+
+        else {
+            maceButton.SetActive(false);
+        }
+        
+        // Deactive inspect
+        if (attackPointCount >= 1) 
+        {
+            inspectEnemyButton.SetActive(true);
+        }
+
+        else {
+            inspectEnemyButton.SetActive(false);
+        }
+        
+        
         
         if (attackPointConsumableAmount.ToString() != addAttackPointsConsumableButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text) 
         {
@@ -241,6 +266,14 @@ public class PlayerStats : MonoBehaviour
         if (attackPointCount - maceApCost >= 0) {
 
             GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().StunMaceAttack();
+        }
+    }
+
+    public void InspectEnemy()
+    {
+        if (attackPointCount - inspectEnemyApCost >= 0) 
+        {
+            GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().InspectEnemy();
         }
     }
 

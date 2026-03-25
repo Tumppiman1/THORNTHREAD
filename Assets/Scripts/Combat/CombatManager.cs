@@ -59,7 +59,7 @@ public class CombatManager : MonoBehaviour
             //_player.GetComponent<PlayerStats>().ResetAttackPoints();
             playerActionsLeft++;
             StartCoroutine(PlayerFirstTurnText());
-            Invoke(nameof(PlayerTurn), 2f);
+            Invoke(nameof(PlayerTurn), 3f);
         }
 
         else if (!isPlayerTurn) {
@@ -67,7 +67,7 @@ public class CombatManager : MonoBehaviour
             enemyActionsLeft++;
             //Invoke(nameof(EnemyTurn), 1f);
             StartCoroutine(EnemyFirstTurnText());
-            Invoke(nameof(EnemyTurn), 2f);
+            Invoke(nameof(EnemyTurn), 4f);
         }
     }
 
@@ -79,7 +79,7 @@ public class CombatManager : MonoBehaviour
             playerIsBlocking = false;
             playerActionsLeft++;
             StartCoroutine(PlayerTurnText());
-            Invoke(nameof(PlayerTurn), 1f);
+            Invoke(nameof(PlayerTurn), 2f);
             //PlayerTurn();
         }
 
@@ -87,8 +87,9 @@ public class CombatManager : MonoBehaviour
         {
             Debug.Log("Enemy turn");
             
-            if (enemies.Count > 0) {
-
+            if (enemies.Count >= 1) 
+            {   
+                
                 foreach (GameObject enemy in enemies) 
                 {
                     // Remove block effect from enemies at the start of enemy turn
@@ -97,7 +98,7 @@ public class CombatManager : MonoBehaviour
                 enemyActionsLeft++;
                 StartCoroutine(EnemyTurnText());
                 
-                Invoke(nameof(EnemyTurn), 1f);
+                Invoke(nameof(EnemyTurn), 3f);
                 // EnemyTurn();
             }
 
@@ -119,11 +120,13 @@ public class CombatManager : MonoBehaviour
             // Damage overtime effect
             foreach (GameObject enemy in enemies.ToList()) 
             {
-                if (enemy.GetComponent<EnemyStats>().enemyAlive && enemy.GetComponent<EnemyStats>().damageOvertimeDuration > 0) 
+                if (enemy != null) 
                 {
-                    Debug.Log("Enemy took: " + _player.GetComponent<PlayerStats>().damageOvertimeConsumableDamage + " damage overtime");
-                    enemy.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().damageOvertimeConsumableDamage);
-                    enemy.GetComponent<EnemyStats>().damageOvertimeDuration--;
+                    if (enemy.GetComponent<EnemyStats>().enemyAlive && enemy.GetComponent<EnemyStats>().damageOvertimeDuration > 0) {
+                        Debug.Log("Enemy took: " + _player.GetComponent<PlayerStats>().damageOvertimeConsumableDamage + " damage overtime");
+                        enemy.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().damageOvertimeConsumableDamage);
+                        enemy.GetComponent<EnemyStats>().damageOvertimeDuration--;
+                    }
                 }
             }
             
@@ -380,7 +383,7 @@ public class CombatManager : MonoBehaviour
         {
             if (target != null && !target.GetComponent<EnemyStats>().isBlocking) 
             {  
-                int playerRandomHitChance = UnityEngine.Random.Range(0, 100);
+                int playerRandomHitChance = UnityEngine.Random.Range(0, target.GetComponent<EnemyStats>().enemyEvadeChance);
 
                 if (playerRandomHitChance <= _player.GetComponent<PlayerStats>().swordHitChance) 
                 {
@@ -417,7 +420,7 @@ public class CombatManager : MonoBehaviour
         {
             if (target != null && !target.GetComponent<EnemyStats>().isBlocking) 
             {  
-                int playerRandomHitChance = UnityEngine.Random.Range(0, 100);
+                int playerRandomHitChance = UnityEngine.Random.Range(0, target.GetComponent<EnemyStats>().enemyEvadeChance);
 
                 if (playerRandomHitChance <= _player.GetComponent<PlayerStats>().axeHitChance) 
                 {
@@ -458,7 +461,7 @@ public class CombatManager : MonoBehaviour
             if (target != null && !target.GetComponent<EnemyStats>().isBlocking) 
             {  
                 // Hit chance calculation
-                int playerRandomHitChance = UnityEngine.Random.Range(0, 100);
+                int playerRandomHitChance = UnityEngine.Random.Range(0, target.GetComponent<EnemyStats>().enemyEvadeChance);
 
                 if (playerRandomHitChance <= _player.GetComponent<PlayerStats>().maceHitChance) 
                 {
@@ -508,6 +511,21 @@ public class CombatManager : MonoBehaviour
             }
         }
         
+        // Inspect enemy
+        else if (attackTypeID == 5) 
+        {
+            // Check if enemy isnt null
+            if (target != null) 
+            {  
+                // Inspect target
+                StartCoroutine(InspectEnemyText("Enemy HP: " + target.GetComponent<EnemyStats>().enemyHealth + "/" + target.GetComponent<EnemyStats>().enemyMaxHealth));
+                _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().inspectEnemyApCost);
+                playerActionsLeft--;
+                target = null;
+                //PlayerTurn();
+                Invoke(nameof(PlayerTurn), 2f);
+            }
+        }
         
         
     }
@@ -546,6 +564,17 @@ public class CombatManager : MonoBehaviour
     public void StunMaceAttack()
     {
         attackType = 3;
+        
+        if (isPlayerTurn) 
+        {
+            // acquire target
+            chooseTarget = true;
+        }
+    }
+
+    public void InspectEnemy()
+    {
+        attackType = 5;
         
         if (isPlayerTurn) 
         {
@@ -658,6 +687,14 @@ public class CombatManager : MonoBehaviour
         GameObject.Find("CombatText").transform.GetChild(5).gameObject.SetActive(true);
         yield return new WaitForSeconds(2f);
         GameObject.Find("CombatText").transform.GetChild(5).gameObject.SetActive(false);
+    }
+    
+    IEnumerator InspectEnemyText(string text)
+    {
+        GameObject.Find("CombatText").transform.GetChild(6).gameObject.GetComponent<TextMeshProUGUI>().text = text;
+        GameObject.Find("CombatText").transform.GetChild(6).gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        GameObject.Find("CombatText").transform.GetChild(6).gameObject.SetActive(false);
     }
 
 }

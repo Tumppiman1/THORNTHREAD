@@ -6,6 +6,7 @@ public class EnemyStats : MonoBehaviour
     public float enemyHealth;
     public float enemyMaxHealth = 20f;
     public bool enemyAlive = true;
+    public int enemyEvadeChance = 100;
     
     [Header("Enemy damage")]
     public float enemyDamage = 10f;
@@ -45,8 +46,9 @@ public class EnemyStats : MonoBehaviour
 
         if (enemyHealth <= 0) {
             enemyAlive = false;
-            // Destroy(gameObject);
-            Invoke(nameof(EnemyDeath), 1f);
+            Destroy(gameObject);
+            GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().enemies.Remove(gameObject);
+            // Invoke(nameof(EnemyDeath), 1f);
         }
     }
 

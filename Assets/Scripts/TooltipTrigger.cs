@@ -12,32 +12,17 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     [Multiline()]
     public string content;
     
-    private bool _hovered = false;
-    
     public void OnPointerEnter(PointerEventData eventData)
     {
         //TooltipSystem.Show(content, header);
-        _hovered = true;
         StartCoroutine(Delay());
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         // TooltipSystem.Hide();
-        _hovered = false;
         StopAllCoroutines();
         TooltipSystem.Hide();
-    }
-
-    void Show()
-    {
-        
-        TooltipSystem.Show(content, header);
-    }
-
-    void Hide()
-    {
-        
     }
 
     IEnumerator Delay()
