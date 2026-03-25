@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.flamearthur.copypose": {
+      "version": "https://github.com/flame99999/CopyPose.git?path=Assets/CopyPose",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "36d872c729a0c957245350598f3de44e1c3d73b4"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.11",
       "depth": 0,
