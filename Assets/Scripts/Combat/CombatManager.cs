@@ -85,7 +85,7 @@ public class CombatManager : MonoBehaviour
 
         else if (!isPlayerTurn) // enemy turn 
         {
-            Debug.Log("Enemy turn");
+            
             
             if (enemies.Count >= 1) 
             {   
@@ -99,10 +99,13 @@ public class CombatManager : MonoBehaviour
                 StartCoroutine(EnemyTurnText());
                 
                 Invoke(nameof(EnemyTurn), 2f);
+                Debug.Log("Enemy turn");
                 // EnemyTurn();
             }
 
-            else {
+            else 
+            {
+                Debug.Log("End of combat");
                 EndCombat();
             }
         }
@@ -239,6 +242,7 @@ public class CombatManager : MonoBehaviour
 
                 else 
                 {
+                    Debug.Log("No enemies");
                     enemies.Clear();
                     EndCombat();
                 }
