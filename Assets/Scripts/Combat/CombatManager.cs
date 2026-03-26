@@ -22,8 +22,8 @@ public class CombatManager : MonoBehaviour
     public int attackType = 0;
     
     public bool playerIsBlocking = false;
-    
-    
+    [SerializeField] GameObject SlashVFX;
+
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
@@ -395,8 +395,12 @@ public class CombatManager : MonoBehaviour
                     // Debug.Log("here");
                     target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().brokenSwordDamage);
                     playerActionsLeft--;
-                    target = null;
                     //AudioManager.Instance.PlaySFX("Sword_Hit");
+                    Instantiate(SlashVFX, target.transform.position, Quaternion.identity);
+
+                    Debug.Log("Slash");
+                    target = null;
+                    
                     PlayerTurn();
                 }
 
