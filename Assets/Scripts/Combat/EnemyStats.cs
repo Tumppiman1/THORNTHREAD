@@ -1,7 +1,10 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
+    [SerializeField] private Material enemyDamaged;
+    [SerializeField] private Material enemyNormal;
     [Header("Enemy health")]
     public float enemyHealth;
     public float enemyMaxHealth = 20f;
@@ -43,6 +46,8 @@ public class EnemyStats : MonoBehaviour
     {
         enemyHealth -= damage;
         Debug.Log("Enemy took: " + damage + " damage");
+        StartCoroutine(EnemyDamagedColor());
+        // GetComponent<MeshRenderer>().material = enemyDamaged;
 
         if (enemyHealth <= 0) {
             enemyAlive = false;
@@ -50,6 +55,8 @@ public class EnemyStats : MonoBehaviour
             GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().enemies.Remove(gameObject);
             // Invoke(nameof(EnemyDeath), 1f);
         }
+        
+        // Invoke(nameof(EnemyIdleColor), 0.1f);
     }
 
     public void TakeHealing(float amountToHeal)
@@ -72,5 +79,12 @@ public class EnemyStats : MonoBehaviour
         Debug.Log("Enemy dead");
         // Play death animation
         Destroy(gameObject);
+    }
+
+    IEnumerator EnemyDamagedColor()
+    {
+        GetComponent<MeshRenderer>().material = enemyDamaged;
+        yield return new WaitForSeconds(0.2f);
+        GetComponent<MeshRenderer>().material = enemyNormal;
     }
 }

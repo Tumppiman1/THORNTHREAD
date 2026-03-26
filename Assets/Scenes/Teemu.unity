@@ -5499,6 +5499,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d81626eef616214d95054cd36dda56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyDamaged: {fileID: 0}
+  enemyNormal: {fileID: 0}
   enemyHealth: 0
   enemyMaxHealth: 20
   enemyAlive: 1
@@ -9293,7 +9295,7 @@ Transform:
   m_GameObject: {fileID: 1561297979}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.91, y: -1.67, z: 6.28}
+  m_LocalPosition: {x: -1.91, y: -1.19, z: 7.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9920,6 +9922,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d81626eef616214d95054cd36dda56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyDamaged: {fileID: 0}
+  enemyNormal: {fileID: 0}
   enemyHealth: 0
   enemyMaxHealth: 20
   enemyAlive: 1
@@ -11483,6 +11487,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d81626eef616214d95054cd36dda56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyDamaged: {fileID: 0}
+  enemyNormal: {fileID: 0}
   enemyHealth: 0
   enemyMaxHealth: 20
   enemyAlive: 1
@@ -20758,6 +20764,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d81626eef616214d95054cd36dda56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyDamaged: {fileID: 2100000, guid: ca82f84203632394bb18fc73fa83c3e2, type: 2}
+  enemyNormal: {fileID: 2100000, guid: d29e9f7b1bd3a7a41860955f08ce258d, type: 2}
   enemyHealth: 0
   enemyMaxHealth: 20
   enemyAlive: 1
