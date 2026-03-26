@@ -3468,6 +3468,7 @@ MonoBehaviour:
   specialChance: 0
   stunDuration: 0
   damageOvertimeDuration: 0
+  effectPoint: {fileID: 0}
   isBlocking: 1
 --- !u!1 &881091458
 GameObject:
@@ -8746,7 +8747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6813859326876503670, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

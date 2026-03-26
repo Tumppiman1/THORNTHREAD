@@ -396,8 +396,8 @@ public class CombatManager : MonoBehaviour
                     target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().brokenSwordDamage);
                     playerActionsLeft--;
                     //AudioManager.Instance.PlaySFX("Sword_Hit");
-                    Instantiate(SlashVFX, target.transform.position, Quaternion.identity);
-
+                    Instantiate(SlashVFX, target.GetComponent<EnemyStats>().effectPoint.position, Quaternion.identity);
+                    
                     Debug.Log("Slash");
                     target = null;
                     
@@ -408,7 +408,7 @@ public class CombatManager : MonoBehaviour
                     Debug.Log("Player attack missed");
                     playerActionsLeft--;
                     target = null;
-                    //AudioManager.Instance.PlaySFX("Sword_Miss");
+                    AudioManager.Instance.PlaySFX("Sword_Miss");
                     PlayerTurn();
                 }
             }
@@ -418,7 +418,7 @@ public class CombatManager : MonoBehaviour
                 target.GetComponent<EnemyStats>().isBlocking = false;
                 target = null;
                 playerActionsLeft--;
-                //AudioManager.Instance.PlaySFX("Sword_Miss2");
+                AudioManager.Instance.PlaySFX("Sword_Miss2");
                 PlayerTurn();
             }
         }
@@ -439,6 +439,7 @@ public class CombatManager : MonoBehaviour
                     StartCoroutine(PlayerAPText("-" + _player.GetComponent<PlayerStats>().axeApCost.ToString()));
                     playerActionsLeft--;
                     target = null;
+                    AudioManager.Instance.PlaySFX("Axe_Hit");
                     PlayerTurn();
                 }
                 
@@ -448,6 +449,7 @@ public class CombatManager : MonoBehaviour
                     StartCoroutine(PlayerAPText("-" + _player.GetComponent<PlayerStats>().axeApCost.ToString()));
                     playerActionsLeft--;
                     target = null;
+                    AudioManager.Instance.PlaySFX("Sword_Miss3");
                     PlayerTurn();
                 }
             }
@@ -565,6 +567,7 @@ public class CombatManager : MonoBehaviour
             playerIsBlocking = true;
             playerActionsLeft--;
             _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().shieldApCost);
+            AudioManager.Instance.PlaySFX("Shied_Block");
             PlayerTurn();
         }
     }
@@ -642,6 +645,7 @@ public class CombatManager : MonoBehaviour
                 _player.GetComponent<PlayerStats>().Heal(_player.GetComponent<PlayerStats>().healFlaskHealAmount);
                 _player.GetComponent<PlayerStats>().healFlaskUsesLeft--;
                 playerActionsLeft--;
+                AudioManager.Instance.PlaySFX("Healing");
                 PlayerTurn();
                 Debug.Log("Used heal flask");
             }
