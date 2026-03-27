@@ -5,24 +5,55 @@ public class ItemInteraction : MonoBehaviour
     [SerializeField] private LayerMask itemMask;
     private GameObject items;
     
-    public string activeItem;
+    public string activeItem = null;
     
     
     void Start()
     {
+        activeItem = null;
         items = GameObject.FindGameObjectWithTag("Items");
     }
 
     public void UseItem(int slot)
     {
-        if (items.GetComponent<Items>().items[slot] != null) 
+        if (string.IsNullOrEmpty(activeItem)) 
         {
-            activeItem = items.GetComponent<Items>().items[slot];
-            Debug.Log(activeItem);
+            if (items.GetComponent<Items>().items[slot] != null) {
+                activeItem = items.GetComponent<Items>().items[slot];
+                Debug.Log(activeItem);
+            }
+
+            else {
+                activeItem = null;
+            }
         }
 
         else {
-            activeItem = null;
+            Debug.Log("here");
+
+            
+            if (items.GetComponent<Items>().items[slot] != null) 
+            {
+                Debug.Log(items.GetComponent<Items>().items[slot]);
+                
+                string itemToCombine = items.GetComponent<Items>().items[slot];
+
+                if (activeItem == "rope" && itemToCombine == "bucket") 
+                {
+                    Debug.Log("items combined");
+                    int activeItemIndex = GetComponent<Items>().items.IndexOf(activeItem);
+                    
+                    GetComponent<Items>().icons.RemoveAt(activeItemIndex);
+                    GetComponent<Items>().items.RemoveAt(activeItemIndex);
+                    
+                    GameObject.Find("HotbarSlots").GetComponent<HotbarScript>().UpdateHotbar();
+                }
+
+                else 
+                {
+                    activeItem = itemToCombine;
+                }
+            }
         }
     }
     

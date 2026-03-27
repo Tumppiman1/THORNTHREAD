@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="70d5cdb3-4fb8-4f19-a4dd-b2fe67eaafda" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.THORNTHREAD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.THORNTHREAD/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemInteraction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Teemu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Teemu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/CombatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/PlayerStats.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +106,7 @@
       <workItem from="1774338104613" duration="11570000" />
       <workItem from="1774425768123" duration="7364000" />
       <workItem from="1774519964391" duration="5062000" />
-      <workItem from="1774599121257" duration="1794000" />
+      <workItem from="1774599121257" duration="7368000" />
     </task>
     <servers />
   </component>

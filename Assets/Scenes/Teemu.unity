@@ -5514,6 +5514,7 @@ MonoBehaviour:
   specialChance: 0
   stunDuration: 0
   damageOvertimeDuration: 0
+  effectPoint: {fileID: 0}
   isBlocking: 0
 --- !u!1 &860192523
 GameObject:
@@ -5883,6 +5884,8 @@ MonoBehaviour:
   enemyActionsLeft: 0
   attackType: 0
   playerIsBlocking: 0
+  SlashVFX: {fileID: 0}
+  MissVFX: {fileID: 0}
 --- !u!1 &922742540
 GameObject:
   m_ObjectHideFlags: 0
@@ -6659,6 +6662,8 @@ MonoBehaviour:
   enemyActionsLeft: 0
   attackType: 0
   playerIsBlocking: 0
+  SlashVFX: {fileID: 0}
+  MissVFX: {fileID: 0}
 --- !u!1 &1046782104
 GameObject:
   m_ObjectHideFlags: 0
@@ -9328,6 +9333,8 @@ MonoBehaviour:
   enemyActionsLeft: 0
   attackType: 0
   playerIsBlocking: 0
+  SlashVFX: {fileID: 0}
+  MissVFX: {fileID: 0}
 --- !u!1 &1570633921
 GameObject:
   m_ObjectHideFlags: 0
@@ -9937,6 +9944,7 @@ MonoBehaviour:
   specialChance: 10
   stunDuration: 0
   damageOvertimeDuration: 0
+  effectPoint: {fileID: 0}
   isBlocking: 0
 --- !u!1 &1733603274
 GameObject:
@@ -11502,6 +11510,7 @@ MonoBehaviour:
   specialChance: 0
   stunDuration: 0
   damageOvertimeDuration: 0
+  effectPoint: {fileID: 0}
   isBlocking: 0
 --- !u!1 &1933086869
 GameObject:
@@ -20779,6 +20788,7 @@ MonoBehaviour:
   specialChance: 0
   stunDuration: 0
   damageOvertimeDuration: 0
+  effectPoint: {fileID: 0}
   isBlocking: 0
 --- !u!222 &5515712867603550488
 CanvasRenderer:
