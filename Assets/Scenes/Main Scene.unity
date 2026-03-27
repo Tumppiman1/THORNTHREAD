@@ -22541,6 +22541,210 @@ PrefabInstance:
       propertyPath: pitchVariance
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.size
+      value: 47
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[22].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b46de6708da45b46b58ecdaa10349d9, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[22].name
+      value: Click End
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[23].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f24265016c7d59245b1d6febd7a0d8c4, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[23].name
+      value: Hover
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[24].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2237bb8a71d8231429dc17902c75fbb0, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[24].name
+      value: Item Combined
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[25].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a58d3791d354684ca05dd4c09dcced6, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[25].name
+      value: Item PickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[26].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f7ac5dff6532fe479c6746b5b4fd425, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[26].name
+      value: Footstep Bri
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[27].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 71f8f1a720c87ed4caf876c9f6130c70, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[27].name
+      value: Footstep Bri2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[28].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: af28f98038f87c14dab1e6c4d9036c8d, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[28].name
+      value: Footstep Bri3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[29].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 68a2de667bfa8d146a7f5557e075a727, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[29].name
+      value: Footstep Bri4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[30].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a294039ca3b3b1b4f8c9469611966a4a, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[30].name
+      value: Footstep Bri5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[31].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d4276767474e7fb42b90101d46bb72f3, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[31].name
+      value: Footstep Bri6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[32].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: aba3869dac85fec43bed08b3c0f08cb2, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[32].name
+      value: Footstep Gra
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[33].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4aea0427980205e4f882a87d5129fee8, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[33].name
+      value: Footstep Gra2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[34].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3bf87c069b7b4aa4fa9cd036a80a72ab, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[34].name
+      value: Footstep Gra3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[35].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f22ce1997669ebd47a3606d42a883b4d, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[35].name
+      value: Footstep Gra4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[36].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d65ff5808f96f546af6ba29ec2f2635, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[36].name
+      value: Footstep Gra5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[37].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b632a20d7f513054b9a2e92a2b82b4d2, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[37].name
+      value: Footstep Gra6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[38].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 192f917af2dd74143ad10e5d140ce928, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[38].name
+      value: Footstep Bur
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[39].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 870a83df62aad3049b580914821149a2, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[39].name
+      value: Footstep Bur2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[40].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d14b371bbb585ec4982c952b987fc23c, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[40].name
+      value: Footstep Bur3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[41].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 99450618609e8d24dbf81b2f8d462ecf, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[41].name
+      value: Footstep Bur4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[42].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 03aa3856686403e41b387ac6da041db9, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[42].name
+      value: Footstep Bur5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[43].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c9c478734874aa40bbf3a274f0fed8a, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[43].name
+      value: Footstep sto
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[44].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e93ffe760ce39df4490e8a597048248d, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[44].name
+      value: Footstep sto2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[45].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 31f8548d53664524fae02d02eefe7946, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[45].name
+      value: Footstep sto3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[46].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 18fcce1ff4e401d4db1e8861ff045823, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[46].name
+      value: Footstep sto4
+      objectReference: {fileID: 0}
     - target: {fileID: 3256639991610041465, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
@@ -23390,7 +23594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1357891656
 RectTransform:
   m_ObjectHideFlags: 0
