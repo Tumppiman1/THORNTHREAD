@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -239,15 +240,20 @@ public class PlayerStats : MonoBehaviour
 
     public void BrokenSwordAttack()
     {
-        GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().BrokenSwordAttack();
-        // AudioManager.Instance.PlaySFX("Sword_Equip");
-        
-        
+        if (GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().isPlayerTurn) 
+        {
+            GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().BrokenSwordAttack();
+
+            // AudioManager.Instance.PlaySFX("Sword_Equip");
+        }
+
+
     }
 
     public void AxeAttack()
     {
-        if (attackPointCount - axeApCost >= 0) 
+        
+        if (attackPointCount - axeApCost >= 0 && GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().isPlayerTurn) 
         {
             GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().AxeAttack();
             
@@ -256,14 +262,14 @@ public class PlayerStats : MonoBehaviour
 
     public void ShieldBlock()
     {
-        if (attackPointCount - shieldApCost >= 0) {
+        if (attackPointCount - shieldApCost >= 0 && GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().isPlayerTurn) {
             GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().ShieldBlock();
         }
     }
 
     public void StunMaceAttack()
     {
-        if (attackPointCount - maceApCost >= 0) {
+        if (attackPointCount - maceApCost >= 0 && GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().isPlayerTurn) {
 
             GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().StunMaceAttack();
         }
@@ -271,7 +277,7 @@ public class PlayerStats : MonoBehaviour
 
     public void InspectEnemy()
     {
-        if (attackPointCount - inspectEnemyApCost >= 0) 
+        if (attackPointCount - inspectEnemyApCost >= 0 && GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().isPlayerTurn) 
         {
             GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().InspectEnemy();
         }
@@ -279,7 +285,7 @@ public class PlayerStats : MonoBehaviour
 
     public void AttackPointConsumable()
     {
-        if (attackPointConsumableAmount > 0 && attackPointConsumable) {
+        if (attackPointConsumableAmount > 0 && attackPointConsumable && GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().isPlayerTurn) {
             GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().UseConsumable(attackPointConsumableID);
         }
         else {
@@ -302,7 +308,7 @@ public class PlayerStats : MonoBehaviour
 
     public void AddTurnsConsumable()
     {
-        if (addTurnsConsumableAmount > 0 && addTurnsConsumable) {
+        if (addTurnsConsumableAmount > 0 && addTurnsConsumable && GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().isPlayerTurn) {
             GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().UseConsumable(addTurnsConsumableID);
         }
         else {
@@ -324,7 +330,7 @@ public class PlayerStats : MonoBehaviour
 
     public void DamageOvertimeConsumable()
     {
-        if (damageOvertimeConsumableAmount > 0) 
+        if (damageOvertimeConsumableAmount > 0 && GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().isPlayerTurn) 
         {
             GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().DamageOvertimeConsumableAttack();
         }
@@ -345,6 +351,34 @@ public class PlayerStats : MonoBehaviour
         //GameObject.FindGameObjectWithTag("SaveController").GetComponent<SaveController>().LoadGame();
         
         
+    }
+
+    public void DisableActionButtons()
+    {
+        brokenSwordButton.GetComponent<Button>().interactable = false;
+        axeButton.GetComponent<Button>().interactable = false;
+        shieldButton.GetComponent<Button>().interactable = false;
+        maceButton.GetComponent<Button>().interactable = false;
+        inspectEnemyButton.GetComponent<Button>().interactable = false;
+        
+        healFlaskButton.GetComponent<Button>().interactable = false;
+        addAttackPointsConsumableButton.GetComponent<Button>().interactable = false;
+        addTurnsConsumableButton.GetComponent<Button>().interactable = false;
+        damageOverTimeConsumableButton.GetComponent<Button>().interactable = false;
+    }
+
+    public void EnableActionButtons()
+    {
+        brokenSwordButton.GetComponent<Button>().interactable = true;
+        axeButton.GetComponent<Button>().interactable = true;
+        shieldButton.GetComponent<Button>().interactable = true;
+        maceButton.GetComponent<Button>().interactable = true;
+        inspectEnemyButton.GetComponent<Button>().interactable = true;
+        
+        healFlaskButton.GetComponent<Button>().interactable = true;
+        addAttackPointsConsumableButton.GetComponent<Button>().interactable = true;
+        addTurnsConsumableButton.GetComponent<Button>().interactable = true;
+        damageOverTimeConsumableButton.GetComponent<Button>().interactable = true;
     }
     
 

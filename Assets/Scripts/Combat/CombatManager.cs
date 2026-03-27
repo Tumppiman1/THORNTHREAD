@@ -28,6 +28,7 @@ public class CombatManager : MonoBehaviour
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
+        _player.GetComponent<PlayerStats>().DisableActionButtons();
         StartCombat();
     }
     
@@ -37,10 +38,13 @@ public class CombatManager : MonoBehaviour
         {
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, Mathf.Infinity, enemyMask)) 
             {
-                if (Input.GetKeyDown(KeyCode.Mouse0)) {
-                    target = hit.collider.gameObject;
-                    PlayerAttack(attackType);
+                if (Input.GetKeyDown(KeyCode.Mouse0)) 
+                {
                     chooseTarget = false;
+                    target = hit.collider.gameObject;
+                    //chooseTarget = false;
+                    PlayerAttack(attackType);
+                    
                     
                 }
                 
@@ -68,7 +72,7 @@ public class CombatManager : MonoBehaviour
             enemyActionsLeft++;
             //Invoke(nameof(EnemyTurn), 1f);
             StartCoroutine(EnemyFirstTurnText());
-            Invoke(nameof(EnemyTurn), 4f);
+            Invoke(nameof(EnemyTurn), 3f);
         }
     }
 
@@ -76,17 +80,20 @@ public class CombatManager : MonoBehaviour
     {
         if (isPlayerTurn) // player turn
         {
+            playerActionsLeft = 0;
+            _player.GetComponent<PlayerStats>().EnableActionButtons();
             Debug.Log("Player turn");
             playerIsBlocking = false;
             playerActionsLeft++;
             StartCoroutine(PlayerTurnText());
-            Invoke(nameof(PlayerTurn), 2f);
+            //Invoke(nameof(PlayerTurn), 2f);
             //PlayerTurn();
         }
 
         else if (!isPlayerTurn) // enemy turn 
         {
-            
+            enemyActionsLeft = 0;
+            _player.GetComponent<PlayerStats>().DisableActionButtons();
             
             if (enemies.Count >= 1) 
             {   
@@ -99,7 +106,7 @@ public class CombatManager : MonoBehaviour
                 enemyActionsLeft++;
                 StartCoroutine(EnemyTurnText());
                 
-                Invoke(nameof(EnemyTurn), 2f);
+                //Invoke(nameof(EnemyTurn), 2f);
                 Debug.Log("Enemy turn");
                 // EnemyTurn();
             }
@@ -122,6 +129,8 @@ public class CombatManager : MonoBehaviour
 
         else {
             // Damage overtime effect
+            isPlayerTurn = false;
+            //_player.GetComponent<PlayerStats>().DisableActionButtons();
             foreach (GameObject enemy in enemies.ToList()) 
             {
                 if (enemy != null) 
@@ -134,7 +143,7 @@ public class CombatManager : MonoBehaviour
                 }
             }
             
-            isPlayerTurn = false;
+            //isPlayerTurn = false;
             
             
             ChangeTurn();
@@ -159,10 +168,11 @@ public class CombatManager : MonoBehaviour
                         int enemyHealChance = enemies[0].GetComponent<EnemyStats>().healChance;
                         int enemySpecialChance = enemies[0].GetComponent<EnemyStats>().specialChance;
 
-                        int totalChance = enemyAttackChance + enemyBlockChance + enemyHealChance + enemySpecialChance;
+                        int totalChance = enemyAttackChance + enemyBlockChance + enemyHealChance;
                         // Debug.Log(totalChance);
                         
                         int randomInt = UnityEngine.Random.Range(0, totalChance + 1);
+                        Debug.Log(randomInt);
 
                         if (randomInt >= 0 && randomInt < enemyAttackChance) {
                             // enemy attack
@@ -211,7 +221,7 @@ public class CombatManager : MonoBehaviour
                             EnemyTurn();
                         }
                         
-                        else if (randomInt >= enemyAttackChance + enemyBlockChance && randomInt < enemyAttackChance + enemyBlockChance + enemyHealChance) {
+                        else if (randomInt > enemyAttackChance + enemyBlockChance && randomInt <= enemyAttackChance + enemyBlockChance + enemyHealChance) {
                             // Enemy Heal
                             //Debug.Log(randomInt);
                             Debug.Log("Enemy heal");
@@ -220,6 +230,7 @@ public class CombatManager : MonoBehaviour
                             EnemyTurn();
                         }
                         
+                        /*
                         else if (randomInt >= enemyAttackChance + enemyBlockChance + enemyHealChance && randomInt <= totalChance) {
                             // enemy special
                             //Debug.Log(randomInt);
@@ -227,9 +238,10 @@ public class CombatManager : MonoBehaviour
                             enemyActionsLeft--;
                             EnemyTurn();
                         }
+                        */
 
                         else {
-                            //Debug.Log("something");
+                            Debug.Log("something");
                             //Debug.Log(randomInt);
                         }
                         
@@ -385,6 +397,8 @@ public class CombatManager : MonoBehaviour
 
     private void PlayerAttack(int attackTypeID)
     {
+        // _player.GetComponent<PlayerStats>().DisableActionButtons();
+        
         // Broken sword
         if (attackTypeID == 1) 
         {
@@ -398,10 +412,11 @@ public class CombatManager : MonoBehaviour
                     // Debug.Log("here");
                     Instantiate(SlashVFX, target.GetComponent<EnemyStats>().effectPoint.position, Quaternion.identity);
                     target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().brokenSwordDamage);
+                    target = null;
                     playerActionsLeft--;
                     //AudioManager.Instance.PlaySFX("Sword_Hit");
                     Debug.Log("Slash");
-                    target = null;
+                    
                     
                     PlayerTurn();
                 }
@@ -666,6 +681,7 @@ public class CombatManager : MonoBehaviour
         GameObject.Find("CombatText").transform.GetChild(1).gameObject.SetActive(true);
         yield return new WaitForSeconds(1f);
         GameObject.Find("CombatText").transform.GetChild(1).gameObject.SetActive(false);
+        PlayerTurn();
     }
     
     IEnumerator EnemyTurnText()
@@ -673,6 +689,7 @@ public class CombatManager : MonoBehaviour
         GameObject.Find("CombatText").transform.GetChild(0).gameObject.SetActive(true);
         yield return new WaitForSeconds(1f);
         GameObject.Find("CombatText").transform.GetChild(0).gameObject.SetActive(false);
+        EnemyTurn();
     }
     
     IEnumerator PlayerFirstTurnText()
