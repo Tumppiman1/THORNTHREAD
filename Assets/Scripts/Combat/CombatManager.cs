@@ -23,6 +23,7 @@ public class CombatManager : MonoBehaviour
     
     public bool playerIsBlocking = false;
     [SerializeField] GameObject SlashVFX;
+    [SerializeField] GameObject MissVFX;
 
     void Start()
     {
@@ -393,11 +394,10 @@ public class CombatManager : MonoBehaviour
                 {
                     // attack target
                     // Debug.Log("here");
+                    Instantiate(SlashVFX, target.GetComponent<EnemyStats>().effectPoint.position, Quaternion.identity);
                     target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().brokenSwordDamage);
                     playerActionsLeft--;
                     //AudioManager.Instance.PlaySFX("Sword_Hit");
-                    Instantiate(SlashVFX, target.GetComponent<EnemyStats>().effectPoint.position, Quaternion.identity);
-                    
                     Debug.Log("Slash");
                     target = null;
                     
@@ -406,9 +406,11 @@ public class CombatManager : MonoBehaviour
 
                 else {
                     Debug.Log("Player attack missed");
+                    Instantiate(MissVFX, target.GetComponent<EnemyStats>().effectPoint.position, Quaternion.identity);
                     playerActionsLeft--;
                     target = null;
                     AudioManager.Instance.PlaySFX("Sword_Miss");
+                    
                     PlayerTurn();
                 }
             }
