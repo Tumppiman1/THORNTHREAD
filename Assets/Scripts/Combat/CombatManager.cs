@@ -188,12 +188,14 @@ public class CombatManager : MonoBehaviour
                                     float enemyDamage = enemies[0].GetComponent<EnemyStats>().enemyDamage;
                                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().TakeDamage(enemyDamage);
                                     StartCoroutine(PlayerDamageText("-" + enemyDamage));
+                                    AudioManager.Instance.PlaySFX("Skeleton hit");
                                     enemyActionsLeft--;
                                     EnemyTurn();
                                 }
 
                                 else {
                                     Debug.Log("Enemy attack missed");
+                                AudioManager.Instance.PlaySFX("Skeleton Miss");
                                     enemyActionsLeft--;
                                     EnemyTurn();
                                 }
