@@ -8,6 +8,8 @@ public class Items : MonoBehaviour
     public List<RawImage> icons = new List<RawImage>();
     public RawImage defaultIcon;
     
+    
+    
     void Start()
     {
         
@@ -24,6 +26,9 @@ public class Items : MonoBehaviour
         if (true) 
         {
             // Sets icons for hotbar slots from icons list
+            // GameObject.Find("HotbarSlots").transform.GetChild(slot).GetComponent<Button>().colors.normalColor = defaultIcon.colors.normalColor;
+            // GameObject.Find("HotbarSlots").transform.GetChild(slot).GetComponent<RawImage>().color = new Color(0, 0, 0, 0);
+            GameObject.Find("HotbarSlots").transform.GetChild(slot).GetComponent<RawImage>().color = icons[slot].color;
             GameObject.Find("HotbarSlots").transform.GetChild(slot).GetComponent<RawImage>().texture = icons[slot].texture;
 
         }
@@ -31,6 +36,7 @@ public class Items : MonoBehaviour
 
     public void DefaultIcon(int slot)
     {
+        GameObject.Find("HotbarSlots").transform.GetChild(slot).GetComponent<RawImage>().color = new Color(0, 0, 0, 0);
         GameObject.Find("HotbarSlots").transform.GetChild(slot).GetComponent<RawImage>().texture = defaultIcon.texture;
     }
     
