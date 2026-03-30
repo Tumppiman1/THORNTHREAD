@@ -8,6 +8,7 @@ public class Fade : MonoBehaviour
     
     public bool fadeIn = false;
     public bool fadeOut = false;
+    public bool fadeComplete = true;
 
     public float fadeInMultiplier = 2;
     public float fadeOutMultiplier = 2;
@@ -31,7 +32,8 @@ public class Fade : MonoBehaviour
             if (blackScreen.alpha <= 0) 
             {
                 fadeOut = false;
-                blackScreenImage.gameObject.SetActive(false);    
+                blackScreenImage.gameObject.SetActive(false);
+                fadeComplete = true;
             }
         }
         
@@ -44,6 +46,7 @@ public class Fade : MonoBehaviour
 
     public void StartFade()
     {
+        fadeComplete = false;
         blackScreenImage.gameObject.SetActive(true);
         fadeIn = true;
     }
