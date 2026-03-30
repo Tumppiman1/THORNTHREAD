@@ -6,6 +6,7 @@ public class Items : MonoBehaviour
 {
     public List<string> items = new List<string>();
     public List<RawImage> icons = new List<RawImage>();
+    public RawImage defaultIcon;
     
     void Start()
     {
@@ -26,6 +27,11 @@ public class Items : MonoBehaviour
             GameObject.Find("HotbarSlots").transform.GetChild(slot).GetComponent<RawImage>().texture = icons[slot].texture;
 
         }
+    }
+
+    public void DefaultIcon(int slot)
+    {
+        GameObject.Find("HotbarSlots").transform.GetChild(slot).GetComponent<RawImage>().texture = defaultIcon.texture;
     }
     
 }

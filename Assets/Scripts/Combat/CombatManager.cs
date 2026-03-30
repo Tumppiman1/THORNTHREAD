@@ -171,7 +171,7 @@ public class CombatManager : MonoBehaviour
                         int totalChance = enemyAttackChance + enemyBlockChance + enemyHealChance;
                         // Debug.Log(totalChance);
                         
-                        int randomInt = UnityEngine.Random.Range(0, totalChance + 1);
+                        int randomInt = UnityEngine.Random.Range(0, totalChance);
                         Debug.Log(randomInt);
 
                         if (randomInt >= 0 && randomInt < enemyAttackChance) {

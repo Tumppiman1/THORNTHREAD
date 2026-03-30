@@ -10,7 +10,7 @@ public static class SaveSystem
     {
         var json = JsonUtility.ToJson(AudioSaveManager.instance.Data);
         File.WriteAllText(SavePath, json);
-        Debug.Log("data saved");
+        // Debug.Log("data saved");
     }
 
     public static void Load()
