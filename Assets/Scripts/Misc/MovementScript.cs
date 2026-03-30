@@ -33,7 +33,7 @@ public class MovementScript : MonoBehaviour
             if (transform.gameObject.name == "Up") 
             {
                 if (_currentCamera.GetComponent<CinemachineCamera>().Lens.FieldOfView >= 40) {
-                    _currentCamera.GetComponent<CinemachineCamera>().Lens.FieldOfView -= Time.deltaTime * 15;
+                    _currentCamera.GetComponent<CinemachineCamera>().Lens.FieldOfView -= Time.deltaTime * 7.5f;
 
                     if (transform.gameObject.name == "Right") {
                         _currentCamera.GetComponent<RectTransform>().rotation = Quaternion.Euler(0,
@@ -54,7 +54,7 @@ public class MovementScript : MonoBehaviour
             else if (transform.gameObject.name == "Down") 
             {
                 if (_currentCamera.GetComponent<CinemachineCamera>().Lens.FieldOfView >= 60) {
-                    _currentCamera.GetComponent<CinemachineCamera>().Lens.FieldOfView += Time.deltaTime * 15;
+                    _currentCamera.GetComponent<CinemachineCamera>().Lens.FieldOfView += Time.deltaTime * 7.5f;
 
                     if (transform.gameObject.name == "Right") {
                         _currentCamera.GetComponent<RectTransform>().rotation = Quaternion.Euler(0,

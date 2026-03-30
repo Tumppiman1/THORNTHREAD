@@ -40,12 +40,16 @@ public class CombatManager : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0)) 
                 {
-                    chooseTarget = false;
-                    target = hit.collider.gameObject;
-                    //chooseTarget = false;
-                    PlayerAttack(attackType);
-                    
-                    
+                    if (target == null) {
+                        Debug.Log("here");
+                        chooseTarget = false;
+                        target = hit.collider.gameObject;
+
+                        //chooseTarget = false;
+                        PlayerAttack(attackType);
+                    }
+
+
                 }
                 
             }
@@ -64,7 +68,8 @@ public class CombatManager : MonoBehaviour
             //_player.GetComponent<PlayerStats>().ResetAttackPoints();
             playerActionsLeft++;
             StartCoroutine(PlayerFirstTurnText());
-            Invoke(nameof(PlayerTurn), 3f);
+            //Invoke(nameof(PlayerTurn), 3f);
+            
         }
 
         else if (!isPlayerTurn) {
@@ -72,7 +77,7 @@ public class CombatManager : MonoBehaviour
             enemyActionsLeft++;
             //Invoke(nameof(EnemyTurn), 1f);
             StartCoroutine(EnemyFirstTurnText());
-            Invoke(nameof(EnemyTurn), 3f);
+            //Invoke(nameof(EnemyTurn), 3f);
         }
     }
 
@@ -97,13 +102,14 @@ public class CombatManager : MonoBehaviour
             
             if (enemies.Count >= 1) 
             {   
-                
+                enemyActionsLeft++;
+                /*
                 foreach (GameObject enemy in enemies) 
                 {
                     // Remove block effect from enemies at the start of enemy turn
                     enemy.GetComponent<EnemyStats>().isBlocking = false;
                 }
-                enemyActionsLeft++;
+                */
                 StartCoroutine(EnemyTurnText());
                 
                 //Invoke(nameof(EnemyTurn), 2f);
@@ -135,7 +141,8 @@ public class CombatManager : MonoBehaviour
             {
                 if (enemy != null) 
                 {
-                    if (enemy.GetComponent<EnemyStats>().enemyAlive && enemy.GetComponent<EnemyStats>().damageOvertimeDuration > 0) {
+                    if (enemy.GetComponent<EnemyStats>().enemyAlive && enemy.GetComponent<EnemyStats>().damageOvertimeDuration > 0) 
+                    {
                         Debug.Log("Enemy took: " + _player.GetComponent<PlayerStats>().damageOvertimeConsumableDamage + " damage overtime");
                         enemy.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().damageOvertimeConsumableDamage);
                         enemy.GetComponent<EnemyStats>().damageOvertimeDuration--;
@@ -152,7 +159,7 @@ public class CombatManager : MonoBehaviour
 
     void EnemyTurn()
     {
-        if (enemyActionsLeft > 0) 
+        if (enemyActionsLeft == 1) 
         {
             // Enemy attack
             
@@ -174,7 +181,8 @@ public class CombatManager : MonoBehaviour
                         int randomInt = UnityEngine.Random.Range(0, totalChance - 1);
                         Debug.Log(randomInt);
 
-                        if (randomInt >= 0 && randomInt < enemyAttackChance) {
+                        if (randomInt >= 0 && randomInt < enemyAttackChance) 
+                        {
                             // enemy attack
                             // Debug.Log(randomInt);
                             Debug.Log("Enemy attack");
@@ -195,7 +203,7 @@ public class CombatManager : MonoBehaviour
 
                                 else {
                                     Debug.Log("Enemy attack missed");
-                                AudioManager.Instance.PlaySFX("Skeleton Miss");
+                                    AudioManager.Instance.PlaySFX("Skeleton Miss");
                                     enemyActionsLeft--;
                                     EnemyTurn();
                                 }
@@ -221,7 +229,7 @@ public class CombatManager : MonoBehaviour
                             EnemyTurn();
                         }
                         
-                        else if (randomInt > enemyAttackChance + enemyBlockChance && randomInt <= enemyAttackChance + enemyBlockChance + enemyHealChance) {
+                        else if (randomInt >= enemyAttackChance + enemyBlockChance && randomInt < totalChance) {
                             // Enemy Heal
                             //Debug.Log(randomInt);
                             Debug.Log("Enemy heal");
@@ -403,6 +411,7 @@ public class CombatManager : MonoBehaviour
 
     private void PlayerAttack(int attackTypeID)
     {
+        Debug.Log("Player attack");
         // _player.GetComponent<PlayerStats>().DisableActionButtons();
         
         // Broken sword
@@ -430,8 +439,8 @@ public class CombatManager : MonoBehaviour
                 else {
                     Debug.Log("Player attack missed");
                     Instantiate(MissVFX, target.GetComponent<EnemyStats>().effectPoint.position, Quaternion.identity);
-                    playerActionsLeft--;
                     target = null;
+                    playerActionsLeft--;
                     AudioManager.Instance.PlaySFX("Sword_Miss");
                     
                     PlayerTurn();
@@ -685,7 +694,7 @@ public class CombatManager : MonoBehaviour
     IEnumerator PlayerTurnText()
     {
         GameObject.Find("CombatText").transform.GetChild(1).gameObject.SetActive(true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         GameObject.Find("CombatText").transform.GetChild(1).gameObject.SetActive(false);
         PlayerTurn();
     }
@@ -693,7 +702,7 @@ public class CombatManager : MonoBehaviour
     IEnumerator EnemyTurnText()
     {
         GameObject.Find("CombatText").transform.GetChild(0).gameObject.SetActive(true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         GameObject.Find("CombatText").transform.GetChild(0).gameObject.SetActive(false);
         EnemyTurn();
     }
@@ -703,6 +712,7 @@ public class CombatManager : MonoBehaviour
         GameObject.Find("CombatText").transform.GetChild(3).gameObject.SetActive(true);
         yield return new WaitForSeconds(2f);
         GameObject.Find("CombatText").transform.GetChild(3).gameObject.SetActive(false);
+        PlayerTurn();
     }
     
     IEnumerator EnemyFirstTurnText()
@@ -710,6 +720,7 @@ public class CombatManager : MonoBehaviour
         GameObject.Find("CombatText").transform.GetChild(2).gameObject.SetActive(true);
         yield return new WaitForSeconds(2f);
         GameObject.Find("CombatText").transform.GetChild(2).gameObject.SetActive(false);
+        EnemyTurn();
     }
     
     IEnumerator PlayerDamageText(string text)
