@@ -171,7 +171,7 @@ public class CombatManager : MonoBehaviour
                         int totalChance = enemyAttackChance + enemyBlockChance + enemyHealChance;
                         // Debug.Log(totalChance);
                         
-                        int randomInt = UnityEngine.Random.Range(0, totalChance);
+                        int randomInt = UnityEngine.Random.Range(0, totalChance - 1);
                         Debug.Log(randomInt);
 
                         if (randomInt >= 0 && randomInt < enemyAttackChance) {
@@ -382,6 +382,12 @@ public class CombatManager : MonoBehaviour
         {
             Debug.Log("EndCombat");
             gameObject.SetActive(false);
+            GameObject.Find("CombatText").transform.GetChild(2).gameObject.SetActive(false);
+            GameObject.Find("CombatText").transform.GetChild(3).gameObject.SetActive(false);
+            GameObject.Find("CombatText").transform.GetChild(4).gameObject.SetActive(false);
+            GameObject.Find("CombatText").transform.GetChild(5).gameObject.SetActive(false);
+            GameObject.Find("CombatText").transform.GetChild(6).gameObject.SetActive(false);
+            TooltipSystem.Hide();
             GameObject.Find("TestUI").transform.GetChild(0).gameObject.SetActive(false);
             GameObject.Find("TestUI").transform.GetChild(1).gameObject.SetActive(true);
             combatEncounterCompleted = true;
