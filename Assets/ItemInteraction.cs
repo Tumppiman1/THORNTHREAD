@@ -10,11 +10,37 @@ public class ItemInteraction : MonoBehaviour
 
     public RawImage ropeBucket;
     
+    [Header("Puzzles")]
+    public GameObject treePuzzle;
+    public bool treePuzzleCompleted = false;
+    
+    public GameObject bushPuzzle;
+    public bool bushPuzzleCompleted = false;
+    
+    public GameObject shovelPuzzle;
+    public bool shovelPuzzleCompleted = false;
     
     void Start()
     {
         activeItem = null;
         items = GameObject.FindGameObjectWithTag("Items");
+
+        if (treePuzzleCompleted) 
+        {
+            treePuzzle.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("TreePuzzle").transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(true);
+        }
+
+        if (bushPuzzleCompleted) 
+        {
+            bushPuzzle.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("BushPuzzle").transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(true);
+        }
+
+        if (shovelPuzzleCompleted) 
+        {
+            shovelPuzzle.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
+        }
     }
 
     public void UseItem(int slot)
@@ -116,7 +142,8 @@ public class ItemInteraction : MonoBehaviour
                             // Debug.Log(activeItem + hit.collider.gameObject.layer);
                             hit.collider.gameObject.SetActive(false);
                             hit.collider.gameObject.transform.parent.transform.GetChild(1).gameObject.SetActive(true);
-                            
+                            treePuzzleCompleted = true;
+
                         }
                     }
 
@@ -126,6 +153,7 @@ public class ItemInteraction : MonoBehaviour
                         {
                             hit.collider.gameObject.SetActive(false);
                             hit.collider.gameObject.transform.parent.transform.GetChild(1).gameObject.SetActive(true);
+                            bushPuzzleCompleted = true;
                         }
                     }
                     
@@ -135,6 +163,7 @@ public class ItemInteraction : MonoBehaviour
                         {
                             hit.collider.gameObject.SetActive(false);
                             //hit.collider.gameObject.transform.parent.transform.GetChild(1).gameObject.SetActive(true);
+                            shovelPuzzleCompleted = true;
                         }
                     }
                     

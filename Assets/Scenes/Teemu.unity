@@ -6225,7 +6225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 878540828}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: TreeObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10239,7 +10239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1527476943}
   m_Layer: 0
-  m_Name: BurnBushPuzzle
+  m_Name: BushPuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25828,6 +25828,12 @@ MonoBehaviour:
     m_Bits: 229376
   activeItem: 
   ropeBucket: {fileID: 503465290}
+  treePuzzle: {fileID: 1046782104}
+  treePuzzleCompleted: 0
+  bushPuzzle: {fileID: 1527476942}
+  bushPuzzleCompleted: 0
+  shovelPuzzle: {fileID: 692554635}
+  shovelPuzzleCompleted: 0
 --- !u!224 &7762273423785227984
 RectTransform:
   m_ObjectHideFlags: 0

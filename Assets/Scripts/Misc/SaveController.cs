@@ -45,6 +45,10 @@ public class SaveController : MonoBehaviour
             healRefillStations = GameObject.Find("HealRefillStationList").GetComponent<HealRefillStationList>().healRefillStations,
             healRefillStationsUsesLeft = GameObject.Find("HealRefillStationList").GetComponent<HealRefillStationList>().healRefillStationsUsesLeft,
             
+            treePuzzleCompleted = GameObject.FindGameObjectWithTag("Items").GetComponent<ItemInteraction>().treePuzzleCompleted,
+            bushPuzzleCompleted = GameObject.FindGameObjectWithTag("Items").GetComponent<ItemInteraction>().bushPuzzleCompleted,
+            shovelPuzzleCompleted = GameObject.FindGameObjectWithTag("Items").GetComponent<ItemInteraction>().shovelPuzzleCompleted,
+            
         };
         
         File.WriteAllText(_saveLocation, JsonUtility.ToJson(saveData));
@@ -84,7 +88,11 @@ public class SaveController : MonoBehaviour
             
             GameObject.Find("HealRefillStationList").GetComponent<HealRefillStationList>().healRefillStations = saveData.healRefillStations;
             GameObject.Find("HealRefillStationList").GetComponent<HealRefillStationList>().healRefillStationsUsesLeft = saveData.healRefillStationsUsesLeft;
-            
+
+            GameObject.FindGameObjectWithTag("Items").GetComponent<ItemInteraction>().treePuzzleCompleted = saveData.treePuzzleCompleted;
+            GameObject.FindGameObjectWithTag("Items").GetComponent<ItemInteraction>().bushPuzzleCompleted = saveData.bushPuzzleCompleted;
+            GameObject.FindGameObjectWithTag("Items").GetComponent<ItemInteraction>().shovelPuzzleCompleted = saveData.shovelPuzzleCompleted;
+
 
 
         }

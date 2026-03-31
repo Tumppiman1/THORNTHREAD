@@ -28,6 +28,11 @@ public class SaveData
 
     public List<GameObject> healRefillStations;
     public List<int> healRefillStationsUsesLeft;
+
+    public bool treePuzzleCompleted;
+    public bool bushPuzzleCompleted;
+    public bool shovelPuzzleCompleted;
+
     //public List<GameObject> emptyHealRefillStations;
 
 
