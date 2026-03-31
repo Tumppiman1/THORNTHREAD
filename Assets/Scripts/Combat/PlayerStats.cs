@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
+    [SerializeField] private GameObject collectAxeButton;
+    [SerializeField] private GameObject collectShieldButton;
+    [SerializeField] private GameObject collectMaceButton;
+    
     [SerializeField] private GameObject deathScreen;
     [SerializeField] private GameObject brokenSwordButton;
     [SerializeField] private GameObject axeButton;
@@ -117,6 +121,7 @@ public class PlayerStats : MonoBehaviour
         if (playerHasAxe && attackPointCount >= 3) 
         {
             axeButton.SetActive(true);
+            collectAxeButton.gameObject.SetActive(false);
         }
 
         else {
@@ -127,6 +132,7 @@ public class PlayerStats : MonoBehaviour
         if (playerHasShield && attackPointCount >= 1) 
         {
             shieldButton.SetActive(true);
+            collectShieldButton.gameObject.SetActive(false);
         }
 
         else {
@@ -136,6 +142,7 @@ public class PlayerStats : MonoBehaviour
         // Deactivate mace
         if (playerHasMace && attackPointCount >= 5) {
             maceButton.SetActive(true);
+            collectMaceButton.gameObject.SetActive(false);
         }
 
         else {
@@ -252,6 +259,12 @@ public class PlayerStats : MonoBehaviour
 
     }
 
+    public void CollectAxe()
+    {
+        collectAxeButton.gameObject.SetActive(false);
+        playerHasAxe = true;
+    }
+    
     public void AxeAttack()
     {
         
@@ -261,12 +274,24 @@ public class PlayerStats : MonoBehaviour
             
         }
     }
+    
+    public void CollectShield()
+    {
+        collectShieldButton.gameObject.SetActive(false);
+        playerHasShield = true;
+    }
 
     public void ShieldBlock()
     {
         if (attackPointCount - shieldApCost >= 0 && GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().isPlayerTurn) {
             GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().ShieldBlock();
         }
+    }
+    
+    public void CollectMace()
+    {
+        collectMaceButton.gameObject.SetActive(false);
+        playerHasMace = true;
     }
 
     public void StunMaceAttack()

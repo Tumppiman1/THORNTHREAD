@@ -103,13 +103,13 @@ public class CombatManager : MonoBehaviour
             if (enemies.Count >= 1) 
             {   
                 enemyActionsLeft++;
-                /*
+                
                 foreach (GameObject enemy in enemies) 
                 {
                     // Remove block effect from enemies at the start of enemy turn
                     enemy.GetComponent<EnemyStats>().isBlocking = false;
                 }
-                */
+                
                 StartCoroutine(EnemyTurnText());
                 
                 //Invoke(nameof(EnemyTurn), 2f);
@@ -449,6 +449,7 @@ public class CombatManager : MonoBehaviour
 
             else {
                 Debug.Log("Enemy blocked attack");
+                Instantiate(MissVFX, target.GetComponent<EnemyStats>().effectPoint.position, Quaternion.identity);
                 target.GetComponent<EnemyStats>().isBlocking = false;
                 target = null;
                 playerActionsLeft--;
