@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemInteraction : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class ItemInteraction : MonoBehaviour
     private GameObject items;
     
     public string activeItem = null;
+
+    public RawImage ropeBucket;
     
     
     void Start()
@@ -40,11 +43,46 @@ public class ItemInteraction : MonoBehaviour
 
                 if (activeItem == "rope" && itemToCombine == "bucket") 
                 {
-                    Debug.Log("items combined");
-                    int activeItemIndex = GetComponent<Items>().items.IndexOf(activeItem);
+                    Debug.Log(activeItem + " and " + itemToCombine + " combined");
+
+                    if (GetComponent<Items>().items.Contains(activeItem) && GetComponent<Items>().items.Contains(itemToCombine)) 
+                    {
+                        int activeItemIndex = GetComponent<Items>().items.IndexOf(activeItem);
+                        
+                        GetComponent<Items>().icons.RemoveAt(activeItemIndex);
+                        GetComponent<Items>().items.Remove(activeItem);
+                        
+                        int itemToCombineIndex = GetComponent<Items>().items.IndexOf(itemToCombine);
+                        
+                        GetComponent<Items>().icons.RemoveAt(itemToCombineIndex);
+                        GetComponent<Items>().items.Remove(itemToCombine);
+                        
+                        GetComponent<Items>().items.Add("RopeBucket");
+                        GetComponent<Items>().icons.Add(ropeBucket);
+                    }
                     
-                    GetComponent<Items>().icons.RemoveAt(activeItemIndex);
-                    GetComponent<Items>().items.RemoveAt(activeItemIndex);
+                    GameObject.Find("HotbarSlots").GetComponent<HotbarScript>().UpdateHotbar();
+                }
+                
+                else if (activeItem == "bucket" && itemToCombine == "rope") 
+                {
+                    Debug.Log(activeItem + " and " + itemToCombine + " combined");
+
+                    if (GetComponent<Items>().items.Contains(activeItem) && GetComponent<Items>().items.Contains(itemToCombine)) 
+                    {
+                        int activeItemIndex = GetComponent<Items>().items.IndexOf(activeItem);
+                        
+                        GetComponent<Items>().icons.RemoveAt(activeItemIndex);
+                        GetComponent<Items>().items.Remove(activeItem);
+                        
+                        int itemToCombineIndex = GetComponent<Items>().items.IndexOf(itemToCombine);
+                        
+                        GetComponent<Items>().icons.RemoveAt(itemToCombineIndex);
+                        GetComponent<Items>().items.Remove(itemToCombine);
+                        
+                        GetComponent<Items>().items.Add("RopeBucket");
+                        GetComponent<Items>().icons.Add(ropeBucket);
+                    }
                     
                     GameObject.Find("HotbarSlots").GetComponent<HotbarScript>().UpdateHotbar();
                 }
@@ -56,6 +94,8 @@ public class ItemInteraction : MonoBehaviour
             }
         }
     }
+    
+    
     
     
     void Update()
@@ -77,6 +117,24 @@ public class ItemInteraction : MonoBehaviour
                             hit.collider.gameObject.SetActive(false);
                             hit.collider.gameObject.transform.parent.transform.GetChild(1).gameObject.SetActive(true);
                             
+                        }
+                    }
+
+                    if (hit.collider.gameObject.layer == 16) 
+                    {
+                        if (activeItem == "lantern" && hit.collider.gameObject.layer == 16) 
+                        {
+                            hit.collider.gameObject.SetActive(false);
+                            hit.collider.gameObject.transform.parent.transform.GetChild(1).gameObject.SetActive(true);
+                        }
+                    }
+                    
+                    if (hit.collider.gameObject.layer == 17) 
+                    {
+                        if (activeItem == "shovel" && hit.collider.gameObject.layer == 17) 
+                        {
+                            hit.collider.gameObject.SetActive(false);
+                            //hit.collider.gameObject.transform.parent.transform.GetChild(1).gameObject.SetActive(true);
                         }
                     }
                     

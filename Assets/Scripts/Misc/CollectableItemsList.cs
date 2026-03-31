@@ -22,13 +22,15 @@ public class CollectableItemsList : MonoBehaviour
         }
     }
 
+    
+    
     public void LoadCollectableItems()
     {
         if (collectableItems.Count > 0 | collectedItems.Count > 0) 
         {
             foreach (GameObject item in collectedItems) 
             {
-                Destroy(item);
+                item.gameObject.SetActive(false);
             }
         }
     }
