@@ -98,7 +98,7 @@ public class ItemInteraction : MonoBehaviour
                         GetComponent<Items>().icons.RemoveAt(itemToCombineIndex);
                         GetComponent<Items>().items.Remove(itemToCombine);
                         
-                        GetComponent<Items>().items.Add("RopeBucket");
+                        GetComponent<Items>().items.Add("ropebucket");
                         GetComponent<Items>().icons.Add(ropeBucket);
                     }
                     

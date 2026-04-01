@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="70d5cdb3-4fb8-4f19-a4dd-b2fe67eaafda" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.THORNTHREAD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.THORNTHREAD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/CombatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/SaveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/SaveController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Transitions/MainMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Transitions/MainMenuController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemInteraction.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +106,7 @@
       <workItem from="1774599121257" duration="7472000" />
       <workItem from="1774853152943" duration="12245000" />
       <workItem from="1774938322318" duration="8838000" />
-      <workItem from="1775024775317" duration="10188000" />
+      <workItem from="1775024775317" duration="10909000" />
     </task>
     <servers />
   </component>
