@@ -30,6 +30,7 @@ public class Items : MonoBehaviour
             // GameObject.Find("HotbarSlots").transform.GetChild(slot).GetComponent<RawImage>().color = new Color(0, 0, 0, 0);
             GameObject.Find("HotbarSlots").transform.GetChild(slot).GetComponent<RawImage>().color = icons[slot].color;
             GameObject.Find("HotbarSlots").transform.GetChild(slot).GetComponent<RawImage>().texture = icons[slot].texture;
+            GameObject.Find("HotbarSlots").transform.GetChild(slot).GetComponent<Button>().interactable = true;
 
         }
     }
@@ -38,6 +39,7 @@ public class Items : MonoBehaviour
     {
         GameObject.Find("HotbarSlots").transform.GetChild(slot).GetComponent<RawImage>().color = new Color(0, 0, 0, 0);
         GameObject.Find("HotbarSlots").transform.GetChild(slot).GetComponent<RawImage>().texture = defaultIcon.texture;
+        GameObject.Find("HotbarSlots").transform.GetChild(slot).GetComponent<Button>().interactable = false;
     }
     
 }

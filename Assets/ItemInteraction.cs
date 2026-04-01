@@ -16,14 +16,22 @@ public class ItemInteraction : MonoBehaviour
     
     public bool wellPuzzleCompleted = false;
     
+    public bool bridgePuzzleCompleted = false;
+    
     public GameObject bushPuzzle;
     public bool bushPuzzleCompleted = false;
     
     public GameObject shovelPuzzle;
     public bool shovelPuzzleCompleted = false;
-
+    
+    
+    public bool casteLock1pened = false;
+    public bool casteLock2pened = false;
+    public bool castleLockPuzzleCompleted = false;
 
     public RawImage key1Icon;
+    public RawImage key2Icon;
+    public RawImage key3Icon;
     
     void Start()
     {
@@ -46,6 +54,8 @@ public class ItemInteraction : MonoBehaviour
         {
             shovelPuzzle.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
         }
+
+        
     }
 
     public void UseItem(int slot)
@@ -111,7 +121,7 @@ public class ItemInteraction : MonoBehaviour
                         GetComponent<Items>().icons.RemoveAt(itemToCombineIndex);
                         GetComponent<Items>().items.Remove(itemToCombine);
                         
-                        GetComponent<Items>().items.Add("RopeBucket");
+                        GetComponent<Items>().items.Add("ropebucket");
                         GetComponent<Items>().icons.Add(ropeBucket);
                     }
                     
@@ -158,6 +168,10 @@ public class ItemInteraction : MonoBehaviour
                         {
                             hit.collider.gameObject.SetActive(false);
                             hit.collider.gameObject.transform.parent.transform.GetChild(1).gameObject.SetActive(true);
+                            
+                            GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items.Add("key2");
+                            GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().icons.Add(key1Icon);
+                            
                             bushPuzzleCompleted = true;
                         }
                     }
@@ -174,16 +188,58 @@ public class ItemInteraction : MonoBehaviour
 
                     if (hit.collider.gameObject.layer == 18) 
                     {
-                        if (activeItem == "ropeBucket" && hit.collider.gameObject.layer == 18) 
+                        if (activeItem == "ropebucket" && hit.collider.gameObject.layer == 18) 
                         {
                             if (!GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items.Contains("key1")) 
                             {
                                 GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items.Add("key1");
                                 GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().icons.Add(key1Icon);
+                                
+                                GameObject.Find("HotbarSlots").GetComponent<HotbarScript>().UpdateHotbar();
                                 wellPuzzleCompleted = true;
+                                Debug.Log("Well puzzle completed");
                             }
                         }
                     }
+
+                    if (hit.collider.gameObject.layer == 19) 
+                    {
+                        if (activeItem == "key1" && hit.collider.gameObject.layer == 19) 
+                        {
+                            // Open bridge lock
+                            bridgePuzzleCompleted = true;
+                        }
+                    }
+                    
+                    if (hit.collider.gameObject.layer == 20) 
+                    {
+                        if (activeItem == "key2" && hit.collider.gameObject.layer == 20) 
+                        {
+                            // Open castle lock #1
+                            
+                        }
+                        
+                        if (!castleLockPuzzleCompleted && casteLock1pened && casteLock2pened) 
+                        {
+                            castleLockPuzzleCompleted = true;
+                        }
+                    }
+
+                    if (hit.collider.gameObject.layer == 21) 
+                    {
+                        if (activeItem == "key3" && hit.collider.gameObject.layer == 21) 
+                        {
+                            // Open castle lock #2
+                        }
+
+                        if (!castleLockPuzzleCompleted && casteLock1pened && casteLock2pened) 
+                        {
+                            castleLockPuzzleCompleted = true;
+                        }
+                            
+                            
+                    }
+                    
                     
                     
                     activeItem = null;

@@ -32,11 +32,13 @@ public class HotbarScript : MonoBehaviour
                 
                 // Gets item icon from inventory controller
                 _inventoryController.GetComponent<Items>().ItemIcon(i);
+                //gameObject.GetComponent<Button>().interactable = true;
             }
 
             for (int i = items.Count; i <= 9; i++) 
             {
                 _inventoryController.GetComponent<Items>().DefaultIcon(i);
+                //gameObject.GetComponent<Button>().interactable = false;
             }
         }
 

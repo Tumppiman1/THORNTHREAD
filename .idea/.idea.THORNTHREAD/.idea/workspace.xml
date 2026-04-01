@@ -8,7 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.THORNTHREAD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.THORNTHREAD/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ItemInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemInteraction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/MovementScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/MovementScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/HotbarScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/HotbarScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Items.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Items.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +110,7 @@
       <workItem from="1774599121257" duration="7472000" />
       <workItem from="1774853152943" duration="12245000" />
       <workItem from="1774938322318" duration="8838000" />
-      <workItem from="1775024775317" duration="3867000" />
+      <workItem from="1775024775317" duration="7399000" />
     </task>
     <servers />
   </component>
