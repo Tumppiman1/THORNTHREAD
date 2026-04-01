@@ -11420,7 +11420,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -336.99997}
+  m_AnchoredPosition: {x: 0, y: -336}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &219120615
@@ -15742,8 +15742,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.29243156, z: 0, w: 0.9562865}
-  m_LocalPosition: {x: 820, y: 5.8, z: 106.3}
+  m_LocalRotation: {x: 0, y: 0.9832027, z: -0, w: -0.18251711}
+  m_LocalPosition: {x: 1531.1, y: 27.18, z: 502.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44187,7 +44187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -461.99997}
+  m_AnchoredPosition: {x: 0, y: -460}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &923869627
@@ -79795,7 +79795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -450}
+  m_AnchoredPosition: {x: 0, y: -460}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1603728898
@@ -85239,7 +85239,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -339.00003}
+  m_AnchoredPosition: {x: 0, y: -336}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1735831417
@@ -100797,7 +100797,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -459.99997}
-  m_SizeDelta: {x: 55, y: 55}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2070596955
 MonoBehaviour:
@@ -102752,7 +102752,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -334.99997}
+  m_AnchoredPosition: {x: 0, y: -336}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2111966255
@@ -108000,7 +108000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1448688597210102643
 GameObject:
   m_ObjectHideFlags: 0
@@ -122500,6 +122500,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8571174217095284880}
+        m_TargetAssemblyTypeName: PlayerStats, Assembly-CSharp
+        m_MethodName: CollectAxe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8385691926740368974
 GameObject:
   m_ObjectHideFlags: 0
@@ -122956,25 +122968,25 @@ MonoBehaviour:
   maxAttackPointCount: 5
   brokenSwordDamage: 5
   swordHitChance: 80
-  playerHasAxe: 1
+  playerHasAxe: 0
   axeDamage: 10
   axeApCost: 3
   axeHitChance: 100
-  playerHasShield: 1
+  playerHasShield: 0
   shieldApCost: 1
-  playerHasMace: 1
+  playerHasMace: 0
   maceDamage: 10
   maceApCost: 5
   maceHitChance: 100
   inspectEnemyApCost: 1
   healFlaskConsumableID: 0
   healFlaskUsesLeft: 2
-  healFlaskHealAmount: 10
+  healFlaskHealAmount: 50
   attackPointConsumableID: 1
-  attackPointConsumable: 1
+  attackPointConsumable: 0
   attackPointConsumableAmount: 1
   addTurnsConsumableID: 2
-  addTurnsConsumable: 1
+  addTurnsConsumable: 0
   addTurnsConsumableAmount: 1
   damageOvertimeConsumableID: 3
   damageOvertimeConsumable: 1
