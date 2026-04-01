@@ -57,7 +57,6 @@ public class SaveController : MonoBehaviour
     public void LoadGame()
     {
         
-        
         if (File.Exists(_saveLocation)) 
         {
             Debug.Log("Game loaded");

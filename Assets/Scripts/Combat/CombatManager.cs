@@ -25,6 +25,8 @@ public class CombatManager : MonoBehaviour
     [SerializeField] GameObject SlashVFX;
     [SerializeField] GameObject MissVFX;
 
+    private bool _coroutineActive = false;
+
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
@@ -90,7 +92,12 @@ public class CombatManager : MonoBehaviour
             Debug.Log("Player turn");
             playerIsBlocking = false;
             playerActionsLeft++;
-            StartCoroutine(PlayerTurnText());
+
+            if (!_coroutineActive) 
+            {
+                StartCoroutine(PlayerTurnText());
+            }
+
             //Invoke(nameof(PlayerTurn), 2f);
             //PlayerTurn();
         }
@@ -109,9 +116,12 @@ public class CombatManager : MonoBehaviour
                     // Remove block effect from enemies at the start of enemy turn
                     enemy.GetComponent<EnemyStats>().isBlocking = false;
                 }
-                
-                StartCoroutine(EnemyTurnText());
-                
+
+                if (!_coroutineActive) 
+                {
+                    StartCoroutine(EnemyTurnText());
+                }
+
                 //Invoke(nameof(EnemyTurn), 2f);
                 Debug.Log("Enemy turn");
                 // EnemyTurn();
@@ -494,6 +504,7 @@ public class CombatManager : MonoBehaviour
                 target.GetComponent<EnemyStats>().isBlocking = false;
                 _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().axeApCost);
                 StartCoroutine(PlayerAPText("-" + _player.GetComponent<PlayerStats>().axeApCost.ToString()));
+                playerActionsLeft--;
                 PlayerTurn();
             }
         }
@@ -535,6 +546,7 @@ public class CombatManager : MonoBehaviour
                 Debug.Log("Enemy blocked attack");
                 target.GetComponent<EnemyStats>().isBlocking = false;
                 _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().maceApCost);
+                playerActionsLeft--;
                 PlayerTurn();
             }
         }
@@ -694,17 +706,21 @@ public class CombatManager : MonoBehaviour
 
     IEnumerator PlayerTurnText()
     {
+        _coroutineActive = true;
         GameObject.Find("CombatText").transform.GetChild(1).gameObject.SetActive(true);
         yield return new WaitForSeconds(2f);
         GameObject.Find("CombatText").transform.GetChild(1).gameObject.SetActive(false);
+        _coroutineActive = false;
         PlayerTurn();
     }
     
     IEnumerator EnemyTurnText()
     {
+        _coroutineActive = true;
         GameObject.Find("CombatText").transform.GetChild(0).gameObject.SetActive(true);
         yield return new WaitForSeconds(2f);
         GameObject.Find("CombatText").transform.GetChild(0).gameObject.SetActive(false);
+        _coroutineActive = false;
         EnemyTurn();
     }
     
