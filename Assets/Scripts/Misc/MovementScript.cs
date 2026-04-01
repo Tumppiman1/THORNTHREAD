@@ -8,6 +8,7 @@ public class MovementScript : MonoBehaviour
     private GameObject _currentCamera;
     public List<string> requirements = new List<string>();
     public List<GameObject> combatRequirements = new List<GameObject>();
+    public List<string> puzzleRequirements = new List<string>();
     
     private GameObject items;
 
@@ -157,6 +158,54 @@ public class MovementScript : MonoBehaviour
                     else {
                         Debug.Log("Combat requirement conditions not met");
                         break;
+                    }
+                }
+            }
+            
+            else if (puzzleRequirements.Count > 0) 
+            {
+                foreach (string puzzle in puzzleRequirements) 
+                {
+                    if (puzzle == "treePuzzle") 
+                    {
+                        if (GameObject.FindGameObjectWithTag("Items").GetComponent<ItemInteraction>().treePuzzleCompleted == true) {
+                            GameObject.FindGameObjectWithTag("Fade").GetComponent<Fade>().StartFade();
+                            _cameraZoom = true;
+
+                            //_mainCamera.GetComponent<CinemachineBrain>().
+                            Invoke(nameof(NextCamera), 1f);
+                        }
+
+                        else {
+                            Debug.Log("Tree puzzle not completed");
+                        }
+                    }
+                    
+                    else if (puzzle == "ropeBucketPuzzle") 
+                    {
+                        
+                    }
+                    
+                    else if (puzzle == "bushPuzzle") 
+                    {
+                        if (GameObject.FindGameObjectWithTag("Items").GetComponent<ItemInteraction>().bushPuzzleCompleted == true) {
+                            GameObject.FindGameObjectWithTag("Fade").GetComponent<Fade>().StartFade();
+                            _cameraZoom = true;
+
+                            //_mainCamera.GetComponent<CinemachineBrain>().
+                            Invoke(nameof(NextCamera), 1f);
+                        }
+                    }
+                    
+                    else if (puzzle == "shovelPuzzle") 
+                    {
+                        if (GameObject.FindGameObjectWithTag("Items").GetComponent<ItemInteraction>().shovelPuzzleCompleted == true) {
+                            GameObject.FindGameObjectWithTag("Fade").GetComponent<Fade>().StartFade();
+                            _cameraZoom = true;
+
+                            //_mainCamera.GetComponent<CinemachineBrain>().
+                            Invoke(nameof(NextCamera), 1f);
+                        }
                     }
                 }
             }

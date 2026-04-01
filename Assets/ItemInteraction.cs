@@ -14,11 +14,16 @@ public class ItemInteraction : MonoBehaviour
     public GameObject treePuzzle;
     public bool treePuzzleCompleted = false;
     
+    public bool wellPuzzleCompleted = false;
+    
     public GameObject bushPuzzle;
     public bool bushPuzzleCompleted = false;
     
     public GameObject shovelPuzzle;
     public bool shovelPuzzleCompleted = false;
+
+
+    public RawImage key1Icon;
     
     void Start()
     {
@@ -164,6 +169,19 @@ public class ItemInteraction : MonoBehaviour
                             hit.collider.gameObject.SetActive(false);
                             //hit.collider.gameObject.transform.parent.transform.GetChild(1).gameObject.SetActive(true);
                             shovelPuzzleCompleted = true;
+                        }
+                    }
+
+                    if (hit.collider.gameObject.layer == 18) 
+                    {
+                        if (activeItem == "ropeBucket" && hit.collider.gameObject.layer == 18) 
+                        {
+                            if (!GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items.Contains("key1")) 
+                            {
+                                GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items.Add("key1");
+                                GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().icons.Add(key1Icon);
+                                wellPuzzleCompleted = true;
+                            }
                         }
                     }
                     
