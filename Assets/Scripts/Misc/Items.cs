@@ -12,6 +12,45 @@ public class Items : MonoBehaviour
     
     void Start()
     {
+        if (items.Contains("bucket")) 
+        {
+            GameObject.Find("Screen_18_Ämpäri").gameObject.SetActive(false);
+        }
+        
+        if (items.Contains("rope")) 
+        {
+            GameObject.Find("Screen_23d_automatic_combat_Köysi").gameObject.SetActive(false);
+        }
+        
+        if (items.Contains("ropebucket")) 
+        {
+            GameObject.Find("Screen_18_Ämpäri").gameObject.SetActive(false);
+            GameObject.Find("Screen_23d_automatic_combat_Köysi").gameObject.SetActive(false);
+        }
+        
+        if (items.Contains("key1")) 
+        {
+            GameObject.Find("Screen_18_Ämpäri").gameObject.SetActive(false);
+            GameObject.Find("Screen_23d_automatic_combat_Köysi").gameObject.SetActive(false);
+        }
+        
+        if (items.Contains("lantern")) 
+        {
+            GameObject.Find("Screen_41_Lyhty_placeholder").gameObject.SetActive(false);
+        }
+        
+        if (items.Contains("key2")) 
+        {
+            GameObject.Find("Screen_35e_Avain1_placeholder").gameObject.SetActive(false);
+            GameObject.Find("Screen_41_Lyhty_placeholder").gameObject.SetActive(false);
+        }
+        
+        if (items.Contains("key3")) 
+        {
+            GameObject.Find("Screen_37c_Avain2_placeholder (1)").gameObject.SetActive(false);
+            GameObject.Find("Screen_41_Lyhty_placeholder").gameObject.SetActive(false);
+        }
+        
         
     }
 

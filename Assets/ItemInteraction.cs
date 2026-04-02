@@ -38,6 +38,21 @@ public class ItemInteraction : MonoBehaviour
         activeItem = null;
         items = GameObject.FindGameObjectWithTag("Items");
 
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasAxe) 
+        {
+            GameObject.Find("Screen_11c_Kirves").SetActive(false);
+        }
+        
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasShield) 
+        {
+            GameObject.Find("Screen_25d_Kilpi").SetActive(false);
+        }
+        
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().playerHasMace) 
+        {
+            GameObject.Find("Screen_24c_Nuija").SetActive(false);
+        }
+
         if (treePuzzleCompleted) 
         {
             treePuzzle.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
