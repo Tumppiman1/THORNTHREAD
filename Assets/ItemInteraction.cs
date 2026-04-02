@@ -182,10 +182,10 @@ public class ItemInteraction : MonoBehaviour
                         if (activeItem == "lantern" && hit.collider.gameObject.layer == 16) 
                         {
                             hit.collider.gameObject.SetActive(false);
-                            hit.collider.gameObject.transform.parent.transform.GetChild(1).gameObject.SetActive(true);
+                            //hit.collider.gameObject.transform.parent.transform.GetChild(1).gameObject.SetActive(true);
                             
                             GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items.Add("key2");
-                            GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().icons.Add(key1Icon);
+                            GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().icons.Add(key2Icon);
                             
                             bushPuzzleCompleted = true;
                         }
@@ -197,6 +197,9 @@ public class ItemInteraction : MonoBehaviour
                         {
                             hit.collider.gameObject.SetActive(false);
                             //hit.collider.gameObject.transform.parent.transform.GetChild(1).gameObject.SetActive(true);
+                            GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items.Add("key3");
+                            GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().icons.Add(key3Icon);
+
                             shovelPuzzleCompleted = true;
                         }
                     }
@@ -223,6 +226,8 @@ public class ItemInteraction : MonoBehaviour
                         {
                             // Open bridge lock
                             bridgePuzzleCompleted = true;
+                            hit.collider.gameObject.SetActive(false);
+                            Debug.Log("Bridge lock puzzle completed");
                         }
                     }
                     
@@ -231,6 +236,7 @@ public class ItemInteraction : MonoBehaviour
                         if (activeItem == "key2" && hit.collider.gameObject.layer == 20) 
                         {
                             // Open castle lock #1
+                            hit.collider.gameObject.SetActive(false);
                             
                         }
                         
@@ -245,6 +251,7 @@ public class ItemInteraction : MonoBehaviour
                         if (activeItem == "key3" && hit.collider.gameObject.layer == 21) 
                         {
                             // Open castle lock #2
+                            hit.collider.gameObject.SetActive(false);
                         }
 
                         if (!castleLockPuzzleCompleted && casteLock1pened && casteLock2pened) 

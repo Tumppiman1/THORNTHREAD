@@ -181,9 +181,20 @@ public class MovementScript : MonoBehaviour
                         }
                     }
                     
-                    else if (puzzle == "ropeBucketPuzzle") 
+                    else if (puzzle == "bridgeLockPuzzle") 
                     {
-                        
+                        if (GameObject.FindGameObjectWithTag("Items").GetComponent<ItemInteraction>().bridgePuzzleCompleted == true && GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items.Contains("key1") )
+                        {
+                            _cameraZoom = true;
+
+                            //_mainCamera.GetComponent<CinemachineBrain>().
+                            Invoke(nameof(NextCamera), 1f);
+                        }
+
+                        else
+                        {
+                            Debug.Log("Bridge lock puzzle not completed");
+                        }
                     }
                     
                     else if (puzzle == "bushPuzzle") 
@@ -206,6 +217,18 @@ public class MovementScript : MonoBehaviour
                             //_mainCamera.GetComponent<CinemachineBrain>().
                             Invoke(nameof(NextCamera), 1f);
                         }
+                    }
+
+                    else if (puzzle == "castleLockPuzzle")
+                    {
+                        if (GameObject.FindGameObjectWithTag("Items").GetComponent<ItemInteraction>().castleLockPuzzleCompleted == true)
+                        {
+                            _cameraZoom = true;
+
+                            //_mainCamera.GetComponent<CinemachineBrain>().
+                            Invoke(nameof(NextCamera), 1f);
+                        }
+
                     }
                 }
             }
