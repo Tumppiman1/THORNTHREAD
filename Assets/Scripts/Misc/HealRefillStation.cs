@@ -11,6 +11,7 @@ public class HealRefillStation : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().RefillHealFlask();
             refillsLeft--;
+            AudioManager.Instance.PlaySFX("Heal Bot Fill");
             GameObject.Find("HealRefillStationList").GetComponent<HealRefillStationList>().HealStationUses(transform.parent.transform.parent.gameObject);
             
 

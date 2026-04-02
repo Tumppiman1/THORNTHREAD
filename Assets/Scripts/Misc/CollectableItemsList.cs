@@ -18,6 +18,7 @@ public class CollectableItemsList : MonoBehaviour
         {
             collectableItems.Remove(item);
             collectedItems.Add(item);
+           
             LoadCollectableItems();
         }
     }

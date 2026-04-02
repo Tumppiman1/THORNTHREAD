@@ -19,6 +19,7 @@ public class CollectItemScript : MonoBehaviour
             Debug.Log("Added to inventory: " + itemName);
             GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items.Add(itemName);
             GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().icons.Add(itemIcon);
+            AudioManager.Instance.PlaySFX("Item PickUp");
             GameObject.Find("InventoryStuff").transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).GetComponent<HotbarScript>().UpdateHotbar();
             
         }

@@ -223,6 +223,7 @@ public class CombatManager : MonoBehaviour
                             {
                                 Debug.Log("Attack blocked");
                                 playerIsBlocking = false;
+                            AudioManager.Instance.PlaySFX("Shield_Block3");
                                 enemyActionsLeft--;
                                 EnemyTurn();
                             }
@@ -235,6 +236,7 @@ public class CombatManager : MonoBehaviour
                             Debug.Log("Enemy block");
 
                             enemies[0].GetComponent<EnemyStats>().isBlocking = true;
+                        AudioManager.Instance.PlaySFX("Shield_Block2");
                             enemyActionsLeft--;
                             EnemyTurn();
                         }
@@ -243,6 +245,7 @@ public class CombatManager : MonoBehaviour
                             // Enemy Heal
                             //Debug.Log(randomInt);
                             Debug.Log("Enemy heal");
+                        AudioManager.Instance.PlaySFX("Heal Bot Drink");
                             enemies[0].GetComponent<EnemyStats>().TakeHealing(enemies[0].GetComponent<EnemyStats>().healAmount);
                             enemyActionsLeft--;
                             EnemyTurn();
@@ -320,6 +323,7 @@ public class CombatManager : MonoBehaviour
                                 if (randomHitChance <= enemy.GetComponent<EnemyStats>().hitChance) 
                                 {
                                     float enemyDamage = enemy.GetComponent<EnemyStats>().enemyDamage;
+                                    AudioManager.Instance.PlaySFX("Skeleton hit");
                                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().TakeDamage(enemyDamage);
                                     StartCoroutine(PlayerDamageText("-" + enemyDamage));
                                     
@@ -327,13 +331,14 @@ public class CombatManager : MonoBehaviour
 
                                 else {
                                     Debug.Log("Enemy attack missed");
-                                    
+                                    AudioManager.Instance.PlaySFX("Skeleton Miss");
                                 }
                             }
                             
                             else 
                             {
                                 Debug.Log("Attack blocked");
+                                AudioManager.Instance.PlaySFX("Shield_Block3");
                                 playerIsBlocking = false;
                                 
                             }
@@ -344,7 +349,7 @@ public class CombatManager : MonoBehaviour
                             // enemy block
                             //Debug.Log(randomInt);
                             Debug.Log("Enemy block");
-
+                            AudioManager.Instance.PlaySFX("Shield_Block2");
                             enemy.GetComponent<EnemyStats>().isBlocking = true;
                             
                         }
@@ -353,6 +358,7 @@ public class CombatManager : MonoBehaviour
                             // Enemy Heal
                             //Debug.Log(randomInt);
                             Debug.Log("Enemy heal");
+                            AudioManager.Instance.PlaySFX("Heal Bot Drink");
                             enemy.GetComponent<EnemyStats>().TakeHealing(enemy.GetComponent<EnemyStats>().healAmount);
                             
                         }
@@ -439,10 +445,11 @@ public class CombatManager : MonoBehaviour
                     target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().brokenSwordDamage);
                     target = null;
                     playerActionsLeft--;
-                    //AudioManager.Instance.PlaySFX("Sword_Hit");
+                    AudioManager.Instance.PlaySFX("Sword_Hit");
                     Debug.Log("Slash");
                     
-                    
+
+
                     PlayerTurn();
                 }
 
@@ -528,6 +535,7 @@ public class CombatManager : MonoBehaviour
                     _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().maceApCost);
                     StartCoroutine(PlayerAPText("-" + _player.GetComponent<PlayerStats>().maceApCost.ToString()));
                     playerActionsLeft--;
+                    AudioManager.Instance.PlaySFX("Axe_Hit");
                     target = null;
                     PlayerTurn();
                 }
@@ -537,6 +545,7 @@ public class CombatManager : MonoBehaviour
                     _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().maceApCost);
                     StartCoroutine(PlayerAPText("-" + _player.GetComponent<PlayerStats>().maceApCost.ToString()));
                     playerActionsLeft--;
+                    AudioManager.Instance.PlaySFX("Sword_Miss2");
                     target = null;
                     PlayerTurn();
                 }
@@ -664,6 +673,7 @@ public class CombatManager : MonoBehaviour
                 _player.GetComponent<PlayerStats>().ResetAttackPoints();
                 _player.GetComponent<PlayerStats>().attackPointConsumableAmount -= 1;
                 _player.GetComponent<PlayerStats>().attackPointConsumable = false;
+                AudioManager.Instance.PlaySFX("OneTimePot");
                 Debug.Log("Used AP consumable");
                 
             }
@@ -674,6 +684,7 @@ public class CombatManager : MonoBehaviour
                 _player.GetComponent<PlayerStats>().addTurnsConsumableAmount -= 1;
                 _player.GetComponent<PlayerStats>().addTurnsConsumable = false;
                 playerActionsLeft += 2;
+                AudioManager.Instance.PlaySFX("OneTimePot");
                 Debug.Log("Used add 2 turns consumable");
             }
             
@@ -692,7 +703,7 @@ public class CombatManager : MonoBehaviour
                 _player.GetComponent<PlayerStats>().Heal(_player.GetComponent<PlayerStats>().healFlaskHealAmount);
                 _player.GetComponent<PlayerStats>().healFlaskUsesLeft--;
                 playerActionsLeft--;
-                AudioManager.Instance.PlaySFX("Healing");
+                AudioManager.Instance.PlaySFX("Heal Bot Drink");
                 PlayerTurn();
                 Debug.Log("Used heal flask");
             }

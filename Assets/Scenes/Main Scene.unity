@@ -15799,8 +15799,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.09727023, z: 0, w: 0.99525803}
-  m_LocalPosition: {x: 114.12, y: -2.129, z: 341.5}
+  m_LocalRotation: {x: 0, y: -0.10549001, z: 0, w: 0.9944204}
+  m_LocalPosition: {x: 112.31, y: 1.09, z: 418.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -61586,11 +61586,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: ambSounds.Array.size
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.size
-      value: 47
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: ambSounds.Array.data[0].clip
@@ -61657,204 +61657,428 @@ PrefabInstance:
       value: Wind2
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: ambSounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8997f2b5b05baba499454d55386752c3, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: ambSounds.Array.data[8].name
+      value: Fire Whoosh
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: ambSounds.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c5bb3534e0922b438cb6002bc5a7fa7, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: ambSounds.Array.data[9].name
+      value: Forest Amb
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f00e21ac36ec9a44cb85eee854695d92, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b8d6697f8a3a90458a207aa9fa128bf, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 191801b850c2ee942874b7aae446e781, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[5].name
+      value: Player damage 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 273a74a83affa444394407cbea7a48b6, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[6].name
+      value: Player damage 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e728ddfff37baa44b399ed05e1d4564, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[7].name
+      value: Player damage 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e7372a97f6ac06040b9166b9a86562ac, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[8].name
+      value: Shied_Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e3fadf72a2e3ec8428804bedf7944bf4, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[9].name
+      value: Shied_Block2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: ambSounds.Array.data[10].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ad3af95521e9bf429da1abf4647c0e6, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: ambSounds.Array.data[10].name
+      value: Castle Amb
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[10].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4cf09ce94d513a8468c925f03121ef09, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[10].name
+      value: Shied_Block3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 26296b626e1eab3478be8115517393c2, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[11].name
+      value: Shied_Block4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[12].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e96b499a3bc036d4c8793ac9de38d678, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[12].name
+      value: Shied_Equip
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[13].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1df1cc6e8d3fa1546a2a53d6f9435194, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[13].name
+      value: Shied_Unequip
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[14].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1df1cc6e8d3fa1546a2a53d6f9435194, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[14].name
+      value: Shied_Unequip
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[15].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: bc9ab6948a3d6d34c921a3e243346550, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[15].name
+      value: Sword_Equip
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[16].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b308f801bbbc9342afd24d3a116c5e3, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[16].name
+      value: Sword_Hit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[17].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d0b2f0221643fe4491be97c95614e09, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[17].name
+      value: Sword_Miss
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[18].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e9f46fc6c84ea3f47a6e5bf987411c83, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[18].name
+      value: Sword_Miss2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[19].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d6103b95bfc5cbd4681333b27d28485a, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[19].name
+      value: Sword_Unequip
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[20].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 891e75ec704d407488123e79c31e551d, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[20].name
+      value: Skeleton hit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[21].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 428d23a522ac7e64185bad53bd0bb125, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[21].name
+      value: Skeleton Miss
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[22].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 7b46de6708da45b46b58ecdaa10349d9, type: 3}
+      objectReference: {fileID: 8300000, guid: 9767d99d9fd3d8e4ebf55cb8be653c05, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[22].name
-      value: Click End
+      value: OneTimePot
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[23].clip
       value: 
-      objectReference: {fileID: 8300000, guid: f24265016c7d59245b1d6febd7a0d8c4, type: 3}
+      objectReference: {fileID: 8300000, guid: dd701e8490c71d64982609ec20256e09, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[23].name
-      value: Hover
+      value: Click
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[24].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 2237bb8a71d8231429dc17902c75fbb0, type: 3}
+      objectReference: {fileID: 8300000, guid: b20eab4e82f4d1f4faf690fc22de989c, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[24].name
-      value: Item Combined
+      value: Game Start
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[25].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 9a58d3791d354684ca05dd4c09dcced6, type: 3}
+      objectReference: {fileID: 8300000, guid: 7b46de6708da45b46b58ecdaa10349d9, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[25].name
-      value: Item PickUp
+      value: Click End
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[26].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 7f7ac5dff6532fe479c6746b5b4fd425, type: 3}
+      objectReference: {fileID: 8300000, guid: f24265016c7d59245b1d6febd7a0d8c4, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[26].name
-      value: Footstep Bri
+      value: Hover
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[27].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 71f8f1a720c87ed4caf876c9f6130c70, type: 3}
+      objectReference: {fileID: 8300000, guid: 2237bb8a71d8231429dc17902c75fbb0, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[27].name
-      value: Footstep Bri2
+      value: Item Combined
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[28].clip
       value: 
-      objectReference: {fileID: 8300000, guid: af28f98038f87c14dab1e6c4d9036c8d, type: 3}
+      objectReference: {fileID: 8300000, guid: 9a58d3791d354684ca05dd4c09dcced6, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[28].name
-      value: Footstep Bri3
+      value: Item PickUp
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[29].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 68a2de667bfa8d146a7f5557e075a727, type: 3}
+      objectReference: {fileID: 8300000, guid: 7f7ac5dff6532fe479c6746b5b4fd425, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[29].name
-      value: Footstep Bri4
+      value: Footstep Bri
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[30].clip
       value: 
-      objectReference: {fileID: 8300000, guid: a294039ca3b3b1b4f8c9469611966a4a, type: 3}
+      objectReference: {fileID: 8300000, guid: 71f8f1a720c87ed4caf876c9f6130c70, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[30].name
-      value: Footstep Bri5
+      value: Footstep Bri2
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[31].clip
       value: 
-      objectReference: {fileID: 8300000, guid: d4276767474e7fb42b90101d46bb72f3, type: 3}
+      objectReference: {fileID: 8300000, guid: af28f98038f87c14dab1e6c4d9036c8d, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[31].name
-      value: Footstep Bri6
+      value: Footstep Bri3
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[32].clip
       value: 
-      objectReference: {fileID: 8300000, guid: aba3869dac85fec43bed08b3c0f08cb2, type: 3}
+      objectReference: {fileID: 8300000, guid: 68a2de667bfa8d146a7f5557e075a727, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[32].name
-      value: Footstep Gra
+      value: Footstep Bri4
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[33].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 4aea0427980205e4f882a87d5129fee8, type: 3}
+      objectReference: {fileID: 8300000, guid: a294039ca3b3b1b4f8c9469611966a4a, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[33].name
-      value: Footstep Gra2
+      value: Footstep Bri5
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[34].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 3bf87c069b7b4aa4fa9cd036a80a72ab, type: 3}
+      objectReference: {fileID: 8300000, guid: d4276767474e7fb42b90101d46bb72f3, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[34].name
-      value: Footstep Gra3
+      value: Footstep Bri6
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[35].clip
       value: 
-      objectReference: {fileID: 8300000, guid: f22ce1997669ebd47a3606d42a883b4d, type: 3}
+      objectReference: {fileID: 8300000, guid: aba3869dac85fec43bed08b3c0f08cb2, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[35].name
-      value: Footstep Gra4
+      value: Footstep Gra
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[36].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 1d65ff5808f96f546af6ba29ec2f2635, type: 3}
+      objectReference: {fileID: 8300000, guid: 4aea0427980205e4f882a87d5129fee8, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[36].name
-      value: Footstep Gra5
+      value: Footstep Gra2
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[37].clip
       value: 
-      objectReference: {fileID: 8300000, guid: b632a20d7f513054b9a2e92a2b82b4d2, type: 3}
+      objectReference: {fileID: 8300000, guid: 3bf87c069b7b4aa4fa9cd036a80a72ab, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[37].name
-      value: Footstep Gra6
+      value: Footstep Gra3
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[38].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 192f917af2dd74143ad10e5d140ce928, type: 3}
+      objectReference: {fileID: 8300000, guid: f22ce1997669ebd47a3606d42a883b4d, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[38].name
-      value: Footstep Bur
+      value: Footstep Gra4
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[39].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 870a83df62aad3049b580914821149a2, type: 3}
+      objectReference: {fileID: 8300000, guid: 1d65ff5808f96f546af6ba29ec2f2635, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[39].name
-      value: Footstep Bur2
+      value: Footstep Gra5
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[40].clip
       value: 
-      objectReference: {fileID: 8300000, guid: d14b371bbb585ec4982c952b987fc23c, type: 3}
+      objectReference: {fileID: 8300000, guid: b632a20d7f513054b9a2e92a2b82b4d2, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[40].name
-      value: Footstep Bur3
+      value: Footstep Gra6
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[41].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 99450618609e8d24dbf81b2f8d462ecf, type: 3}
+      objectReference: {fileID: 8300000, guid: 192f917af2dd74143ad10e5d140ce928, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[41].name
-      value: Footstep Bur4
+      value: Footstep Bur
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[42].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 03aa3856686403e41b387ac6da041db9, type: 3}
+      objectReference: {fileID: 8300000, guid: 870a83df62aad3049b580914821149a2, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[42].name
-      value: Footstep Bur5
+      value: Footstep Bur2
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[43].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 4c9c478734874aa40bbf3a274f0fed8a, type: 3}
+      objectReference: {fileID: 8300000, guid: d14b371bbb585ec4982c952b987fc23c, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[43].name
-      value: Footstep sto
+      value: Footstep Bur3
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[44].clip
       value: 
-      objectReference: {fileID: 8300000, guid: e93ffe760ce39df4490e8a597048248d, type: 3}
+      objectReference: {fileID: 8300000, guid: 99450618609e8d24dbf81b2f8d462ecf, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[44].name
-      value: Footstep sto2
+      value: Footstep Bur4
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[45].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 31f8548d53664524fae02d02eefe7946, type: 3}
+      objectReference: {fileID: 8300000, guid: 03aa3856686403e41b387ac6da041db9, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[45].name
-      value: Footstep sto3
+      value: Footstep Bur5
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[46].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 18fcce1ff4e401d4db1e8861ff045823, type: 3}
+      objectReference: {fileID: 8300000, guid: 4c9c478734874aa40bbf3a274f0fed8a, type: 3}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[46].name
+      value: Footstep sto
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[47].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e93ffe760ce39df4490e8a597048248d, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[47].name
+      value: Footstep sto2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[48].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 31f8548d53664524fae02d02eefe7946, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[48].name
+      value: Footstep sto3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[49].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 18fcce1ff4e401d4db1e8861ff045823, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[49].name
       value: Footstep sto4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[50].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b7ef35fceb55b14a9030d9db84bbd63, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[50].name
+      value: Heal Bot Fill
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[51].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 58abd19653d19214eacf4b4331e323d1, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[51].name
+      value: Heal Bot Drink
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[52].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 191801b850c2ee942874b7aae446e781, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[52].name
+      value: Princess
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[53].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 50f870d1ba4518541ada69059328fdb5, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: sfxSounds.Array.data[53].name
+      value: Player Death
       objectReference: {fileID: 0}
     - target: {fileID: 3256639991610041465, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: OutputAudioMixerGroup
