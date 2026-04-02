@@ -52,8 +52,8 @@ public class MainMenuController : MonoBehaviour
         {
             Debug.Log("File not found");
         }
-        
-        
+
+        AudioManager.Instance.PlaySFX("Game Start");
         SceneManager.LoadSceneAsync(gameScene);
        
     }
