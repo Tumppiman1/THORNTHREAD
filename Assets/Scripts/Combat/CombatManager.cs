@@ -241,14 +241,54 @@ public class CombatManager : MonoBehaviour
                             EnemyTurn();
                         }
                         
-                        else if (randomInt >= enemyAttackChance + enemyBlockChance && randomInt < totalChance) {
+                        else if (randomInt >= enemyAttackChance + enemyBlockChance && randomInt < totalChance) 
+                        {
                             // Enemy Heal
                             //Debug.Log(randomInt);
-                            Debug.Log("Enemy heal");
-                        AudioManager.Instance.PlaySFX("Heal Bot Drink");
-                            enemies[0].GetComponent<EnemyStats>().TakeHealing(enemies[0].GetComponent<EnemyStats>().healAmount);
-                            enemyActionsLeft--;
-                            EnemyTurn();
+
+                            if (enemies[0].GetComponent<EnemyStats>().enemyHealth < enemies[0].GetComponent<EnemyStats>().enemyMaxHealth / 2) {
+                                Debug.Log("Enemy heal");
+                                AudioManager.Instance.PlaySFX("Heal Bot Drink");
+                                enemies[0].GetComponent<EnemyStats>().TakeHealing(enemies[0].GetComponent<EnemyStats>().healAmount);
+                                enemyActionsLeft--;
+                                EnemyTurn();
+                            }
+
+                            else
+                            {
+                                Debug.Log("Enemy attack");
+                            
+                                if (!playerIsBlocking) {
+                                
+                                    int randomHitChance = UnityEngine.Random.Range(0, 101);
+                                
+                                    if (randomHitChance <= enemies[0].GetComponent<EnemyStats>().hitChance) 
+                                    {
+                                        float enemyDamage = enemies[0].GetComponent<EnemyStats>().enemyDamage;
+                                        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().TakeDamage(enemyDamage);
+                                        StartCoroutine(PlayerDamageText("-" + enemyDamage));
+                                        AudioManager.Instance.PlaySFX("Skeleton hit");
+                                        enemyActionsLeft--;
+                                        EnemyTurn();
+                                    }
+
+                                    else {
+                                        Debug.Log("Enemy attack missed");
+                                        AudioManager.Instance.PlaySFX("Skeleton Miss");
+                                        enemyActionsLeft--;
+                                        EnemyTurn();
+                                    }
+                                }
+                            
+                                else 
+                                {
+                                    Debug.Log("Attack blocked");
+                                    playerIsBlocking = false;
+                                    AudioManager.Instance.PlaySFX("Shield_Block3");
+                                    enemyActionsLeft--;
+                                    EnemyTurn();
+                                }
+                            }
                         }
                         
                         /*
