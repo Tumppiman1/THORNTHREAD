@@ -186,7 +186,8 @@ public class ItemInteraction : MonoBehaviour
                             
                             GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items.Add("key2");
                             GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().icons.Add(key2Icon);
-                            
+                            GameObject.Find("HotbarSlots").GetComponent<HotbarScript>().UpdateHotbar();
+
                             bushPuzzleCompleted = true;
                         }
                     }
@@ -199,6 +200,7 @@ public class ItemInteraction : MonoBehaviour
                             //hit.collider.gameObject.transform.parent.transform.GetChild(1).gameObject.SetActive(true);
                             GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items.Add("key3");
                             GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().icons.Add(key3Icon);
+                            GameObject.Find("HotbarSlots").GetComponent<HotbarScript>().UpdateHotbar();
 
                             shovelPuzzleCompleted = true;
                         }

@@ -87,11 +87,12 @@ public class CombatManager : MonoBehaviour
     {
         if (isPlayerTurn) // player turn
         {
+            target = null;
             playerActionsLeft = 0;
             _player.GetComponent<PlayerStats>().EnableActionButtons();
             Debug.Log("Player turn");
             playerIsBlocking = false;
-            playerActionsLeft++;
+            playerActionsLeft = 1;
 
             if (!_coroutineActive) 
             {
@@ -104,12 +105,13 @@ public class CombatManager : MonoBehaviour
 
         else if (!isPlayerTurn) // enemy turn 
         {
+            target = null;
             enemyActionsLeft = 0;
             _player.GetComponent<PlayerStats>().DisableActionButtons();
             
             if (enemies.Count >= 1) 
             {   
-                enemyActionsLeft++;
+                enemyActionsLeft = 1;
                 
                 foreach (GameObject enemy in enemies) 
                 {
@@ -140,12 +142,14 @@ public class CombatManager : MonoBehaviour
         if (playerActionsLeft > 0) 
         {
             // Player attack
-            
+            target = null;
+
         }
 
         else {
             // Damage overtime effect
             isPlayerTurn = false;
+            target = null;
             //_player.GetComponent<PlayerStats>().DisableActionButtons();
             foreach (GameObject enemy in enemies.ToList()) 
             {
@@ -344,12 +348,12 @@ public class CombatManager : MonoBehaviour
                         int enemyAttackChance = enemy.GetComponent<EnemyStats>().attackChance;
                         int enemyBlockChance = enemy.GetComponent<EnemyStats>().blockChance;
                         int enemyHealChance = enemy.GetComponent<EnemyStats>().healChance;
-                        int enemySpecialChance = enemy.GetComponent<EnemyStats>().specialChance;
+                        //int enemySpecialChance = enemy.GetComponent<EnemyStats>().specialChance;
 
-                        int totalChance = enemyAttackChance + enemyBlockChance + enemyHealChance + enemySpecialChance;
+                        int totalChance = enemyAttackChance + enemyBlockChance + enemyHealChance;
                         // Debug.Log(totalChance);
                         
-                        int randomInt = UnityEngine.Random.Range(0, totalChance + 1);
+                        int randomInt = UnityEngine.Random.Range(0, totalChance);
 
                         if (randomInt >= 0 && randomInt < enemyAttackChance) {
                             // enemy attack
@@ -401,14 +405,7 @@ public class CombatManager : MonoBehaviour
                             AudioManager.Instance.PlaySFX("Heal Bot Drink");
                             enemy.GetComponent<EnemyStats>().TakeHealing(enemy.GetComponent<EnemyStats>().healAmount);
                             
-                        }
-                        
-                        else if (randomInt >= enemyAttackChance + enemyBlockChance + enemyHealChance && randomInt <= totalChance) {
-                            // enemy special
-                            //Debug.Log(randomInt);
-                            Debug.Log("Enemy special");
-                            
-                        }
+                        }                                          
 
                         else {
                             //Debug.Log("something");
