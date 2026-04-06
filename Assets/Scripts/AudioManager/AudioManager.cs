@@ -59,7 +59,7 @@ public class AudioManager : MonoBehaviour
         if (s == null)
         {
             Debug.Log("Sound not found");
-
+            return;
 
         }
 
@@ -80,13 +80,13 @@ public class AudioManager : MonoBehaviour
         {
             Debug.Log("Sound not found");
 
-
+            return;
         }
 
         else
         {
             float randomPitch = Random.Range(1f - pitchVariance, 1f + pitchVariance);
-            sfxSource.clip = s.clip;
+            sfxSource.PlayOneShot(s.clip);
             sfxSource.pitch = randomPitch;
             sfxSource.Play();
 
@@ -94,22 +94,25 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayPianoNote(string name)
+    public void PlayAmb(string name)
     {
-        Sound s = Array.Find(sfxSounds, x => x.name == name);
+        Sound s = Array.Find(ambSounds, x => x.name == name);
+
 
         if (s == null)
         {
-            Debug.Log("Piano sound not found: " + name);
+            Debug.Log("Sound not found");
             return;
+
         }
+        if (ambSource.clip == s.clip) return; // prevent restart
 
-        sfxSource.pitch = 1f;
-        sfxSource.PlayOneShot(s.clip);
+        ambSource.clip = s.clip;
+        ambSource.loop = true;
+        ambSource.Play();
+
     }
-
-
-    public void StopSFX()
+        public void StopSFX()
     {
         if (sfxSource.isPlaying)
         {

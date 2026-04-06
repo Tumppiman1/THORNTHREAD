@@ -211,7 +211,8 @@ public class CombatManager : MonoBehaviour
                                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().TakeDamage(enemyDamage);
                                     StartCoroutine(PlayerDamageText("-" + enemyDamage));
                                     AudioManager.Instance.PlaySFX("Skeleton hit");
-                                    enemyActionsLeft--;
+                                    
+                                enemyActionsLeft--;
                                     EnemyTurn();
                                 }
 

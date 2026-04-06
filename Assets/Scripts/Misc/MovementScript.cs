@@ -254,5 +254,13 @@ public class MovementScript : MonoBehaviour
         GetComponent<Button>().interactable = true;
         //nextCamera.GetComponent<CinemachineCamera>().ForceCameraPosition(nextCamera.transform.position);
         GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().FindCurrentActiveScreen();
+
+        ZOneMusic zone = nextCamera.GetComponent<ZOneMusic>();
+
+        if (zone != null)
+        {
+            AudioManager.Instance.PlayAmb(zone.ambientName);
+        }
     }
+
 }

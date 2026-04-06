@@ -1836,6 +1836,7 @@ GameObject:
   - component: {fileID: 28508169}
   - component: {fileID: 28508171}
   - component: {fileID: 28508170}
+  - component: {fileID: 28508172}
   m_Layer: 0
   m_Name: Screen_25a
   m_TagString: Untagged
@@ -1914,6 +1915,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &28508172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28508168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &32046262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2268,6 +2282,7 @@ GameObject:
   - component: {fileID: 37924986}
   - component: {fileID: 37924988}
   - component: {fileID: 37924987}
+  - component: {fileID: 37924989}
   m_Layer: 0
   m_Name: Screen_23a
   m_TagString: Untagged
@@ -2346,6 +2361,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &37924989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37924985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &38575113
 GameObject:
   m_ObjectHideFlags: 0
@@ -2754,6 +2782,7 @@ GameObject:
   - component: {fileID: 51481263}
   - component: {fileID: 51481265}
   - component: {fileID: 51481264}
+  - component: {fileID: 51481266}
   m_Layer: 0
   m_Name: Screen_35c
   m_TagString: Untagged
@@ -2833,6 +2862,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &51481266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51481262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &51836882
 GameObject:
   m_ObjectHideFlags: 0
@@ -3551,6 +3593,7 @@ GameObject:
   - component: {fileID: 60754308}
   - component: {fileID: 60754310}
   - component: {fileID: 60754309}
+  - component: {fileID: 60754311}
   m_Layer: 0
   m_Name: Screen_35d
   m_TagString: Untagged
@@ -3629,6 +3672,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &60754311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60754307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &61403675
 GameObject:
   m_ObjectHideFlags: 0
@@ -4071,6 +4127,7 @@ GameObject:
   - component: {fileID: 68687533}
   - component: {fileID: 68687535}
   - component: {fileID: 68687534}
+  - component: {fileID: 68687536}
   m_Layer: 0
   m_Name: Screen_22b
   m_TagString: Untagged
@@ -4150,6 +4207,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &68687536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68687532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &76049892
 GameObject:
   m_ObjectHideFlags: 0
@@ -4932,6 +5002,7 @@ GameObject:
   - component: {fileID: 85343790}
   - component: {fileID: 85343792}
   - component: {fileID: 85343791}
+  - component: {fileID: 85343793}
   m_Layer: 0
   m_Name: Screen_36
   m_TagString: Untagged
@@ -5010,6 +5081,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &85343793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85343789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &88613958
 GameObject:
   m_ObjectHideFlags: 0
@@ -6617,6 +6701,7 @@ GameObject:
   - component: {fileID: 103861047}
   - component: {fileID: 103861049}
   - component: {fileID: 103861048}
+  - component: {fileID: 103861050}
   m_Layer: 0
   m_Name: Screen_33c
   m_TagString: Untagged
@@ -6697,6 +6782,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &103861050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103861046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &108181207
 GameObject:
   m_ObjectHideFlags: 0
@@ -8522,6 +8620,7 @@ GameObject:
   - component: {fileID: 169224909}
   - component: {fileID: 169224911}
   - component: {fileID: 169224910}
+  - component: {fileID: 169224912}
   m_Layer: 0
   m_Name: Screen_33a
   m_TagString: Untagged
@@ -8600,6 +8699,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &169224912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169224908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &171577905
 GameObject:
   m_ObjectHideFlags: 0
@@ -10912,6 +11024,7 @@ GameObject:
   - component: {fileID: 217063693}
   - component: {fileID: 217063695}
   - component: {fileID: 217063694}
+  - component: {fileID: 217063696}
   m_Layer: 0
   m_Name: Screen_30
   m_TagString: Untagged
@@ -10990,6 +11103,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &217063696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217063692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &217839597
 GameObject:
   m_ObjectHideFlags: 0
@@ -13940,6 +14066,7 @@ GameObject:
   - component: {fileID: 292772804}
   - component: {fileID: 292772806}
   - component: {fileID: 292772805}
+  - component: {fileID: 292772807}
   m_Layer: 0
   m_Name: Screen_33b
   m_TagString: Untagged
@@ -14018,6 +14145,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &292772807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292772803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &295957606
 GameObject:
   m_ObjectHideFlags: 0
@@ -15799,8 +15939,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.16720383, z: 0, w: 0.9859224}
-  m_LocalPosition: {x: 1090.9003, y: 20.3, z: 815.1}
+  m_LocalRotation: {x: 0, y: -0.949973, z: 0, w: 0.3123323}
+  m_LocalPosition: {x: 581.5, y: -3, z: 658.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16043,6 +16183,7 @@ GameObject:
   - component: {fileID: 338431157}
   - component: {fileID: 338431159}
   - component: {fileID: 338431158}
+  - component: {fileID: 338431160}
   m_Layer: 0
   m_Name: Screen_25d
   m_TagString: Untagged
@@ -16122,6 +16263,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &338431160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338431156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &340643643
 GameObject:
   m_ObjectHideFlags: 0
@@ -16722,6 +16876,7 @@ GameObject:
   - component: {fileID: 350653615}
   - component: {fileID: 350653617}
   - component: {fileID: 350653616}
+  - component: {fileID: 350653618}
   m_Layer: 0
   m_Name: Screen_16_combat
   m_TagString: Untagged
@@ -16801,6 +16956,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &350653618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350653614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1001 &356649376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19100,6 +19268,7 @@ GameObject:
   - component: {fileID: 410812097}
   - component: {fileID: 410812096}
   - component: {fileID: 410812095}
+  - component: {fileID: 410812098}
   m_Layer: 0
   m_Name: Screen_15
   m_TagString: Untagged
@@ -19178,6 +19347,19 @@ RectTransform:
   m_AnchoredPosition: {x: 417.3, y: -2.26}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &410812098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410812094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &414262138
 GameObject:
   m_ObjectHideFlags: 0
@@ -20479,6 +20661,7 @@ GameObject:
   - component: {fileID: 450474958}
   - component: {fileID: 450474960}
   - component: {fileID: 450474959}
+  - component: {fileID: 450474961}
   m_Layer: 0
   m_Name: Screen_13
   m_TagString: Untagged
@@ -20557,6 +20740,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &450474961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450474957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &452199948
 GameObject:
   m_ObjectHideFlags: 0
@@ -22557,6 +22753,7 @@ GameObject:
   - component: {fileID: 492801003}
   - component: {fileID: 492801002}
   - component: {fileID: 492801001}
+  - component: {fileID: 492801004}
   m_Layer: 0
   m_Name: Screen_17
   m_TagString: Untagged
@@ -22635,6 +22832,19 @@ RectTransform:
   m_AnchoredPosition: {x: 222.25, y: 1.88}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &492801004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492801000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &492972611
 GameObject:
   m_ObjectHideFlags: 0
@@ -23213,6 +23423,7 @@ GameObject:
   - component: {fileID: 503199807}
   - component: {fileID: 503199809}
   - component: {fileID: 503199808}
+  - component: {fileID: 503199810}
   m_Layer: 0
   m_Name: Screen_32
   m_TagString: Untagged
@@ -23291,6 +23502,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &503199810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503199806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &503301474
 GameObject:
   m_ObjectHideFlags: 0
@@ -23747,6 +23971,7 @@ GameObject:
   - component: {fileID: 516269145}
   - component: {fileID: 516269147}
   - component: {fileID: 516269146}
+  - component: {fileID: 516269148}
   m_Layer: 0
   m_Name: Screen_37a_combat
   m_TagString: Untagged
@@ -23826,6 +24051,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &516269148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516269144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &517271627
 GameObject:
   m_ObjectHideFlags: 0
@@ -25220,6 +25458,7 @@ GameObject:
   - component: {fileID: 543736188}
   - component: {fileID: 543736190}
   - component: {fileID: 543736189}
+  - component: {fileID: 543736191}
   m_Layer: 0
   m_Name: Screen_11a_combat
   m_TagString: Untagged
@@ -25299,6 +25538,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &543736191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543736187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &548347572
 GameObject:
   m_ObjectHideFlags: 0
@@ -27206,6 +27458,7 @@ GameObject:
   - component: {fileID: 600609266}
   - component: {fileID: 600609268}
   - component: {fileID: 600609267}
+  - component: {fileID: 600609269}
   m_Layer: 0
   m_Name: Screen_28
   m_TagString: Untagged
@@ -27284,6 +27537,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &600609269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600609265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &601181682
 GameObject:
   m_ObjectHideFlags: 0
@@ -27434,6 +27700,7 @@ GameObject:
   - component: {fileID: 601214563}
   - component: {fileID: 601214562}
   - component: {fileID: 601214561}
+  - component: {fileID: 601214564}
   m_Layer: 0
   m_Name: Screen_11b
   m_TagString: Untagged
@@ -27512,6 +27779,19 @@ RectTransform:
   m_AnchoredPosition: {x: 743.8291, y: 0.499}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &601214564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601214560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1001 &602300772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28788,6 +29068,7 @@ GameObject:
   - component: {fileID: 638552738}
   - component: {fileID: 638552737}
   - component: {fileID: 638552736}
+  - component: {fileID: 638552739}
   m_Layer: 0
   m_Name: Screen_08
   m_TagString: Untagged
@@ -28867,6 +29148,19 @@ RectTransform:
   m_AnchoredPosition: {x: 255.1, y: 7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &638552739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638552735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &641063755
 GameObject:
   m_ObjectHideFlags: 0
@@ -30082,6 +30376,7 @@ GameObject:
   - component: {fileID: 671320999}
   - component: {fileID: 671321001}
   - component: {fileID: 671321000}
+  - component: {fileID: 671321002}
   m_Layer: 0
   m_Name: Screen_31
   m_TagString: Untagged
@@ -30160,6 +30455,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &671321002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671320998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &677360488
 GameObject:
   m_ObjectHideFlags: 0
@@ -30382,6 +30690,7 @@ GameObject:
   - component: {fileID: 679612297}
   - component: {fileID: 679612299}
   - component: {fileID: 679612298}
+  - component: {fileID: 679612300}
   m_Layer: 0
   m_Name: Screen_37c
   m_TagString: Untagged
@@ -30461,6 +30770,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &679612300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679612296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &681514268
 GameObject:
   m_ObjectHideFlags: 0
@@ -33689,6 +34011,7 @@ GameObject:
   - component: {fileID: 720921102}
   - component: {fileID: 720921101}
   - component: {fileID: 720921100}
+  - component: {fileID: 720921103}
   m_Layer: 0
   m_Name: Screen_12a
   m_TagString: Untagged
@@ -33767,6 +34090,19 @@ RectTransform:
   m_AnchoredPosition: {x: 567.8, y: 1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &720921103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720921099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &725282281
 GameObject:
   m_ObjectHideFlags: 0
@@ -34779,6 +35115,7 @@ GameObject:
   - component: {fileID: 741954629}
   - component: {fileID: 741954628}
   - component: {fileID: 741954627}
+  - component: {fileID: 741954630}
   m_Layer: 0
   m_Name: Screen_19
   m_TagString: Untagged
@@ -34857,6 +35194,19 @@ RectTransform:
   m_AnchoredPosition: {x: 201.1, y: 3.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &741954630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741954626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &742683372
 GameObject:
   m_ObjectHideFlags: 0
@@ -40647,6 +40997,7 @@ GameObject:
   - component: {fileID: 840581371}
   - component: {fileID: 840581373}
   - component: {fileID: 840581372}
+  - component: {fileID: 840581374}
   m_Layer: 0
   m_Name: Screen_27
   m_TagString: Untagged
@@ -40725,6 +41076,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &840581374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840581370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &840763207
 GameObject:
   m_ObjectHideFlags: 0
@@ -43145,6 +43509,7 @@ GameObject:
   - component: {fileID: 878723840}
   - component: {fileID: 878723841}
   - component: {fileID: 878723843}
+  - component: {fileID: 878723844}
   m_Layer: 0
   m_Name: Screen_03
   m_TagString: Untagged
@@ -43223,6 +43588,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878723839}
   m_CullTransparentMesh: 1
+--- !u!114 &878723844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878723839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &879200975
 GameObject:
   m_ObjectHideFlags: 0
@@ -43673,6 +44051,7 @@ GameObject:
   - component: {fileID: 881948424}
   - component: {fileID: 881948426}
   - component: {fileID: 881948425}
+  - component: {fileID: 881948427}
   m_Layer: 0
   m_Name: Screen_24a
   m_TagString: Untagged
@@ -43753,6 +44132,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &881948427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881948423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &885083950
 GameObject:
   m_ObjectHideFlags: 0
@@ -44192,6 +44584,7 @@ GameObject:
   - component: {fileID: 888853999}
   - component: {fileID: 888854001}
   - component: {fileID: 888854000}
+  - component: {fileID: 888854002}
   m_Layer: 0
   m_Name: Screen_05_combat
   m_TagString: Untagged
@@ -44271,6 +44664,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &888854002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888853998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &895091029
 GameObject:
   m_ObjectHideFlags: 0
@@ -44818,6 +45224,7 @@ GameObject:
   - component: {fileID: 906826561}
   - component: {fileID: 906826563}
   - component: {fileID: 906826562}
+  - component: {fileID: 906826564}
   m_Layer: 0
   m_Name: Screen_41
   m_TagString: Untagged
@@ -44897,6 +45304,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &906826564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906826560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &908707116
 GameObject:
   m_ObjectHideFlags: 0
@@ -46882,6 +47302,7 @@ GameObject:
   - component: {fileID: 967218877}
   - component: {fileID: 967218879}
   - component: {fileID: 967218878}
+  - component: {fileID: 967218880}
   m_Layer: 0
   m_Name: Screen_33gFINALCAMERA
   m_TagString: Untagged
@@ -46960,6 +47381,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &967218880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967218876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1001 &967391617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47225,6 +47659,7 @@ GameObject:
   - component: {fileID: 972655972}
   - component: {fileID: 972655974}
   - component: {fileID: 972655973}
+  - component: {fileID: 972655975}
   m_Layer: 0
   m_Name: Screen_09
   m_TagString: Untagged
@@ -47303,6 +47738,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &972655975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972655971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &976394601
 GameObject:
   m_ObjectHideFlags: 0
@@ -48252,6 +48700,7 @@ GameObject:
   - component: {fileID: 1001902033}
   - component: {fileID: 1001902035}
   - component: {fileID: 1001902034}
+  - component: {fileID: 1001902036}
   m_Layer: 0
   m_Name: Screen_23d_automatic_combat
   m_TagString: Untagged
@@ -48332,6 +48781,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1001902036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001902032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1002746789
 GameObject:
   m_ObjectHideFlags: 0
@@ -51257,6 +51719,7 @@ GameObject:
   - component: {fileID: 1069366417}
   - component: {fileID: 1069366416}
   - component: {fileID: 1069366415}
+  - component: {fileID: 1069366418}
   m_Layer: 0
   m_Name: Screen_07b
   m_TagString: Untagged
@@ -51336,6 +51799,19 @@ RectTransform:
   m_AnchoredPosition: {x: 384.25, y: 5.68}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1069366418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069366414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1071359446
 GameObject:
   m_ObjectHideFlags: 0
@@ -53818,6 +54294,7 @@ GameObject:
   - component: {fileID: 1099689698}
   - component: {fileID: 1099689700}
   - component: {fileID: 1099689699}
+  - component: {fileID: 1099689701}
   m_Layer: 0
   m_Name: Screen_38
   m_TagString: Untagged
@@ -53896,6 +54373,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1099689701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099689697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1104473146
 GameObject:
   m_ObjectHideFlags: 0
@@ -53907,6 +54397,7 @@ GameObject:
   - component: {fileID: 1104473147}
   - component: {fileID: 1104473149}
   - component: {fileID: 1104473148}
+  - component: {fileID: 1104473150}
   m_Layer: 0
   m_Name: Screen_33e
   m_TagString: Untagged
@@ -53985,6 +54476,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1104473150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104473146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1108630195
 GameObject:
   m_ObjectHideFlags: 0
@@ -55081,6 +55585,7 @@ GameObject:
   - component: {fileID: 1127254995}
   - component: {fileID: 1127254994}
   - component: {fileID: 1127254993}
+  - component: {fileID: 1127254996}
   m_Layer: 0
   m_Name: Screen_06
   m_TagString: Untagged
@@ -55159,6 +55664,19 @@ RectTransform:
   m_AnchoredPosition: {x: 116.68, y: 6.07}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1127254996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127254992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1127801115
 GameObject:
   m_ObjectHideFlags: 0
@@ -55987,6 +56505,7 @@ GameObject:
   - component: {fileID: 1141015509}
   - component: {fileID: 1141015511}
   - component: {fileID: 1141015510}
+  - component: {fileID: 1141015512}
   m_Layer: 0
   m_Name: Screen_25c
   m_TagString: Untagged
@@ -56065,6 +56584,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1141015512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141015508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1141879978
 GameObject:
   m_ObjectHideFlags: 0
@@ -57989,6 +58521,7 @@ GameObject:
   - component: {fileID: 1168090318}
   - component: {fileID: 1168090320}
   - component: {fileID: 1168090319}
+  - component: {fileID: 1168090321}
   m_Layer: 0
   m_Name: Screen_35b
   m_TagString: Untagged
@@ -58067,6 +58600,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1168090321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168090317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1169657963
 GameObject:
   m_ObjectHideFlags: 0
@@ -60061,6 +60607,7 @@ GameObject:
   - component: {fileID: 1233199286}
   - component: {fileID: 1233199287}
   - component: {fileID: 1233199289}
+  - component: {fileID: 1233199290}
   m_Layer: 0
   m_Name: Screen_02
   m_TagString: Untagged
@@ -60139,6 +60686,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233199285}
   m_CullTransparentMesh: 1
+--- !u!114 &1233199290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233199285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1233304888
 GameObject:
   m_ObjectHideFlags: 0
@@ -63267,6 +63827,7 @@ GameObject:
   - component: {fileID: 1288544115}
   - component: {fileID: 1288544117}
   - component: {fileID: 1288544116}
+  - component: {fileID: 1288544118}
   m_Layer: 0
   m_Name: Screen_26
   m_TagString: Untagged
@@ -63345,6 +63906,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1288544118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288544114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1288973048
 GameObject:
   m_ObjectHideFlags: 0
@@ -63356,6 +63930,7 @@ GameObject:
   - component: {fileID: 1288973049}
   - component: {fileID: 1288973051}
   - component: {fileID: 1288973050}
+  - component: {fileID: 1288973052}
   m_Layer: 0
   m_Name: Screen_37b
   m_TagString: Untagged
@@ -63434,6 +64009,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1288973052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288973048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1289100804
 GameObject:
   m_ObjectHideFlags: 0
@@ -64351,6 +64939,7 @@ GameObject:
   - component: {fileID: 1308493253}
   - component: {fileID: 1308493255}
   - component: {fileID: 1308493254}
+  - component: {fileID: 1308493256}
   m_Layer: 0
   m_Name: Screen_33f
   m_TagString: Untagged
@@ -64429,6 +65018,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1308493256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308493252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!4 &1309245824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4361637125381307170, guid: 18ce14f9f36c3ad4696f63bae801b367, type: 3}
@@ -65307,6 +65909,7 @@ GameObject:
   - component: {fileID: 1322723437}
   - component: {fileID: 1322723439}
   - component: {fileID: 1322723438}
+  - component: {fileID: 1322723440}
   m_Layer: 0
   m_Name: Screen_24c
   m_TagString: Untagged
@@ -65386,6 +65989,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1322723440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322723436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1330924823
 GameObject:
   m_ObjectHideFlags: 0
@@ -67654,6 +68270,7 @@ GameObject:
   - component: {fileID: 1372802433}
   - component: {fileID: 1372802435}
   - component: {fileID: 1372802434}
+  - component: {fileID: 1372802436}
   m_Layer: 0
   m_Name: Screen_22a
   m_TagString: Untagged
@@ -67732,6 +68349,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1372802436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372802432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1374207927
 GameObject:
   m_ObjectHideFlags: 0
@@ -68806,6 +69436,7 @@ GameObject:
   - component: {fileID: 1393764588}
   - component: {fileID: 1393764590}
   - component: {fileID: 1393764589}
+  - component: {fileID: 1393764591}
   m_Layer: 0
   m_Name: Screen_40
   m_TagString: Untagged
@@ -68885,6 +69516,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1393764591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393764587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1396208878
 GameObject:
   m_ObjectHideFlags: 0
@@ -70701,6 +71345,7 @@ GameObject:
   - component: {fileID: 1420991129}
   - component: {fileID: 1420991131}
   - component: {fileID: 1420991130}
+  - component: {fileID: 1420991132}
   m_Layer: 0
   m_Name: Screen_35a
   m_TagString: Untagged
@@ -70779,6 +71424,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1420991132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420991128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1423947925
 GameObject:
   m_ObjectHideFlags: 0
@@ -71090,6 +71748,7 @@ GameObject:
   - component: {fileID: 1428959429}
   - component: {fileID: 1428959431}
   - component: {fileID: 1428959430}
+  - component: {fileID: 1428959432}
   m_Layer: 0
   m_Name: Screen_18
   m_TagString: Untagged
@@ -71169,6 +71828,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1428959432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428959428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1432622605
 GameObject:
   m_ObjectHideFlags: 0
@@ -72436,6 +73108,7 @@ GameObject:
   - component: {fileID: 1445233654}
   - component: {fileID: 1445233653}
   - component: {fileID: 1445233656}
+  - component: {fileID: 1445233657}
   m_Layer: 0
   m_Name: Screen_04
   m_TagString: Untagged
@@ -72514,6 +73187,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1445233652}
   m_CullTransparentMesh: 1
+--- !u!114 &1445233657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445233652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1449380431
 GameObject:
   m_ObjectHideFlags: 0
@@ -72675,6 +73361,7 @@ GameObject:
   - component: {fileID: 1449423705}
   - component: {fileID: 1449423707}
   - component: {fileID: 1449423706}
+  - component: {fileID: 1449423708}
   m_Layer: 0
   m_Name: Screen_23a (1)
   m_TagString: Untagged
@@ -72753,6 +73440,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1449423708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449423704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1451791038
 GameObject:
   m_ObjectHideFlags: 0
@@ -75873,6 +76573,7 @@ GameObject:
   - component: {fileID: 1485691416}
   - component: {fileID: 1485691418}
   - component: {fileID: 1485691417}
+  - component: {fileID: 1485691419}
   m_Layer: 0
   m_Name: Screen_34
   m_TagString: Untagged
@@ -75951,6 +76652,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1485691419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485691415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1487504514
 GameObject:
   m_ObjectHideFlags: 0
@@ -80651,6 +81365,7 @@ GameObject:
   - component: {fileID: 1594979850}
   - component: {fileID: 1594979852}
   - component: {fileID: 1594979851}
+  - component: {fileID: 1594979853}
   m_Layer: 0
   m_Name: Screen_39_combat
   m_TagString: Untagged
@@ -80730,6 +81445,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1594979853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594979849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1596337991
 GameObject:
   m_ObjectHideFlags: 0
@@ -81180,6 +81908,7 @@ GameObject:
   - component: {fileID: 1609129988}
   - component: {fileID: 1609129990}
   - component: {fileID: 1609129989}
+  - component: {fileID: 1609129991}
   m_Layer: 0
   m_Name: Screen_35e
   m_TagString: Untagged
@@ -81259,6 +81988,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1609129991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609129987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1609207274
 GameObject:
   m_ObjectHideFlags: 0
@@ -82513,6 +83255,7 @@ GameObject:
   - component: {fileID: 1628416088}
   - component: {fileID: 1628416090}
   - component: {fileID: 1628416089}
+  - component: {fileID: 1628416091}
   m_Layer: 0
   m_Name: Screen_33d
   m_TagString: Untagged
@@ -82591,6 +83334,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1628416091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628416087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1630816842
 GameObject:
   m_ObjectHideFlags: 0
@@ -85850,6 +86606,7 @@ GameObject:
   - component: {fileID: 1715488179}
   - component: {fileID: 1715488181}
   - component: {fileID: 1715488180}
+  - component: {fileID: 1715488182}
   m_Layer: 0
   m_Name: Screen_23c
   m_TagString: Untagged
@@ -85928,6 +86685,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1715488182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715488178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1716363659
 GameObject:
   m_ObjectHideFlags: 0
@@ -90020,6 +90790,7 @@ GameObject:
   - component: {fileID: 1790045381}
   - component: {fileID: 1790045383}
   - component: {fileID: 1790045382}
+  - component: {fileID: 1790045384}
   m_Layer: 0
   m_Name: Screen_10
   m_TagString: Untagged
@@ -90098,6 +90869,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1790045384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790045380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1790596230
 GameObject:
   m_ObjectHideFlags: 0
@@ -90597,6 +91381,7 @@ GameObject:
   - component: {fileID: 1805254034}
   - component: {fileID: 1805254033}
   - component: {fileID: 1805254032}
+  - component: {fileID: 1805254035}
   m_Layer: 0
   m_Name: Screen_20
   m_TagString: Untagged
@@ -90675,6 +91460,19 @@ RectTransform:
   m_AnchoredPosition: {x: 146.1, y: 0.93}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1805254035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805254031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1806723384 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3263509207005303517, guid: 99dd8d26c50c03049a0fb77a4528c545, type: 3}
@@ -90722,6 +91520,7 @@ GameObject:
   - component: {fileID: 1810300242}
   - component: {fileID: 1810300244}
   - component: {fileID: 1810300243}
+  - component: {fileID: 1810300245}
   m_Layer: 0
   m_Name: Screen_29
   m_TagString: Untagged
@@ -90800,6 +91599,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1810300245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810300241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1811450094
 GameObject:
   m_ObjectHideFlags: 0
@@ -93914,6 +94726,7 @@ GameObject:
   - component: {fileID: 1863382957}
   - component: {fileID: 1863382959}
   - component: {fileID: 1863382958}
+  - component: {fileID: 1863382960}
   m_Layer: 0
   m_Name: Screen_14
   m_TagString: Untagged
@@ -93992,6 +94805,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1863382960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863382956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1863967393
 GameObject:
   m_ObjectHideFlags: 0
@@ -94003,6 +94829,7 @@ GameObject:
   - component: {fileID: 1863967394}
   - component: {fileID: 1863967396}
   - component: {fileID: 1863967395}
+  - component: {fileID: 1863967397}
   m_Layer: 0
   m_Name: Screen_23b
   m_TagString: Untagged
@@ -94081,6 +94908,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1863967397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863967393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1865575401
 GameObject:
   m_ObjectHideFlags: 0
@@ -95361,6 +96201,7 @@ GameObject:
   - component: {fileID: 1905933060}
   - component: {fileID: 1905933062}
   - component: {fileID: 1905933061}
+  - component: {fileID: 1905933063}
   m_Layer: 0
   m_Name: Screen_24b
   m_TagString: Untagged
@@ -95439,6 +96280,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1905933063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905933059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1906769728
 GameObject:
   m_ObjectHideFlags: 0
@@ -96017,6 +96871,7 @@ GameObject:
   - component: {fileID: 1912421374}
   - component: {fileID: 1912421376}
   - component: {fileID: 1912421375}
+  - component: {fileID: 1912421377}
   m_Layer: 0
   m_Name: Screen_21
   m_TagString: Untagged
@@ -96096,6 +96951,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1912421377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912421373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1913702155
 GameObject:
   m_ObjectHideFlags: 0
@@ -98428,6 +99296,7 @@ GameObject:
   - component: {fileID: 1949765563}
   - component: {fileID: 1949765565}
   - component: {fileID: 1949765564}
+  - component: {fileID: 1949765566}
   m_Layer: 0
   m_Name: Screen_12b
   m_TagString: Untagged
@@ -98507,6 +99376,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1949765566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949765562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &1954973635
 GameObject:
   m_ObjectHideFlags: 0
@@ -100177,6 +101059,7 @@ GameObject:
   - component: {fileID: 2015990257}
   - component: {fileID: 2015990258}
   - component: {fileID: 2015990260}
+  - component: {fileID: 2015990261}
   m_Layer: 0
   m_Name: Screen_01
   m_TagString: Untagged
@@ -100255,6 +101138,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015990256}
   m_CullTransparentMesh: 1
+--- !u!114 &2015990261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015990256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &2017287346
 GameObject:
   m_ObjectHideFlags: 0
@@ -105048,6 +105944,7 @@ GameObject:
   - component: {fileID: 2123157647}
   - component: {fileID: 2123157649}
   - component: {fileID: 2123157648}
+  - component: {fileID: 2123157650}
   m_Layer: 0
   m_Name: Screen_11c
   m_TagString: Untagged
@@ -105128,6 +106025,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &2123157650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123157646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &2123189853
 GameObject:
   m_ObjectHideFlags: 0
@@ -105282,6 +106192,7 @@ GameObject:
   - component: {fileID: 2126498203}
   - component: {fileID: 2126498202}
   - component: {fileID: 2126498201}
+  - component: {fileID: 2126498204}
   m_Layer: 0
   m_Name: Screen_07a
   m_TagString: Untagged
@@ -105360,6 +106271,19 @@ RectTransform:
   m_AnchoredPosition: {x: 216.59, y: 11.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2126498204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126498200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &2131128930
 GameObject:
   m_ObjectHideFlags: 0
@@ -105791,6 +106715,7 @@ GameObject:
   - component: {fileID: 2146092822}
   - component: {fileID: 2146092824}
   - component: {fileID: 2146092823}
+  - component: {fileID: 2146092825}
   m_Layer: 0
   m_Name: Screen_25b
   m_TagString: Untagged
@@ -105869,6 +106794,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &2146092825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146092821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3828f1a74098728418247a787095bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientName: Forest Amb
 --- !u!1 &2146301549
 GameObject:
   m_ObjectHideFlags: 0

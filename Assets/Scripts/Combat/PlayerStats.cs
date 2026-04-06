@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -94,6 +95,7 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         // health = maxHealth;
+
 
         if (health == 0) {
             health = maxHealth;
@@ -200,20 +202,39 @@ public class PlayerStats : MonoBehaviour
         attackPointText.text = "AP: " + attackPointCount;
     }
 
+    IEnumerator PlayDamageSoundDelayed(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        AudioManager.Instance.PlaySFX("Player_Damage");
+    }
+
+    IEnumerator HandleDeath()
+    {
+        yield return new WaitForSeconds(0.5f);
+        AudioManager.Instance.PlaySFX("Player Death");
+    }
     public void TakeDamage(float damage)
     {
         health -= damage;
+
         healthText.text = "Health: " + health;
+
         Debug.Log("Player took: " + damage + " damage");
-        
-        if (health <= 0) {
+
+        if (health <= 0)
+        {
             Debug.Log("Player dead");
-            
-            // Death screen, Death Menu, Load last checkpoint
+
+            StartCoroutine(HandleDeath());
+
             deathScreen.SetActive(true);
         }
+        else
+        {
+            StartCoroutine(PlayDamageSoundDelayed(0.55f));
+        }
     }
-
+ 
     public void UseHealFlask()
     {
         GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().UseHealthFlask();
