@@ -8627,7 +8627,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &169224909
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11031,7 +11031,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &217063693
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16238,8 +16238,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.3115078, z: 0, w: 0.95024365}
-  m_LocalPosition: {x: 110.11, y: -2.316, z: 247.66}
+  m_LocalRotation: {x: 0.01570378, y: 0.44779667, z: -0.009899456, w: 0.8939428}
+  m_LocalPosition: {x: 1024.1, y: 6.7, z: 274.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23858,7 +23858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &503199807
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27904,7 +27904,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &600609266
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30822,7 +30822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &671320999
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41443,7 +41443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &840581371
 RectTransform:
   m_ObjectHideFlags: 0
@@ -72452,7 +72452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1428959429
 RectTransform:
   m_ObjectHideFlags: 0
@@ -92482,7 +92482,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1810300242
 RectTransform:
   m_ObjectHideFlags: 0
@@ -127613,7 +127613,6 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 744439687}
   - {fileID: 1661412645}
   - {fileID: 292111488}
   - {fileID: 374810391}
@@ -127624,3 +127623,4 @@ SceneRoots:
   - {fileID: 1732856640}
   - {fileID: 115725617}
   - {fileID: 312286590}
+  - {fileID: 744439687}
