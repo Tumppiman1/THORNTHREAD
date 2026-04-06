@@ -7289,8 +7289,12 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2100790558494548142, guid: 7dc4e24160bd807449094743cfd6d0a8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100790558494548142, guid: 7dc4e24160bd807449094743cfd6d0a8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -112
+      value: -115
       objectReference: {fileID: 0}
     - target: {fileID: 3711962426138756325, guid: 7dc4e24160bd807449094743cfd6d0a8, type: 3}
       propertyPath: m_Name
@@ -25108,7 +25112,7 @@ MonoBehaviour:
   enemyHealth: 0
   enemyMaxHealth: 1
   enemyAlive: 1
-  enemyEvadeChance: 40
+  enemyEvadeChance: 5
   enemyDamage: 10
   healAmount: 5
   hitChance: 70
@@ -114779,6 +114783,7 @@ GameObject:
   - component: {fileID: 5162080713077919107}
   - component: {fileID: 1202115497264953744}
   - component: {fileID: 2209988396748920285}
+  - component: {fileID: 5162080713077919108}
   m_Layer: 5
   m_Name: KirvesIcon
   m_TagString: Untagged
@@ -118971,6 +118976,19 @@ RectTransform:
   m_AnchoredPosition: {x: -825.0001, y: -49.99997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5162080713077919108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3103136603546201805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fead1953bbc38144acccf0287c9866b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueData: {fileID: 0}
 --- !u!1 &5179316540546358553
 GameObject:
   m_ObjectHideFlags: 0
@@ -126003,6 +126021,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2254286395893337150}
+        m_TargetAssemblyTypeName: PlayerStats, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 8366651593033281166}
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
         m_MethodName: TriggerDialogue
@@ -126012,7 +126042,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Sturdy Axe.
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &8366651593033281166
@@ -127659,6 +127689,7 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
+  - {fileID: 744439687}
   - {fileID: 1661412645}
   - {fileID: 292111488}
   - {fileID: 374810391}
@@ -127669,4 +127700,3 @@ SceneRoots:
   - {fileID: 1732856640}
   - {fileID: 115725617}
   - {fileID: 312286590}
-  - {fileID: 744439687}
