@@ -20,8 +20,8 @@ public class PlayerStats : MonoBehaviour
 
     [SerializeField] private GameObject healFlaskButton;
     
-    [SerializeField] private GameObject addAttackPointsConsumableButton;
-    [SerializeField] private GameObject addTurnsConsumableButton;
+    [SerializeField] public GameObject addAttackPointsConsumableButton;
+    [SerializeField] public GameObject addTurnsConsumableButton;
     [SerializeField] private GameObject damageOverTimeConsumableButton;
     
     [SerializeField] private TextMeshProUGUI healthText;
@@ -333,7 +333,8 @@ public class PlayerStats : MonoBehaviour
 
     public void AttackPointConsumable()
     {
-        if (attackPointConsumableAmount > 0 && attackPointConsumable && GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().isPlayerTurn) {
+        
+        if (attackPointConsumableAmount > 0 && GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().isPlayerTurn) {
             GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().UseConsumable(attackPointConsumableID);
         }
         else {
@@ -343,6 +344,10 @@ public class PlayerStats : MonoBehaviour
 
     public void CollectAttackPointConsumable()
     {
+        attackPointConsumable = true;
+        attackPointConsumableAmount++;
+        
+        /*
         if (!attackPointConsumable) 
         {
             attackPointConsumable = true;
@@ -352,11 +357,12 @@ public class PlayerStats : MonoBehaviour
         else {
             Debug.Log("Maximum amount of AP consumables");
         }
+        */
     }
 
     public void AddTurnsConsumable()
     {
-        if (addTurnsConsumableAmount > 0 && addTurnsConsumable && GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().isPlayerTurn) {
+        if (addTurnsConsumableAmount > 0 && GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().isPlayerTurn) {
             GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().UseConsumable(addTurnsConsumableID);
         }
         else {
@@ -367,6 +373,10 @@ public class PlayerStats : MonoBehaviour
 
     public void CollectAddTurnsConsumable()
     {
+        addTurnsConsumable = true;
+        addTurnsConsumableAmount++;
+        
+        /*
         if (!addTurnsConsumable) {
             addTurnsConsumable = true;
             addTurnsConsumableAmount++;
@@ -374,6 +384,7 @@ public class PlayerStats : MonoBehaviour
         else {
             Debug.Log("Maximum amount of add turns consumables");
         }
+        */
     }
 
     public void DamageOvertimeConsumable()

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CombatManager : MonoBehaviour
 {
@@ -26,6 +27,9 @@ public class CombatManager : MonoBehaviour
     [SerializeField] GameObject MissVFX;
 
     private bool _coroutineActive = false;
+
+    private bool _canUseAPConsumable;
+    private bool _canUseAddTurnsConsumable;
     
     // Animations
     [Header("Animations")] 
@@ -61,6 +65,23 @@ public class CombatManager : MonoBehaviour
         else {
             _kilpi.gameObject.SetActive(false);
         }
+
+        if (!_canUseAPConsumable) 
+        {
+            _player.GetComponent<PlayerStats>().addAttackPointsConsumableButton.GetComponent<Button>().interactable = false;
+        }
+
+        else {
+            _player.GetComponent<PlayerStats>().addAttackPointsConsumableButton.GetComponent<Button>().interactable = true;
+        }
+
+        if (!_canUseAddTurnsConsumable) {
+            _player.GetComponent<PlayerStats>().addTurnsConsumableButton.GetComponent<Button>().interactable = false;
+        }
+
+        else {
+            _player.GetComponent<PlayerStats>().addTurnsConsumableButton.GetComponent<Button>().interactable = true;
+        }
             
         if (chooseTarget) 
         {
@@ -87,10 +108,14 @@ public class CombatManager : MonoBehaviour
     public void StartCombat()
     {
         transform.parent.GetChild(0).gameObject.SetActive(false);
+        GameObject.FindGameObjectWithTag("Hands").transform.GetChild(0).gameObject.SetActive(true);
         
         GameObject.Find("TestUI").transform.GetChild(1).gameObject.SetActive(false);
         GameObject.Find("TestUI").transform.GetChild(0).gameObject.SetActive(true);
         _player.GetComponent<PlayerStats>().ResetAttackPoints();
+
+        _canUseAPConsumable = true;
+        _canUseAddTurnsConsumable = true;
         
         if (isPlayerTurn) {
             //_player.GetComponent<PlayerStats>().ResetAttackPoints();
@@ -712,7 +737,7 @@ public class CombatManager : MonoBehaviour
         else if (attackTypeID == 5) 
         {
             // Check if enemy isnt null
-            if (target != null) 
+            if (target != null && isPlayerTurn) 
             {  
                 // Inspect target
                 StartCoroutine(InspectEnemyText("Enemy HP: " + target.GetComponent<EnemyStats>().enemyHealth + "/" + target.GetComponent<EnemyStats>().enemyMaxHealth));
@@ -720,7 +745,8 @@ public class CombatManager : MonoBehaviour
                 playerActionsLeft--;
                 target = null;
                 //PlayerTurn();
-                Invoke(nameof(PlayerTurn), 2f);
+                //Invoke(nameof(PlayerTurn), 2f);
+                _player.GetComponent<PlayerStats>().DisableActionButtons();
             }
         }
         
@@ -799,24 +825,26 @@ public class CombatManager : MonoBehaviour
         if (isPlayerTurn) 
         {
             // AP Consumable
-            if (consumableID == 1) 
+            if (consumableID == 1 && _canUseAPConsumable) 
             {
                 _player.GetComponent<PlayerStats>().ResetAttackPoints();
                 _player.GetComponent<PlayerStats>().attackPointConsumableAmount -= 1;
                 _player.GetComponent<PlayerStats>().attackPointConsumable = false;
                 AudioManager.Instance.PlaySFX("OneTimePot");
                 Debug.Log("Used AP consumable");
-                
+                _canUseAPConsumable = false;
+
             }
             
             // Add +2 Turns Consumable
-            else if (consumableID == 2) 
+            else if (consumableID == 2 && _canUseAddTurnsConsumable) 
             {
                 _player.GetComponent<PlayerStats>().addTurnsConsumableAmount -= 1;
                 _player.GetComponent<PlayerStats>().addTurnsConsumable = false;
                 playerActionsLeft += 2;
                 AudioManager.Instance.PlaySFX("OneTimePot");
                 Debug.Log("Used add 2 turns consumable");
+                _canUseAddTurnsConsumable = false;
             }
             
             
@@ -904,6 +932,8 @@ public class CombatManager : MonoBehaviour
         GameObject.Find("CombatText").transform.GetChild(6).gameObject.SetActive(true);
         yield return new WaitForSeconds(2f);
         GameObject.Find("CombatText").transform.GetChild(6).gameObject.SetActive(false);
+        _player.GetComponent<PlayerStats>().EnableActionButtons();
+        PlayerTurn();
     }
 
 }
