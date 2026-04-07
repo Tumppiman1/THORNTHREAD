@@ -41,6 +41,7 @@ public class CombatManager : MonoBehaviour
         _player = GameObject.FindGameObjectWithTag("Player");
         _player.GetComponent<PlayerStats>().DisableActionButtons();
         StartCombat();
+        PlayerIdle();
         
         //_miekkaKäsi = GameObject.FindGameObjectWithTag("Hands").transform.GetChild(0).gameObject;
         //_kirvesKäsi = GameObject.FindGameObjectWithTag("Hands").transform.GetChild(1).gameObject;
@@ -472,6 +473,7 @@ public class CombatManager : MonoBehaviour
             
             // GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().currentScreen.transform.GetChild(0).gameObject.SetActive(true);
             transform.parent.transform.GetChild(0).gameObject.SetActive(true);
+            GameObject.FindGameObjectWithTag("Hands").SetActive(false);
             Destroy(gameObject);
         }
         
@@ -480,8 +482,12 @@ public class CombatManager : MonoBehaviour
 
     public void PlayerIdle()
     {
+        
         _kirvesKäsi.gameObject.SetActive(false);
+        _kirves.gameObject.SetActive(false);
+        _nuija.gameObject.SetActive(false);
         _miekkaKäsi.gameObject.SetActive(true);
+        _miekka.gameObject.SetActive(true);
     }
 
     private void PlayerAttack(int attackTypeID)
@@ -526,6 +532,10 @@ public class CombatManager : MonoBehaviour
                     playerActionsLeft--;
                     AudioManager.Instance.PlaySFX("Sword_Miss");
                     
+                    _kirvesKäsi.gameObject.SetActive(false);
+                    _miekkaKäsi.gameObject.SetActive(true);
+                    _miekkaKäsi.GetComponent<Animator>().SetTrigger("AxeAttack");
+                    
                     PlayerTurn();
                 }
             }
@@ -537,6 +547,11 @@ public class CombatManager : MonoBehaviour
                 target = null;
                 playerActionsLeft--;
                 AudioManager.Instance.PlaySFX("Sword_Miss2");
+                
+                _kirvesKäsi.gameObject.SetActive(false);
+                _miekkaKäsi.gameObject.SetActive(true);
+                _miekkaKäsi.GetComponent<Animator>().SetTrigger("AxeAttack");
+                
                 PlayerTurn();
             }
         }
@@ -564,8 +579,8 @@ public class CombatManager : MonoBehaviour
                     //GameObject.FindGameObjectWithTag("Hands").GetComponent<Animator>().SetTrigger("AxeAttack");
                     
                     _miekkaKäsi.gameObject.SetActive(false);
+                    _kirves.gameObject.SetActive(true);
                     _kirvesKäsi.gameObject.SetActive(true);
-                    
                     _kirvesKäsi.GetComponent<Animator>().SetTrigger("AxeAttack");
                     
                     PlayerTurn();
@@ -578,6 +593,12 @@ public class CombatManager : MonoBehaviour
                     playerActionsLeft--;
                     target = null;
                     AudioManager.Instance.PlaySFX("Sword_Miss3");
+                    
+                    _miekkaKäsi.gameObject.SetActive(false);
+                    _kirves.gameObject.SetActive(true);
+                    _kirvesKäsi.gameObject.SetActive(true);
+                    _kirvesKäsi.GetComponent<Animator>().SetTrigger("AxeAttack");
+                    
                     PlayerTurn();
                 }
             }
@@ -588,6 +609,12 @@ public class CombatManager : MonoBehaviour
                 _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().axeApCost);
                 StartCoroutine(PlayerAPText("-" + _player.GetComponent<PlayerStats>().axeApCost.ToString()));
                 playerActionsLeft--;
+                
+                _miekkaKäsi.gameObject.SetActive(false);
+                _kirves.gameObject.SetActive(true);
+                _kirvesKäsi.gameObject.SetActive(true);
+                _kirvesKäsi.GetComponent<Animator>().SetTrigger("AxeAttack");
+                
                 PlayerTurn();
             }
         }
@@ -613,13 +640,9 @@ public class CombatManager : MonoBehaviour
                     playerActionsLeft--;
                     AudioManager.Instance.PlaySFX("Axe_Hit");
                     target = null;
-                    
-                    //GameObject.FindGameObjectWithTag("Hands").transform.GetChild(0).gameObject.SetActive(false);
-                    //GameObject.FindGameObjectWithTag("Hands").transform.GetChild(1).gameObject.SetActive(true);
-                    //GameObject.FindGameObjectWithTag("Nuija").gameObject.SetActive(true);
-                    //GameObject.FindGameObjectWithTag("Hands").GetComponent<Animator>().SetTrigger("AxeAttack");
 
                     _miekkaKäsi.gameObject.SetActive(false);
+                    _nuija.gameObject.SetActive(true);
                     _kirvesKäsi.gameObject.SetActive(true);
                     _kirvesKäsi.GetComponent<Animator>().SetTrigger("AxeAttack");
                     
@@ -633,6 +656,12 @@ public class CombatManager : MonoBehaviour
                     playerActionsLeft--;
                     AudioManager.Instance.PlaySFX("Sword_Miss2");
                     target = null;
+                    
+                    _miekkaKäsi.gameObject.SetActive(false);
+                    _nuija.gameObject.SetActive(true);
+                    _kirvesKäsi.gameObject.SetActive(true);
+                    _kirvesKäsi.GetComponent<Animator>().SetTrigger("AxeAttack");
+                    
                     PlayerTurn();
                 }
             }
@@ -642,6 +671,12 @@ public class CombatManager : MonoBehaviour
                 target.GetComponent<EnemyStats>().isBlocking = false;
                 _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().maceApCost);
                 playerActionsLeft--;
+                
+                _miekkaKäsi.gameObject.SetActive(false);
+                _nuija.gameObject.SetActive(true);
+                _kirvesKäsi.gameObject.SetActive(true);
+                _kirvesKäsi.GetComponent<Animator>().SetTrigger("AxeAttack");
+                
                 PlayerTurn();
             }
         }
