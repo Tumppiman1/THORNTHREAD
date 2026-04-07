@@ -182,8 +182,9 @@ public class MovementScript : MonoBehaviour
                     
                     else if (puzzle == "bridgeLockPuzzle") 
                     {
-                        if (GameObject.FindGameObjectWithTag("Items").GetComponent<ItemInteraction>().bridgePuzzleCompleted == true && GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items.Contains("key1") )
+                        if (GameObject.FindGameObjectWithTag("Items").GetComponent<ItemInteraction>().bridgePuzzleCompleted == true && GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items.Contains("key1"))
                         {
+                            GameObject.FindGameObjectWithTag("Fade").GetComponent<Fade>().StartFade();
                             _cameraZoom = true;
                             Invoke(nameof(NextCamera), 1f);
                         }
