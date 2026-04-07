@@ -171,8 +171,7 @@ public class MovementScript : MonoBehaviour
                         if (GameObject.FindGameObjectWithTag("Items").GetComponent<ItemInteraction>().treePuzzleCompleted == true) {
                             GameObject.FindGameObjectWithTag("Fade").GetComponent<Fade>().StartFade();
                             _cameraZoom = true;
-
-                            //_mainCamera.GetComponent<CinemachineBrain>().
+                            
                             Invoke(nameof(NextCamera), 1f);
                         }
 
@@ -186,8 +185,6 @@ public class MovementScript : MonoBehaviour
                         if (GameObject.FindGameObjectWithTag("Items").GetComponent<ItemInteraction>().bridgePuzzleCompleted == true && GameObject.FindGameObjectWithTag("Items").GetComponent<Items>().items.Contains("key1") )
                         {
                             _cameraZoom = true;
-
-                            //_mainCamera.GetComponent<CinemachineBrain>().
                             Invoke(nameof(NextCamera), 1f);
                         }
 
