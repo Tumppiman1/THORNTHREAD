@@ -14,6 +14,9 @@ TagManager:
   - CombatEncounterList
   - CollectableItemsList
   - Fade
+  - Hands
+  - Kirves
+  - Nuija
   layers:
   - Default
   - TransparentFX
