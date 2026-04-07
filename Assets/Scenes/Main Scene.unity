@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.5411765, g: 0.3372549, b: 0.3529412, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.004
@@ -16681,8 +16681,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.3115078, z: 0, w: 0.95024365}
-  m_LocalPosition: {x: 110.11, y: -2.316, z: 247.66}
+  m_LocalRotation: {x: 0, y: 0.29243156, z: 0, w: 0.9562865}
+  m_LocalPosition: {x: 820, y: 5.8, z: 106.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18726,7 +18726,7 @@ MonoBehaviour:
   requirements: []
   combatRequirements: []
   puzzleRequirements: []
-  nextCamera: {fileID: 0}
+  nextCamera: {fileID: 1322723436}
 --- !u!114 &385363106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41248,7 +41248,7 @@ MonoBehaviour:
   requirements: []
   combatRequirements: []
   puzzleRequirements: []
-  nextCamera: {fileID: 410812094}
+  nextCamera: {fileID: 0}
 --- !u!114 &819139804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53909,7 +53909,7 @@ MonoBehaviour:
   requirements: []
   combatRequirements: []
   puzzleRequirements: []
-  nextCamera: {fileID: 1949765562}
+  nextCamera: {fileID: 1141015508}
 --- !u!114 &1080239334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82642,7 +82642,7 @@ MonoBehaviour:
   requirements: []
   combatRequirements: []
   puzzleRequirements: []
-  nextCamera: {fileID: 1805254031}
+  nextCamera: {fileID: 1912421373}
 --- !u!114 &1586163485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103534,7 +103534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2015990257
 RectTransform:
   m_ObjectHideFlags: 0
