@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5411765, g: 0.3372549, b: 0.3529412, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.004
@@ -6883,7 +6883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &103861047
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14531,7 +14531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &292772804
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16697,8 +16697,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.019198582, y: -0.15432958, z: -0.0029994168, w: 0.9878283}
-  m_LocalPosition: {x: 1075.91, y: 20.35, z: 856}
+  m_LocalRotation: {x: 0, y: -0.16720383, z: 0, w: 0.9859224}
+  m_LocalPosition: {x: 1090.9003, y: 20.3, z: 815.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -104384,7 +104384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2015990257
 RectTransform:
   m_ObjectHideFlags: 0
