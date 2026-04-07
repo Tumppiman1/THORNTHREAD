@@ -32,6 +32,7 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private GameObject _miekka;
     [SerializeField] private GameObject _kirves;
     [SerializeField] private GameObject _nuija;
+    [SerializeField] private GameObject _kilpi;
     
     [SerializeField] private GameObject _miekkaKäsi;
     [SerializeField] private GameObject _kirvesKäsi;
@@ -52,6 +53,15 @@ public class CombatManager : MonoBehaviour
     
     void Update()
     {
+        if (playerIsBlocking) 
+        {
+            _kilpi.gameObject.SetActive(true);
+        }
+
+        else {
+            _kilpi.gameObject.SetActive(false);
+        }
+            
         if (chooseTarget) 
         {
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, Mathf.Infinity, enemyMask)) 
@@ -228,7 +238,7 @@ public class CombatManager : MonoBehaviour
                                     StartCoroutine(PlayerDamageText("-" + enemyDamage));
                                     AudioManager.Instance.PlaySFX("Skeleton hit");
                                     
-                                enemyActionsLeft--;
+                                    enemyActionsLeft--;
                                     EnemyTurn();
                                 }
 
@@ -244,7 +254,7 @@ public class CombatManager : MonoBehaviour
                             {
                                 Debug.Log("Attack blocked");
                                 playerIsBlocking = false;
-                            AudioManager.Instance.PlaySFX("Shield_Block3");
+                                AudioManager.Instance.PlaySFX("Shield_Block3");
                                 enemyActionsLeft--;
                                 EnemyTurn();
                             }

@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70d5cdb3-4fb8-4f19-a4dd-b2fe67eaafda" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Teemu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Teemu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.THORNTHREAD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.THORNTHREAD/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/CombatManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +109,7 @@
       <workItem from="1775024775317" duration="10941000" />
       <workItem from="1775112789740" duration="6903000" />
       <workItem from="1775544750083" duration="127000" />
-      <workItem from="1775544892920" duration="3280000" />
+      <workItem from="1775544892920" duration="4792000" />
     </task>
     <servers />
   </component>
