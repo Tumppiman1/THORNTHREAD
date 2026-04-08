@@ -11,6 +11,9 @@ public class SceneTransition : MonoBehaviour
         SceneManager.LoadScene("CutSceneIntro");
     }
 
-
+    public void OnCorpseButton()
+    {
+        SceneManager.LoadScene("CutSceneEnd");
+    }
    
 }

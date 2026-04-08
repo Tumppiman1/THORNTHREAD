@@ -14,6 +14,7 @@ public class CutSceneController : MonoBehaviour
             videoPlayer.loopPointReached += EndReached;
             videoPlayer.Play();
         }
+     
     }
 
     void EndReached(VideoPlayer vp)
@@ -21,6 +22,7 @@ public class CutSceneController : MonoBehaviour
         SceneManager.LoadScene("Main Scene");
     }
 
+  
     public void SkipCutscene()
     {
         videoPlayer.Stop();
