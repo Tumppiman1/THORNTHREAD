@@ -12,8 +12,10 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager Instance;
     public Sound[] musicSounds, sfxSounds, ambSounds;
+    public AudioClip[] FootGrass, FootBridge, FootBurned, FootStone;
     public AudioSource musicSource, sfxSource, ambSource;
     [SerializeField] float pitchVariance = 0.5f;
+    private AudioClip activeSound;
 
     [SerializeField] private AudioMixer audioMixer;
 
@@ -94,6 +96,53 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlayGrass()
+    {
+
+
+        activeSound = FootGrass[Random.Range(0, FootGrass.Length)];
+
+        float randomPitch = Random.Range(1f - pitchVariance, 1f + pitchVariance);
+        sfxSource.PlayOneShot(activeSound);
+        sfxSource.pitch = randomPitch;
+        sfxSource.Play();
+        Debug.Log(activeSound);
+    }
+
+    public void PlayBridge()
+    {
+        
+        activeSound = FootBridge[Random.Range(0, FootBridge.Length)];
+        float randomPitch = Random.Range(1f - pitchVariance, 1f + pitchVariance);
+        sfxSource.PlayOneShot(activeSound);
+        sfxSource.pitch = randomPitch;
+        sfxSource.Play();
+        Debug.Log(activeSound);
+    }
+
+    public void PlayBurned()
+    {
+      
+        activeSound = FootBurned[Random.Range(0, FootBurned.Length)];
+
+        float randomPitch = Random.Range(1f - pitchVariance, 1f + pitchVariance);
+        sfxSource.PlayOneShot(activeSound);
+        sfxSource.pitch = randomPitch;
+        sfxSource.Play();
+        Debug.Log(activeSound);
+    }
+
+    public void PlayStone()
+    {
+    
+        activeSound = FootStone[Random.Range(0, FootStone.Length)];
+
+        float randomPitch = Random.Range(1f - pitchVariance, 1f + pitchVariance);
+        sfxSource.PlayOneShot(activeSound);
+        sfxSource.pitch = randomPitch;
+        sfxSource.Play();
+        Debug.Log(activeSound);
+    }
     public void PlayAmb(string name)
     {
         Sound s = Array.Find(ambSounds, x => x.name == name);
