@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/CutSceneIntro.unity
+    guid: 17e21e491165fc24d990dc247c264975
+  - enabled: 1
+    path: Assets/Scenes/CutSceneEnd.unity
+    guid: a52190bff7f8c754e900a850e3dc475e
   - enabled: 0
     path: Assets/Scenes/Tuomas.unity
     guid: f953f4bd3d786d349aac000d8d971072
