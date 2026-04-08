@@ -402,7 +402,7 @@ public class PlayerStats : MonoBehaviour
 
     public void ReloadLastCheckPoint()
     {
-        SceneManager.LoadScene("Teemu");
+        SceneManager.LoadScene("Main Scene");
         // GameObject.FindGameObjectWithTag("UI").transform.GetChild(0).gameObject.SetActive(false);
         // GameObject.FindGameObjectWithTag("UI").transform.GetChild(1).gameObject.SetActive(true);
         
