@@ -412,6 +412,11 @@ public class PlayerStats : MonoBehaviour
         
     }
 
+    public void LoadMenuScene()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
     public void DisableActionButtons()
     {
         brokenSwordButton.GetComponent<Button>().interactable = false;
