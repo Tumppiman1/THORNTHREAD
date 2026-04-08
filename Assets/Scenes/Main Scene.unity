@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5411765, g: 0.3372549, b: 0.3529412, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.004
@@ -28642,7 +28642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7257228423725071761, guid: 03f7bc925c5d1a442812bd170b3d4026, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7271540602081600930, guid: 03f7bc925c5d1a442812bd170b3d4026, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47762,7 +47762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7257228423725071761, guid: 03f7bc925c5d1a442812bd170b3d4026, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7271540602081600930, guid: 03f7bc925c5d1a442812bd170b3d4026, type: 3}
       propertyPath: m_LocalPosition.x
@@ -48953,7 +48953,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 796877293903666542, guid: b565e046c22b8c346a3bfeb87c954479, type: 3}
       propertyPath: m_Colors.m_NormalColor.a
-      value: 0.019607844
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 796877293903666542, guid: b565e046c22b8c346a3bfeb87c954479, type: 3}
       propertyPath: m_Colors.m_PressedColor.a
@@ -49411,7 +49411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7257228423725071761, guid: 03f7bc925c5d1a442812bd170b3d4026, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7271540602081600930, guid: 03f7bc925c5d1a442812bd170b3d4026, type: 3}
       propertyPath: m_LocalPosition.x
@@ -69888,7 +69888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1357891656
 RectTransform:
   m_ObjectHideFlags: 0
@@ -71278,7 +71278,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 796877293903666542, guid: b565e046c22b8c346a3bfeb87c954479, type: 3}
       propertyPath: m_Colors.m_NormalColor.a
-      value: 0.09803922
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 796877293903666542, guid: b565e046c22b8c346a3bfeb87c954479, type: 3}
       propertyPath: m_Colors.m_PressedColor.a
@@ -73766,7 +73766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7257228423725071761, guid: 03f7bc925c5d1a442812bd170b3d4026, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7271540602081600930, guid: 03f7bc925c5d1a442812bd170b3d4026, type: 3}
       propertyPath: m_LocalPosition.x
@@ -99295,7 +99295,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 796877293903666542, guid: b565e046c22b8c346a3bfeb87c954479, type: 3}
       propertyPath: m_Colors.m_NormalColor.a
-      value: 0.105882354
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 796877293903666542, guid: b565e046c22b8c346a3bfeb87c954479, type: 3}
       propertyPath: m_Colors.m_PressedColor.a
