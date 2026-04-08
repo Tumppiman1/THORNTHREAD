@@ -25258,9 +25258,9 @@ MonoBehaviour:
   enemyDamaged: {fileID: 2100000, guid: ca82f84203632394bb18fc73fa83c3e2, type: 2}
   enemyNormal: {fileID: 2100000, guid: d29e9f7b1bd3a7a41860955f08ce258d, type: 2}
   enemyHealth: 0
-  enemyMaxHealth: 1
-  enemyAlive: 1
-  enemyEvadeChance: 40
+  enemyMaxHealth: 100
+  enemyAlive: 0
+  enemyEvadeChance: 30
   enemyDamage: 10
   healAmount: 5
   hitChance: 70
@@ -65298,6 +65298,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: musicSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: 'FootGrass.Array.data[0]'
       value: 
       objectReference: {fileID: 8300000, guid: aba3869dac85fec43bed08b3c0f08cb2, type: 3}
@@ -65872,6 +65876,14 @@ PrefabInstance:
     - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: sfxSounds.Array.data[53].name
       value: Player Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: musicSounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 08145ce83c940934e8bc273cbaf9b284, type: 3}
+    - target: {fileID: 1735280812645188586, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: musicSounds.Array.data[0].name
+      value: Battle
       objectReference: {fileID: 0}
     - target: {fileID: 3256639991610041465, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -110711,7 +110723,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -111471,15 +111483,15 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6efaeae9146c3074d9070c68713cc2e3, type: 2}
+  m_sharedMaterial: {fileID: -3440920393917220053, guid: 6efaeae9146c3074d9070c68713cc2e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -111496,13 +111508,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 3
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -113144,7 +113156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -117270,7 +117282,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 499, y: -263}
+  m_AnchoredPosition: {x: 818, y: -457}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3259385280302051341
