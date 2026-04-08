@@ -65245,6 +65245,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -5038350718423471037, guid: d6e3e09a1992dc046b1047635930d94d, type: 2}
+    - target: {fileID: 1031673455306131188, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1120063855047177891, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
@@ -65933,6 +65937,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 6331067417339213636, guid: d6e3e09a1992dc046b1047635930d94d, type: 2}
+    - target: {fileID: 5911860876705202080, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5939119150758155919, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
@@ -65945,6 +65953,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 6331067417339213636, guid: d6e3e09a1992dc046b1047635930d94d, type: 2}
+    - target: {fileID: 7176904438942863353, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7194083611798112134, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
@@ -65953,6 +65965,14 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 6331067417339213636, guid: d6e3e09a1992dc046b1047635930d94d, type: 2}
+    - target: {fileID: 7587688172927124904, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707895926639112466, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -104573,7 +104593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd9ea1bafb24a3478fd4f37985518c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forestVolume: 1
+  forestVolume: 2
   riverVolume: 0.5
   torchVolume: 0
   castleVolume: 0

@@ -13,6 +13,8 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider sfxSlider;
     [SerializeField] private Slider ambientSlider;
+
+
     [SerializeField] private AudioMixer audioMixer;
 
     public GameObject pauseMenu;
@@ -44,6 +46,7 @@ public class GameUIManager : MonoBehaviour
         musicSlider.value = data.musicVolume;
         sfxSlider.value = data.sfxVolume;
         ambientSlider.value = data.ambVolume;
+
         AudioManager.Instance.PlayRiver("River");
         AudioManager.Instance.PlayTorch("Fireplace");
         AudioManager.Instance.PlayForest("Forest Amb");
@@ -74,14 +77,14 @@ public class GameUIManager : MonoBehaviour
     }
     public void SetMusicVolume(float level)
     {
-        audioMixer.SetFloat("SoundEffects", Mathf.Log10(level) * 20f);
+        audioMixer.SetFloat("MusicVolume", Mathf.Log10(level) * 20f);
         AudioManager.Instance.musicSource.volume = level;
         AudioSaveManager.instance.Data.musicVolume = level;
         SaveSystem.Save();
     }
     public void SetAmbientVolume(float level)
     {
-        audioMixer.SetFloat("SoundEffects", Mathf.Log10(level) * 20f);
+        audioMixer.SetFloat("AmbVolume", Mathf.Log10(level) * 20f);
         AudioManager.Instance.ambSource.volume = level;
         AudioSaveManager.instance.Data.ambVolume = level;
         SaveSystem.Save();
