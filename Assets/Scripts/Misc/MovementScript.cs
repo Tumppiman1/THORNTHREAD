@@ -22,11 +22,21 @@ public class MovementScript : MonoBehaviour
         GetComponent<Button>().interactable = true;
         _currentCamera = transform.parent.transform.parent.gameObject;
         items = GameObject.FindGameObjectWithTag("Items");
-        
+
+        AudioZone zone = _currentCamera.GetComponent<AudioZone>();
+        if (zone != null)
+        {
+            zone.ActivateZone();
+        }
+
         if (nextCamera == null) 
         {
             this.gameObject.SetActive(false);
         }
+       
+
+        
+        
     }
 
     void Update()
@@ -255,9 +265,15 @@ public class MovementScript : MonoBehaviour
 
         ZOneMusic zone = nextCamera.GetComponent<ZOneMusic>();
 
-        if (zone != null)
+        foreach (var z in FindObjectsByType<AudioZone>(FindObjectsSortMode.None))
         {
-            AudioManager.Instance.PlayAmb(zone.ambientName);
+            z.DeactivateZone();
+        }
+
+        AudioZone newZone = nextCamera.GetComponent<AudioZone>();
+        if (newZone != null)
+        {
+            newZone.ActivateZone();
         }
     }
 

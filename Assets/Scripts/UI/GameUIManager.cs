@@ -23,6 +23,8 @@ public class GameUIManager : MonoBehaviour
 
     private void Awake()
     {
+       
+
         if (instance == null)
         {
             instance = this;
@@ -42,8 +44,11 @@ public class GameUIManager : MonoBehaviour
         musicSlider.value = data.musicVolume;
         sfxSlider.value = data.sfxVolume;
         ambientSlider.value = data.ambVolume;
-
-       
+        AudioManager.Instance.PlayRiver("River");
+        AudioManager.Instance.PlayTorch("Fireplace");
+        AudioManager.Instance.PlayForest("Forest Amb");
+        AudioManager.Instance.PlayCastle("Castle Amb");
+        AudioManager.Instance.PlayCaldron("Caldron");
     }
     private void Update()
     {

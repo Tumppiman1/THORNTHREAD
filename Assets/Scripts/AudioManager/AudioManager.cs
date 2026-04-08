@@ -16,6 +16,11 @@ public class AudioManager : MonoBehaviour
     public AudioSource musicSource, sfxSource, ambSource;
     [SerializeField] float pitchVariance = 0.5f;
     private AudioClip activeSound;
+    public AudioSource forestSource;
+    public AudioSource riverSource;
+    public AudioSource torchSource;
+    public AudioSource castleSource;
+    public AudioSource caldronSource;
 
     [SerializeField] private AudioMixer audioMixer;
 
@@ -143,6 +148,69 @@ public class AudioManager : MonoBehaviour
         sfxSource.Play();
         Debug.Log(activeSound);
     }
+
+
+    public void PlayForest(string name)
+    {
+        Sound s = Array.Find(ambSounds, x => x.name == name);
+        if (s == null) return;
+
+        if (forestSource.clip == s.clip) return;
+
+        forestSource.clip = s.clip;
+        forestSource.loop = true;
+        forestSource.Play();
+    }
+
+    public void PlayRiver(string name)
+    {
+        Sound s = Array.Find(ambSounds, x => x.name == name);
+        if (s == null) return;
+
+        if (riverSource.clip == s.clip) return;
+
+        riverSource.clip = s.clip;
+        riverSource.loop = true;
+        riverSource.Play();
+    }
+
+    public void PlayTorch(string name)
+    {
+        Sound s = Array.Find(ambSounds, x => x.name == name);
+        if (s == null) return;
+
+        if (torchSource.clip == s.clip) return;
+
+        torchSource.clip = s.clip;
+        torchSource.loop = true;
+        torchSource.Play();
+    }
+
+    public void PlayCastle(string name)
+    {
+        Sound s = Array.Find(ambSounds, x => x.name == name);
+        if (s == null) return;
+
+        if (castleSource.clip == s.clip) return;
+
+        castleSource.clip = s.clip;
+        castleSource.loop = true;
+        castleSource.Play();
+    }
+
+    public void PlayCaldron(string name)
+    {
+        Sound s = Array.Find(ambSounds, x => x.name == name);
+        if (s == null) return;
+
+        if (caldronSource.clip == s.clip) return;
+
+        caldronSource.clip = s.clip;
+        caldronSource.loop = true;
+        caldronSource.Play();
+    }
+
+
     public void PlayAmb(string name)
     {
         Sound s = Array.Find(ambSounds, x => x.name == name);
