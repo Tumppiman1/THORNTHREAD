@@ -35,6 +35,7 @@ public class EnemyStats : MonoBehaviour
     void Start()
     {
         enemyHealth = enemyMaxHealth;
+        AudioManager.Instance.PlayMusic("Battle");
     }
 
     
@@ -53,6 +54,7 @@ public class EnemyStats : MonoBehaviour
         if (enemyHealth <= 0) {
             enemyAlive = false;
             Destroy(gameObject);
+            AudioManager.Instance.StopMusic();
             GameObject.FindGameObjectWithTag("CombatEncounter").GetComponent<CombatManager>().enemies.Remove(gameObject);
             // Invoke(nameof(EnemyDeath), 1f);
         }

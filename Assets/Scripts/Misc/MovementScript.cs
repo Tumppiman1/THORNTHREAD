@@ -263,7 +263,7 @@ public class MovementScript : MonoBehaviour
         //nextCamera.GetComponent<CinemachineCamera>().ForceCameraPosition(nextCamera.transform.position);
         GameObject.FindGameObjectWithTag("ScreenList").GetComponent<ScreenListScript>().FindCurrentActiveScreen();
 
-        ZOneMusic zone = nextCamera.GetComponent<ZOneMusic>();
+       
 
         foreach (var z in FindObjectsByType<AudioZone>(FindObjectsSortMode.None))
         {

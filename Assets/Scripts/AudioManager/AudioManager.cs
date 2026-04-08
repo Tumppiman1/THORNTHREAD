@@ -37,26 +37,26 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-  /*  private void Start()
+    private void Start()
     {
         var data = AudioSaveManager.instance.Data;
 
         audioMixer.SetFloat("MasterVolume", Mathf.Log10(data.masterVolume) * 20f);
         audioMixer.SetFloat("SoundEffects", Mathf.Log10(data.sfxVolume) * 20f);
         audioMixer.SetFloat("MusicVolume", Mathf.Log10(data.musicVolume) * 20f);
-
+        audioMixer.SetFloat("AmbianceVolume", Mathf.Log10(data.ambVolume) * 20f);
 
 
         musicSource.volume = data.musicVolume;
         sfxSource.volume = data.sfxVolume;
+        ambSource.volume = data.ambVolume;
 
 
-
-        PlayMusic(musicSource.name);
+        
     }
 
 
-    */
+    
 
     public void PlayMusic(string name)
     {
@@ -237,5 +237,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-
+    public void StopMusic()
+    {
+        if (musicSource.isPlaying)
+        {
+            musicSource.Stop();
+        }
+    }
 }
