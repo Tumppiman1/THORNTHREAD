@@ -54,7 +54,7 @@ public class MainMenuController : MonoBehaviour
         }
 
         AudioManager.Instance.PlaySFX("Game Start");
-        SceneManager.LoadSceneAsync(gameScene);
+
        
     }
 
