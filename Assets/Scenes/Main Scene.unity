@@ -82031,8 +82031,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de59645bd2d661d439a99d56e25bd3a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  header: Inspect enemy
-  content: 
+  header: Inspect Enemy
+  content: 'AP cost: 1'
 --- !u!1001 &1522677489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114245,6 +114245,7 @@ GameObject:
   - component: {fileID: 8790241323324632952}
   - component: {fileID: 8451562599163702558}
   - component: {fileID: 8315858913302708870}
+  - component: {fileID: 8790241323324632953}
   m_Layer: 5
   m_Name: DamageOverTimeConsumable
   m_TagString: Untagged
@@ -115728,6 +115729,7 @@ GameObject:
   - component: {fileID: 304842737875729413}
   - component: {fileID: 5478349695271573077}
   - component: {fileID: 5894382379239944065}
+  - component: {fileID: 7226467904448268062}
   m_Layer: 5
   m_Name: ExtraTurnsConsumable
   m_TagString: Untagged
@@ -116875,9 +116877,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Broken Sword
-  content: '- Medium damage
+  content: 'medium damage
 
-    - No AP cost'
+    no AP cost'
 --- !u!1 &2412920415462604412
 GameObject:
   m_ObjectHideFlags: 0
@@ -121382,12 +121384,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Mace
-  content: '- Medium damage
+  content: 'medium damage
 
-    - high chance to stun targeted enemy
+    high chance to stun targeted enemy
 
-    - AP cost:
-    5'
+    AP cost: 5'
 --- !u!222 &4938301789735656435
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -121466,9 +121467,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Axe
-  content: '- High damage
+  content: 'high damage
 
-    - AP cost: 3'
+    AP cost: 3'
 --- !u!4 &5008623321401293278
 Transform:
   m_ObjectHideFlags: 0
@@ -123550,6 +123551,7 @@ GameObject:
   - component: {fileID: 4828491497261343840}
   - component: {fileID: 6848326060628183999}
   - component: {fileID: 5540664763522516677}
+  - component: {fileID: 6848326060628184000}
   m_Layer: 5
   m_Name: HealConsumable
   m_TagString: Untagged
@@ -124382,9 +124384,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Shield
-  content: '- Fully blocks next enemy attack
+  content: 'fully blocks next enemy attack
 
-    - AP cost: 1'
+    AP cost: 1'
 --- !u!114 &6426049178409669140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125646,6 +125648,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6848326060628184000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6063995465486015334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de59645bd2d661d439a99d56e25bd3a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: Healing Flask
+  content: '- refill at a cauldron'
 --- !u!224 &6877517802231455441
 RectTransform:
   m_ObjectHideFlags: 0
@@ -126233,6 +126249,20 @@ RectTransform:
   m_AnchoredPosition: {x: 81, y: -408.99997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7226467904448268062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010190120308770645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de59645bd2d661d439a99d56e25bd3a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: One Time Use Potion
+  content: play two turns
 --- !u!222 &7229720333147714184
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -127438,6 +127468,7 @@ GameObject:
   - component: {fileID: 986446581622728337}
   - component: {fileID: 3259385280302051341}
   - component: {fileID: 596836568454988134}
+  - component: {fileID: 8190940397193917906}
   m_Layer: 5
   m_Name: AddAPConsumable
   m_TagString: Untagged
@@ -128178,6 +128209,20 @@ RectTransform:
   m_AnchoredPosition: {x: -29.999878, y: -413.99997}
   m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8190940397193917906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7846011200320432181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de59645bd2d661d439a99d56e25bd3a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: One Time Use Potion
+  content: gives full AP
 --- !u!4 &8192622948069026238
 Transform:
   m_ObjectHideFlags: 0
@@ -129558,6 +129603,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256215184707598685}
   m_CullTransparentMesh: 1
+--- !u!114 &8790241323324632953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256215184707598685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de59645bd2d661d439a99d56e25bd3a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: Throwable
+  content: causes damage over time
 --- !u!222 &8822180376231245960
 CanvasRenderer:
   m_ObjectHideFlags: 0
