@@ -125661,7 +125661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Healing Flask
-  content: '- refill at a cauldron'
+  content: refill at a cauldron
 --- !u!224 &6877517802231455441
 RectTransform:
   m_ObjectHideFlags: 0

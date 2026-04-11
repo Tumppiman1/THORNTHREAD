@@ -1956,6 +1956,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7070611858262287736, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070611858262287736, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070611858262287736, guid: f24e7e082a2fe9a45ac5888b5adaf5d8, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 1ec3d7bc88344db45834f81e3a2e1fbd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
