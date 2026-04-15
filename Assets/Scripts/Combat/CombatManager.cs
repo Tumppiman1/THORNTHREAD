@@ -602,6 +602,7 @@ public class CombatManager : MonoBehaviour
                 {
                     // attack target
                     // Debug.Log("here");
+                    Instantiate(SlashVFX, target.GetComponent<EnemyStats>().effectPoint.position, Quaternion.identity);
                     target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().axeDamage);
                     _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().axeApCost);
                     StartCoroutine(PlayerAPText("-" + _player.GetComponent<PlayerStats>().axeApCost.ToString()));
@@ -623,6 +624,7 @@ public class CombatManager : MonoBehaviour
                 
                 else {
                     Debug.Log("Player attack missed");
+                    Instantiate(MissVFX, target.GetComponent<EnemyStats>().effectPoint.position, Quaternion.identity);
                     _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().axeApCost);
                     StartCoroutine(PlayerAPText("-" + _player.GetComponent<PlayerStats>().axeApCost.ToString()));
                     playerActionsLeft--;
@@ -640,6 +642,7 @@ public class CombatManager : MonoBehaviour
             
             else {
                 Debug.Log("Enemy blocked attack");
+                Instantiate(MissVFX, target.GetComponent<EnemyStats>().effectPoint.position, Quaternion.identity);
                 target.GetComponent<EnemyStats>().isBlocking = false;
                 _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().axeApCost);
                 StartCoroutine(PlayerAPText("-" + _player.GetComponent<PlayerStats>().axeApCost.ToString()));
@@ -668,6 +671,7 @@ public class CombatManager : MonoBehaviour
                 {
                     // attack target
                     // Debug.Log("here");
+                    Instantiate(SlashVFX, target.GetComponent<EnemyStats>().effectPoint.position, Quaternion.identity);
                     target.GetComponent<EnemyStats>().TakeDamage(_player.GetComponent<PlayerStats>().maceDamage);
                     target.GetComponent<EnemyStats>().stunDuration = 2;
                     _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().maceApCost);
@@ -686,6 +690,7 @@ public class CombatManager : MonoBehaviour
                 
                 else {
                     Debug.Log("Player attack missed");
+                    Instantiate(MissVFX, target.GetComponent<EnemyStats>().effectPoint.position, Quaternion.identity);
                     _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().maceApCost);
                     StartCoroutine(PlayerAPText("-" + _player.GetComponent<PlayerStats>().maceApCost.ToString()));
                     playerActionsLeft--;
@@ -703,6 +708,7 @@ public class CombatManager : MonoBehaviour
             
             else {
                 Debug.Log("Enemy blocked attack");
+                Instantiate(MissVFX, target.GetComponent<EnemyStats>().effectPoint.position, Quaternion.identity);
                 target.GetComponent<EnemyStats>().isBlocking = false;
                 _player.GetComponent<PlayerStats>().TakeAttackPoints(_player.GetComponent<PlayerStats>().maceApCost);
                 playerActionsLeft--;

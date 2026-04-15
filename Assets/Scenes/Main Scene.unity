@@ -1839,7 +1839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0
-  torchVolume: 0
+  torchVolume: 0.5
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
@@ -2296,7 +2296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0
-  torchVolume: 0
+  torchVolume: 0.2
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
@@ -4183,7 +4183,7 @@ MonoBehaviour:
   riverVolume: 0
   torchVolume: 0
   castleVolume: 0
-  caldronVolume: 0
+  caldronVolume: 1
   fadeSpeed: 2
 --- !u!1 &76049892
 GameObject:
@@ -6860,8 +6860,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0
-  torchVolume: 0
-  castleVolume: 0
+  torchVolume: 0.1
+  castleVolume: 1
   caldronVolume: 0
   fadeSpeed: 2
 --- !u!1 &108181207
@@ -8986,7 +8986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0
-  torchVolume: 0
+  torchVolume: 0.5
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
@@ -14616,8 +14616,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0
-  torchVolume: 0
-  castleVolume: 0
+  torchVolume: 0.3
+  castleVolume: 1
   caldronVolume: 0
   fadeSpeed: 2
 --- !u!1 &295957606
@@ -16750,10 +16750,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forestVolume: 1
-  riverVolume: 0
-  torchVolume: 0
+  riverVolume: 0.1
+  torchVolume: 0.3
   castleVolume: 0
-  caldronVolume: 0
+  caldronVolume: 1
   fadeSpeed: 2
 --- !u!1 &340643643
 GameObject:
@@ -17579,7 +17579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forestVolume: 1
-  riverVolume: 0
+  riverVolume: 0.2
   torchVolume: 0
   castleVolume: 0
   caldronVolume: 0
@@ -20028,7 +20028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forestVolume: 1
-  riverVolume: 0
+  riverVolume: 0.3
   torchVolume: 0
   castleVolume: 0
   caldronVolume: 0
@@ -21450,7 +21450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forestVolume: 1
-  riverVolume: 0
+  riverVolume: 0.5
   torchVolume: 0
   castleVolume: 0
   caldronVolume: 0
@@ -23475,7 +23475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forestVolume: 1
-  riverVolume: 0
+  riverVolume: 0.1
   torchVolume: 0
   castleVolume: 0
   caldronVolume: 0
@@ -24163,7 +24163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0
-  torchVolume: 0
+  torchVolume: 0.1
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
@@ -28349,8 +28349,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forestVolume: 1
-  riverVolume: 0
-  torchVolume: 0
+  riverVolume: 0.5
+  torchVolume: 0.2
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
@@ -35149,7 +35149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0
-  torchVolume: 0
+  torchVolume: 0.1
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
@@ -36274,7 +36274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forestVolume: 1
-  riverVolume: 0
+  riverVolume: 0.2
   torchVolume: 0
   castleVolume: 0
   caldronVolume: 0
@@ -45135,7 +45135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0.2
-  torchVolume: 0
+  torchVolume: 0.2
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
@@ -45708,7 +45708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0
-  torchVolume: 0
+  torchVolume: 0.5
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
@@ -46258,7 +46258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0
-  torchVolume: 0
+  torchVolume: 0.2
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
@@ -49443,7 +49443,7 @@ MonoBehaviour:
   forestVolume: 1
   riverVolume: 0
   torchVolume: 0
-  castleVolume: 0
+  castleVolume: 1
   caldronVolume: 0
   fadeSpeed: 2
 --- !u!1001 &967391617
@@ -49804,7 +49804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0
-  torchVolume: 0
+  torchVolume: 0.1
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
@@ -54150,7 +54150,7 @@ MonoBehaviour:
   riverVolume: 0
   torchVolume: 0
   castleVolume: 0
-  caldronVolume: 0
+  caldronVolume: 1
   fadeSpeed: 2
 --- !u!1 &1071359446
 GameObject:
@@ -56919,7 +56919,7 @@ MonoBehaviour:
   forestVolume: 1
   riverVolume: 0
   torchVolume: 0
-  castleVolume: 0
+  castleVolume: 1
   caldronVolume: 0
   fadeSpeed: 2
 --- !u!1 &1108630195
@@ -58146,7 +58146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0
-  torchVolume: 0
+  torchVolume: 0.2
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
@@ -59107,7 +59107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0
-  torchVolume: 0
+  torchVolume: 0.3
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
@@ -68119,7 +68119,7 @@ MonoBehaviour:
   forestVolume: 1
   riverVolume: 0
   torchVolume: 0
-  castleVolume: 0
+  castleVolume: 1
   caldronVolume: 0
   fadeSpeed: 2
 --- !u!4 &1309245824 stripped
@@ -75284,7 +75284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forestVolume: 1
-  riverVolume: 0
+  riverVolume: 0.1
   torchVolume: 0
   castleVolume: 0
   caldronVolume: 0
@@ -76673,7 +76673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0
-  torchVolume: 0
+  torchVolume: 0.5
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
@@ -95638,7 +95638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forestVolume: 1
-  riverVolume: 0
+  riverVolume: 0.5
   torchVolume: 0
   castleVolume: 0
   caldronVolume: 0
@@ -98921,8 +98921,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forestVolume: 1
-  riverVolume: 0
-  torchVolume: 0
+  riverVolume: 0.3
+  torchVolume: 0.2
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
@@ -103597,7 +103597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0
-  torchVolume: 0
+  torchVolume: 0.5
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
@@ -110653,7 +110653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forestVolume: 1
-  riverVolume: 0
+  riverVolume: 0.2
   torchVolume: 0
   castleVolume: 0
   caldronVolume: 0
@@ -110905,7 +110905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0
-  torchVolume: 0
+  torchVolume: 0.2
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
@@ -111433,7 +111433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestVolume: 1
   riverVolume: 0
-  torchVolume: 0
+  torchVolume: 0.5
   castleVolume: 0
   caldronVolume: 0
   fadeSpeed: 2
